@@ -1,6 +1,5 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import { quickLinks, serviceLinks } from '@/data/navigation';
 import HelpfulLinks from '@/components/helpful-links.astro';
 ---
 
@@ -9,19 +8,21 @@ import HelpfulLinks from '@/components/helpful-links.astro';
     description="The page you're looking for doesn't exist. Find your way back to Phehlwana Group Investments."
 >
     <div class='relative isolate overflow-hidden'>
-        <!-- Background grid + gradient -->
+        <!-- Background: grid + blobs — all semantic tokens -->
         <div class='absolute inset-0 -z-10' aria-hidden='true'>
+            <!-- Fade to page background at the bottom -->
             <div
-                class='absolute inset-0 bg-[linear-gradient(to_bottom,transparent_60%,hsl(var(--background))_100%)]'
+                class='absolute inset-0 bg-linear-to-b from-transparent via-transparent to-background'
             >
             </div>
+            <!-- Dot grid -->
             <svg
-                class='absolute inset-0 h-full w-full stroke-border/60 mask-[radial-gradient(ellipse_at_center,white_30%,transparent_80%)]'
+                class='absolute inset-0 h-full w-full stroke-border/50 mask-[radial-gradient(ellipse_at_center,white_20%,transparent_75%)]'
                 aria-hidden='true'
             >
                 <defs>
                     <pattern
-                        id='grid'
+                        id='404-grid'
                         width='40'
                         height='40'
                         patternUnits='userSpaceOnUse'
@@ -29,11 +30,11 @@ import HelpfulLinks from '@/components/helpful-links.astro';
                         <path d='M.5 40V.5H40' fill='none'></path>
                     </pattern>
                 </defs>
-                <rect width='100%' height='100%' fill='url(#grid)'></rect>
+                <rect width='100%' height='100%' fill='url(#404-grid)'></rect>
             </svg>
-            <!-- Colour blobs -->
+            <!-- Ambient blobs -->
             <div
-                class='absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/5 rounded-full blur-3xl'
+                class='absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/8 rounded-full blur-3xl'
             >
             </div>
             <div
@@ -42,7 +43,7 @@ import HelpfulLinks from '@/components/helpful-links.astro';
             </div>
         </div>
 
-        <!-- Hero section -->
+        <!-- ── Hero ── -->
         <section
             class='min-h-[75vh] flex flex-col items-center justify-center px-4 py-24 text-center'
         >
@@ -66,14 +67,14 @@ import HelpfulLinks from '@/components/helpful-links.astro';
                 Error 404
             </div>
 
-            <!-- Giant 404 -->
+            <!-- Giant 404 numeral -->
             <div class='relative mb-6 select-none' aria-hidden='true'>
                 <span
                     class='block text-[8rem] sm:text-[12rem] lg:text-[16rem] font-black leading-none tracking-tighter bg-linear-to-b from-foreground/20 to-foreground/5 bg-clip-text text-transparent'
                 >
                     404
                 </span>
-                <!-- Floating icon over the 0 -->
+                <!-- Floating icon card centred over the middle zero -->
                 <div
                     class='absolute inset-0 flex items-center justify-center pointer-events-none'
                 >
@@ -98,8 +99,11 @@ import HelpfulLinks from '@/components/helpful-links.astro';
                                 <path d='M11 14h.01'></path>
                             </svg>
                         </div>
-                        <!-- Ping dot -->
-                        <span class='absolute -top-1 -right-1 flex size-3'>
+                        <!-- Pulse dot -->
+                        <span
+                            class='absolute -top-1 -right-1 flex size-3'
+                            aria-hidden='true'
+                        >
                             <span
                                 class='animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75'
                             ></span>
@@ -111,7 +115,7 @@ import HelpfulLinks from '@/components/helpful-links.astro';
                 </div>
             </div>
 
-            <!-- Heading -->
+            <!-- Copy -->
             <h1
                 class='text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight'
             >
@@ -124,7 +128,7 @@ import HelpfulLinks from '@/components/helpful-links.astro';
                 moved. Let's get you back on track.
             </p>
 
-            <!-- CTA buttons -->
+            <!-- CTAs -->
             <div
                 class='flex flex-col sm:flex-row items-center justify-center gap-3'
             >
@@ -173,7 +177,7 @@ import HelpfulLinks from '@/components/helpful-links.astro';
             </div>
         </section>
 
-        <!-- Helpful links section -->
+        <!-- ── Helpful links ── -->
         <!-- <HelpfulLinks /> -->
     </div>
 </Layout>
