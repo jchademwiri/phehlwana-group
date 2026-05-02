@@ -1,0 +1,700 @@
+---
+import { serviceDivisions } from '@/data/navigation';
+
+const currentPath = Astro.url.pathname;
+
+const isActive = (href: string) => {
+  if (href === '/') return currentPath === '/';
+  return currentPath.startsWith(href);
+};
+
+const isServicesActive = currentPath.startsWith('/services');
+---
+
+<!-- ── Backdrop overlay (mobile drawer) ──────────────────────────────────── -->
+<div
+  id='drawer-backdrop'
+  aria-hidden='true'
+  class='fixed inset-0 z-60 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden'
+>
+</div>
+
+<!-- ── Mobile drawer (slides from right) ─────────────────────────────────── -->
+<div
+  id='mobile-drawer'
+  role='dialog'
+  aria-modal='true'
+  aria-label='Navigation menu'
+  class='fixed top-0 right-0 z-70 h-full w-80 max-w-[85vw] bg-background shadow-2xl
+         translate-x-full transition-transform duration-300 ease-in-out
+         flex flex-col lg:hidden'
+>
+  <!-- Drawer header -->
+  <div
+    class='flex items-center justify-between px-5 py-4 border-b border-border shrink-0'
+  >
+    <a
+      href='/'
+      class='flex items-center gap-2.5'
+      aria-label='Phehlwana Group Investments — Home'
+    >
+      <img
+        src='/img/logo.png'
+        alt='Phehlwana Group Investments logo'
+        width='36'
+        height='36'
+        class='size-9 object-contain'
+      />
+      <div class='leading-tight'>
+        <span class='block font-bold text-foreground text-sm'
+          >Phehlwana Group</span
+        >
+        <span class='block text-xs text-muted-foreground'>Investments</span>
+      </div>
+    </a>
+    <button
+      id='drawer-close'
+      type='button'
+      aria-label='Close navigation menu'
+      class='p-2 rounded-md text-muted-foreground hover:bg-accent hover:text-foreground transition-colors'
+    >
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        class='size-5'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        aria-hidden='true'
+        ><path d='M18 6 6 18'></path><path d='m6 6 12 12'></path></svg
+      >
+    </button>
+  </div>
+
+  <!-- Drawer nav — scrollable -->
+  <nav class='flex-1 overflow-y-auto px-4 py-4' aria-label='Mobile navigation'>
+    <div class='flex flex-col gap-1'>
+      <!-- Home -->
+      <a
+        href='/'
+        aria-current={isActive('/') ? 'page' : undefined}
+        class:list={[
+          'px-3 py-2.5 rounded-md text-sm font-medium transition-colors',
+          isActive('/')
+            ? 'bg-primary text-primary-foreground'
+            : 'text-foreground hover:bg-accent',
+        ]}>Home</a
+      >
+
+      <!-- About -->
+      <a
+        href='/about'
+        aria-current={isActive('/about') ? 'page' : undefined}
+        class:list={[
+          'px-3 py-2.5 rounded-md text-sm font-medium transition-colors',
+          isActive('/about')
+            ? 'bg-primary text-primary-foreground'
+            : 'text-foreground hover:bg-accent',
+        ]}>About</a
+      >
+
+      <!-- Services accordion -->
+      <div>
+        <button
+          id='mobile-services-toggle'
+          type='button'
+          aria-expanded={isServicesActive ? 'true' : 'false'}
+          aria-controls='mobile-services-panel'
+          class:list={[
+            'w-full flex items-center justify-between px-3 py-2.5 rounded-md text-sm font-medium transition-colors',
+            isServicesActive
+              ? 'bg-primary text-primary-foreground'
+              : 'text-foreground hover:bg-accent',
+          ]}
+        >
+          Services
+          <svg
+            id='mobile-services-chevron'
+            xmlns='http://www.w3.org/2000/svg'
+            class:list={[
+              'size-4 transition-transform duration-200',
+              isServicesActive ? 'rotate-180' : '',
+            ]}
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2.5'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            aria-hidden='true'><path d='m6 9 6 6 6-6'></path></svg
+          >
+        </button>
+
+        <div
+          id='mobile-services-panel'
+          class:list={['pl-3 mt-1 space-y-1', isServicesActive ? '' : 'hidden']}
+        >
+          <a
+            href='/services'
+            class='block px-3 py-2 text-sm font-semibold text-primary hover:bg-accent rounded-md'
+          >
+            View All Services
+          </a>
+          {
+            serviceDivisions.map((service) => (
+              <div>
+                <a
+                  href={service.href}
+                  class:list={[
+                    'block px-3 py-2 text-sm font-medium rounded-md transition-colors',
+                    currentPath.startsWith(service.href)
+                      ? 'text-primary bg-accent'
+                      : 'text-foreground hover:bg-accent',
+                  ]}
+                >
+                  {service.division}
+                </a>
+                <div class='pl-3 mt-0.5 space-y-0.5'>
+                  {service.items.map((item) => (
+                    <a
+                      href={item.href}
+                      class='flex items-center gap-1.5 px-3 py-1.5 text-xs text-muted-foreground hover:text-primary hover:bg-accent rounded-md transition-colors'
+                    >
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        class='size-3 shrink-0 text-primary/40'
+                        viewBox='0 0 24 24'
+                        fill='none'
+                        stroke='currentColor'
+                        stroke-width='2.5'
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        aria-hidden='true'
+                      >
+                        <path d='m9 18 6-6-6-6' />
+                      </svg>
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <a
+        href='/projects'
+        aria-current={isActive('/projects') ? 'page' : undefined}
+        class:list={[
+          'px-3 py-2.5 rounded-md text-sm font-medium transition-colors',
+          isActive('/projects')
+            ? 'bg-primary text-primary-foreground'
+            : 'text-foreground hover:bg-accent',
+        ]}>Projects</a
+      >
+
+      <!-- Contact -->
+      <a
+        href='/contact'
+        aria-current={isActive('/contact') ? 'page' : undefined}
+        class:list={[
+          'px-3 py-2.5 rounded-md text-sm font-medium transition-colors',
+          isActive('/contact')
+            ? 'bg-primary text-primary-foreground'
+            : 'text-foreground hover:bg-accent',
+        ]}>Contact</a
+      >
+    </div>
+  </nav>
+
+  <!-- Drawer footer — contact + CTA -->
+  <div class='shrink-0 border-t border-border px-5 py-4 space-y-3'>
+    <a
+      href='tel:+27126550284'
+      class='flex items-center gap-2.5 text-sm text-muted-foreground hover:text-primary transition-colors'
+    >
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        class='size-4 text-primary shrink-0'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        aria-hidden='true'
+        ><path
+          d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z'
+        ></path></svg
+      >
+      012 655 0284
+    </a>
+    <a
+      href='/contact'
+      class='flex items-center justify-center gap-2 w-full bg-primary text-primary-foreground px-4 py-2.5 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors'
+    >
+      Request a Quote
+    </a>
+  </div>
+</div>
+
+<!-- ── Sticky header bar ───────────────────────────────────────────────────── -->
+<header class='w-full bg-background border-b border-border sticky top-0 z-50'>
+  <!-- Topbar (desktop only) -->
+  <div class='hidden lg:block bg-muted border-b border-border'>
+    <div class='container mx-auto px-4 py-2'>
+      <div
+        class='flex items-center justify-between text-sm text-muted-foreground'
+      >
+        <div class='flex items-center gap-6'>
+          <a
+            href='https://maps.google.com/?q=PKN+Office+Park,+62+Taaifontein+Street,+Montana+Park,+0182'
+            target='_blank'
+            rel='noopener noreferrer'
+            class='flex items-center gap-2 hover:text-primary transition-colors'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='size-4 text-primary shrink-0'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              aria-hidden='true'
+              ><path d='M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z'
+              ></path><circle cx='12' cy='10' r='3'></circle></svg
+            >
+            Office No 06, PKN Office Park, Montana Park, 0182
+          </a>
+          <a
+            href='mailto:info@phehlwanagroup.co.za'
+            class='flex items-center gap-2 hover:text-primary transition-colors'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='size-4 text-primary shrink-0'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              aria-hidden='true'
+              ><rect width='20' height='16' x='2' y='4' rx='2'></rect><path
+                d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'></path></svg
+            >
+            info@phehlwanagroup.co.za
+          </a>
+        </div>
+        <div class='flex items-center gap-3'>
+          <a
+            href='#'
+            aria-label='Follow us on Facebook'
+            class='hover:text-primary transition-colors'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='size-4'
+              viewBox='0 0 24 24'
+              fill='currentColor'
+              aria-hidden='true'
+              ><path
+                d='M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z'
+              ></path></svg
+            >
+          </a>
+          <a
+            href='#'
+            aria-label='Follow us on Instagram'
+            class='hover:text-primary transition-colors'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='size-4'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              aria-hidden='true'
+              ><rect width='20' height='20' x='2' y='2' rx='5' ry='5'
+              ></rect><path d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z'
+              ></path><line x1='17.5' x2='17.51' y1='6.5' y2='6.5'></line></svg
+            >
+          </a>
+          <a
+            href='#'
+            aria-label='Connect on LinkedIn'
+            class='hover:text-primary transition-colors'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='size-4'
+              viewBox='0 0 24 24'
+              fill='currentColor'
+              aria-hidden='true'
+              ><path
+                d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z'
+              ></path><rect width='4' height='12' x='2' y='9'></rect><circle
+                cx='4'
+                cy='4'
+                r='2'></circle></svg
+            >
+          </a>
+          <a
+            href='https://wa.me/27792947635'
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='Chat on WhatsApp'
+            class='hover:text-primary transition-colors'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='size-4'
+              viewBox='0 0 24 24'
+              fill='currentColor'
+              aria-hidden='true'
+              ><path
+                d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z'
+              ></path></svg
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main navbar -->
+  <nav aria-label='Main navigation' class='container mx-auto px-4'>
+    <div class='flex items-center justify-between h-16 lg:h-20'>
+      <!-- Logo -->
+      <a
+        href='/'
+        class='flex items-center gap-3 shrink-0'
+        aria-label='Phehlwana Group Investments — Home'
+      >
+        <img
+          src='/img/logo.png'
+          alt='Phehlwana Group Investments logo'
+          width='48'
+          height='48'
+          class='size-10 lg:size-12 object-contain'
+        />
+        <div class='hidden sm:block leading-tight'>
+          <span class='block font-bold text-foreground text-sm lg:text-base'
+            >Phehlwana Group</span
+          >
+          <span class='block text-xs text-muted-foreground'>Investments</span>
+        </div>
+      </a>
+
+      <!-- ── Desktop nav ── -->
+      <div class='hidden lg:flex items-center gap-1'>
+        <!-- Home -->
+        <a
+          href='/'
+          aria-current={isActive('/') ? 'page' : undefined}
+          class:list={[
+            'px-4 py-2 rounded-md text-sm font-medium transition-colors',
+            isActive('/')
+              ? 'bg-primary text-primary-foreground'
+              : 'text-foreground hover:bg-accent hover:text-accent-foreground',
+          ]}>Home</a
+        >
+
+        <!-- About -->
+        <a
+          href='/about'
+          aria-current={isActive('/about') ? 'page' : undefined}
+          class:list={[
+            'px-4 py-2 rounded-md text-sm font-medium transition-colors',
+            isActive('/about')
+              ? 'bg-primary text-primary-foreground'
+              : 'text-foreground hover:bg-accent hover:text-accent-foreground',
+          ]}>About</a
+        >
+
+        <!-- Services mega menu trigger -->
+        <div class='relative' id='services-menu-wrapper'>
+          <button
+            id='services-trigger'
+            type='button'
+            aria-haspopup='true'
+            aria-expanded='false'
+            aria-controls='services-mega-menu'
+            class:list={[
+              'flex items-center gap-1.5 px-4 py-2 rounded-md text-sm font-medium transition-colors',
+              isServicesActive
+                ? 'bg-primary text-primary-foreground'
+                : 'text-foreground hover:bg-accent hover:text-accent-foreground',
+            ]}
+          >
+            Services
+            <svg
+              id='services-chevron'
+              xmlns='http://www.w3.org/2000/svg'
+              class='size-4 transition-transform duration-200'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2.5'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              aria-hidden='true'><path d='m6 9 6 6 6-6'></path></svg
+            >
+          </button>
+
+          <div
+            id='services-mega-menu'
+            role='region'
+            aria-label='Services menu'
+            class='hidden absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[860px] bg-background border border-border rounded-xl shadow-xl overflow-hidden'
+          >
+            <div class='grid grid-cols-4 divide-x divide-border'>
+              {
+                serviceDivisions.map((service) => (
+                  <div class='p-5'>
+                    <a
+                      href={service.href}
+                      class='group flex items-start gap-2 mb-3 hover:text-primary transition-colors'
+                    >
+                      <span class='font-semibold text-sm text-foreground group-hover:text-primary leading-snug'>
+                        {service.division}
+                      </span>
+                    </a>
+                    <p class='text-xs text-muted-foreground mb-3 leading-relaxed'>
+                      {service.description}
+                    </p>
+                    <ul class='space-y-1.5'>
+                      {service.items.map((item) => (
+                        <li>
+                          <a
+                            href={item.href}
+                            class='flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors group'
+                          >
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              class='size-3 shrink-0 text-primary/50 group-hover:text-primary transition-colors'
+                              viewBox='0 0 24 24'
+                              fill='none'
+                              stroke='currentColor'
+                              stroke-width='2.5'
+                              stroke-linecap='round'
+                              stroke-linejoin='round'
+                              aria-hidden='true'
+                            >
+                              <path d='m9 18 6-6-6-6' />
+                            </svg>
+                            {item.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))
+              }
+            </div>
+            <div
+              class='bg-muted border-t border-border px-5 py-3 flex items-center justify-between'
+            >
+              <p class='text-xs text-muted-foreground'>
+                Not sure which service you need?
+              </p>
+              <div class='flex items-center gap-3'>
+                <a
+                  href='/services'
+                  class='text-xs font-medium text-primary hover:underline underline-offset-2'
+                  >View all services →</a
+                >
+                <a
+                  href='/contact'
+                  class='inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-md hover:bg-primary/90 transition-colors'
+                  >Get a free quote</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <a
+          href='/projects'
+          aria-current={isActive('/projects') ? 'page' : undefined}
+          class:list={[
+            'px-4 py-2 rounded-md text-sm font-medium transition-colors',
+            isActive('/projects')
+              ? 'bg-primary text-primary-foreground'
+              : 'text-foreground hover:bg-accent hover:text-accent-foreground',
+          ]}>Projects</a
+        >
+
+        <!-- Contact -->
+        <a
+          href='/contact'
+          aria-current={isActive('/contact') ? 'page' : undefined}
+          class:list={[
+            'px-4 py-2 rounded-md text-sm font-medium transition-colors',
+            isActive('/contact')
+              ? 'bg-primary text-primary-foreground'
+              : 'text-foreground hover:bg-accent hover:text-accent-foreground',
+          ]}>Contact</a
+        >
+      </div>
+
+      <!-- Desktop CTA + phone -->
+      <div class='hidden lg:flex items-center gap-4'>
+        <a
+          href='tel:+27126550284'
+          class='flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors'
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            class='size-4 text-primary'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            aria-hidden='true'
+            ><path
+              d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z'
+            ></path></svg
+          >
+          012 655 0284
+        </a>
+        <a
+          href='/contact'
+          class='inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors'
+        >
+          Request a Quote
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button
+        id='drawer-open'
+        type='button'
+        aria-controls='mobile-drawer'
+        aria-expanded='false'
+        aria-label='Open navigation menu'
+        class='lg:hidden p-2 rounded-md text-foreground hover:bg-accent transition-colors'
+      >
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          class='size-6'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke='currentColor'
+          stroke-width='2'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          aria-hidden='true'
+          ><line x1='4' x2='20' y1='6' y2='6'></line><line
+            x1='4'
+            x2='20'
+            y1='12'
+            y2='12'></line><line x1='4' x2='20' y1='18' y2='18'></line></svg
+        >
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // ── Drawer open / close ───────────────────────────────────────────────────
+  const drawerOpenBtn = document.getElementById('drawer-open');
+  const drawerCloseBtn = document.getElementById('drawer-close');
+  const drawer = document.getElementById('mobile-drawer');
+  const backdrop = document.getElementById('drawer-backdrop');
+
+  function openDrawer() {
+    drawer?.classList.remove('translate-x-full');
+    backdrop?.classList.remove('opacity-0', 'pointer-events-none');
+    backdrop?.classList.add('opacity-100');
+    drawerOpenBtn?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    // Move focus into drawer
+    (drawer?.querySelector('a, button') as HTMLElement)?.focus();
+  }
+
+  function closeDrawer() {
+    drawer?.classList.add('translate-x-full');
+    backdrop?.classList.remove('opacity-100');
+    backdrop?.classList.add('opacity-0', 'pointer-events-none');
+    drawerOpenBtn?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    drawerOpenBtn?.focus();
+  }
+
+  drawerOpenBtn?.addEventListener('click', openDrawer);
+  drawerCloseBtn?.addEventListener('click', closeDrawer);
+  backdrop?.addEventListener('click', closeDrawer);
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (!drawer?.classList.contains('translate-x-full')) closeDrawer();
+      if (!servicesMegaMenu?.classList.contains('hidden')) closeMegaMenu();
+    }
+  });
+
+  // Close drawer when any nav link inside it is clicked
+  drawer?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeDrawer);
+  });
+
+  // ── Mobile services accordion ─────────────────────────────────────────────
+  const mobileServicesToggle = document.getElementById(
+    'mobile-services-toggle',
+  );
+  const mobileServicesPanel = document.getElementById('mobile-services-panel');
+  const mobileServicesChevron = document.getElementById(
+    'mobile-services-chevron',
+  );
+
+  mobileServicesToggle?.addEventListener('click', () => {
+    const isOpen = mobileServicesPanel?.classList.toggle('hidden') === false;
+    mobileServicesToggle.setAttribute('aria-expanded', String(isOpen));
+    mobileServicesChevron?.classList.toggle('rotate-180', isOpen);
+  });
+
+  // ── Desktop mega menu ─────────────────────────────────────────────────────
+  const servicesTrigger = document.getElementById('services-trigger');
+  const servicesMegaMenu = document.getElementById('services-mega-menu');
+  const servicesChevron = document.getElementById('services-chevron');
+  const servicesWrapper = document.getElementById('services-menu-wrapper');
+
+  function openMegaMenu() {
+    servicesMegaMenu?.classList.remove('hidden');
+    servicesTrigger?.setAttribute('aria-expanded', 'true');
+    servicesChevron?.classList.add('rotate-180');
+  }
+
+  function closeMegaMenu() {
+    servicesMegaMenu?.classList.add('hidden');
+    servicesTrigger?.setAttribute('aria-expanded', 'false');
+    servicesChevron?.classList.remove('rotate-180');
+  }
+
+  servicesTrigger?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    servicesMegaMenu?.classList.contains('hidden')
+      ? openMegaMenu()
+      : closeMegaMenu();
+  });
+
+  servicesWrapper?.addEventListener('mouseenter', openMegaMenu);
+  servicesWrapper?.addEventListener('mouseleave', closeMegaMenu);
+
+  document.addEventListener('click', (e) => {
+    if (!servicesWrapper?.contains(e.target as Node)) closeMegaMenu();
+  });
+</script>
