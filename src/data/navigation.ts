@@ -48,7 +48,7 @@ export const quickLinks: NavLink[] = [
 // ── Footer legal / bottom-bar links ──────────────────────────────────────────
 export const legalLinks: NavLink[] = [
   { label: 'Privacy Policy', href: '/privacy-policy' },
-  { label: 'Contact', href: '/contact' },
+  // { label: 'Contact', href: '/contact' },
 ];
 
 // ── Developer / agency credit ─────────────────────────────────────────────────
@@ -110,6 +110,19 @@ export const serviceDivisions: ServiceDivision[] = [
       { label: 'Excavators', href: '/services/plant-hire#excavators' },
       { label: 'Bulldozers', href: '/services/plant-hire#bulldozers' },
       { label: 'Generators & Tools', href: '/services/plant-hire#generators' },
+    ],
+  },
+  {
+    division: 'Security',
+    href: '/services/security',
+    description: 'Guarding, access control & risk management solutions',
+    items: [
+      { label: 'Manned Guarding', href: '/services/security#guarding' },
+      { label: 'Access Control', href: '/services/security#access-control' },
+      { label: 'CCTV & Surveillance', href: '/services/security#cctv' },
+      { label: 'Risk Assessment', href: '/services/security#risk-assessment' },
+      { label: 'Event Security', href: '/services/security#events' },
+      { label: 'Site Security', href: '/services/security#site-security' },
     ],
   },
 ];

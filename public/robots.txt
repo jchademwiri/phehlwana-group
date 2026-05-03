@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://phehlwanagroup.co.za/sitemap-index.xml

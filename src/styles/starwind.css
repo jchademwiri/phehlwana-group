@@ -11,6 +11,7 @@
     from {
       height: 0;
     }
+
     to {
       height: var(--starwind-accordion-content-height);
     }
@@ -20,6 +21,7 @@
     from {
       height: var(--starwind-accordion-content-height);
     }
+
     to {
       height: 0;
     }
@@ -158,10 +160,24 @@
   * {
     @apply border-border outline-outline/50;
   }
+
   body {
     @apply bg-background text-foreground scheme-light dark:scheme-dark;
   }
+
   button {
     @apply cursor-pointer;
   }
+}
+
+/* ── Scroll animation — used with data-animate attribute ── */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+[data-animate].animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }

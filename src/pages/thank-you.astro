@@ -1,0 +1,36 @@
+---
+import Layout from '@/layouts/Layout.astro';
+export const prerender = true;
+---
+
+<Layout
+    title='Message Sent'
+    description='Thank you for contacting Phehlwana Group Investments.'
+>
+    <section
+        class='flex min-h-[70vh] flex-col items-center justify-center text-center px-4 py-20'
+    >
+        <div class='text-6xl mb-6' aria-hidden='true'>✅</div>
+        <h1 class='text-3xl font-bold mb-4'>Message Received!</h1>
+        <p class='text-muted-foreground mb-2 max-w-md text-lg'>
+            Thank you for reaching out to Phehlwana Group Investments.
+        </p>
+        <p class='text-muted-foreground mb-10 max-w-md'>
+            A member of our team will contact you within <strong
+                >1 business day</strong
+            >.
+        </p>
+        <div class='flex flex-wrap gap-4 justify-center'>
+            <a
+                href='/'
+                class='inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors'
+                >Back to Home</a
+            >
+            <a
+                href='/services'
+                class='inline-flex items-center gap-2 border border-border text-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:bg-accent transition-colors'
+                >View Our Services</a
+            >
+        </div>
+    </section>
+</Layout>

@@ -1,5 +1,5 @@
 ---
-import { serviceDivisions } from '@/data/navigation';
+import { serviceLinks } from '@/data/navigation';
 
 const currentPath = Astro.url.pathname;
 const isActive = (href: string) =>
@@ -7,7 +7,7 @@ const isActive = (href: string) =>
 const isServicesActive = currentPath.startsWith('/services');
 ---
 
-<!-- Backdrop -->
+<!-- Backdrop (mobile drawer) -->
 <div
     id='drawer-backdrop'
     aria-hidden='true'
@@ -15,7 +15,7 @@ const isServicesActive = currentPath.startsWith('/services');
 >
 </div>
 
-<!-- Mobile drawer -->
+<!-- Mobile drawer — slides from right -->
 <div
     id='mobile-drawer'
     role='dialog'
@@ -96,7 +96,7 @@ const isServicesActive = currentPath.startsWith('/services');
                 ]}>About</a
             >
 
-            <!-- Services accordion -->
+            <!-- Services accordion (mobile) -->
             <div>
                 <button
                     id='mobile-services-toggle'
@@ -130,53 +130,28 @@ const isServicesActive = currentPath.startsWith('/services');
                 <div
                     id='mobile-services-panel'
                     class:list={[
-                        'pl-3 mt-1 space-y-1',
+                        'pl-3 mt-1 space-y-0.5',
                         isServicesActive ? '' : 'hidden',
                     ]}
                 >
                     <a
                         href='/services'
                         class='block px-3 py-2 text-sm font-semibold text-primary hover:bg-accent rounded-md'
-                        >View All Services</a
+                        >All Services</a
                     >
                     {
-                        serviceDivisions.map((service) => (
-                            <div>
-                                <a
-                                    href={service.href}
-                                    class:list={[
-                                        'block px-3 py-2 text-sm font-medium rounded-md transition-colors',
-                                        currentPath.startsWith(service.href)
-                                            ? 'text-primary bg-accent'
-                                            : 'text-foreground hover:bg-accent',
-                                    ]}
-                                >
-                                    {service.division}
-                                </a>
-                                <div class='pl-3 mt-0.5 space-y-0.5'>
-                                    {service.items.map((item) => (
-                                        <a
-                                            href={item.href}
-                                            class='flex items-center gap-1.5 px-3 py-1.5 text-xs text-muted-foreground hover:text-primary hover:bg-accent rounded-md transition-colors'
-                                        >
-                                            <svg
-                                                xmlns='http://www.w3.org/2000/svg'
-                                                class='size-3 shrink-0 text-primary/40'
-                                                viewBox='0 0 24 24'
-                                                fill='none'
-                                                stroke='currentColor'
-                                                stroke-width='2.5'
-                                                stroke-linecap='round'
-                                                stroke-linejoin='round'
-                                                aria-hidden='true'
-                                            >
-                                                <path d='m9 18 6-6-6-6' />
-                                            </svg>
-                                            {item.label}
-                                        </a>
-                                    ))}
-                                </div>
-                            </div>
+                        serviceLinks.map((service) => (
+                            <a
+                                href={service.href}
+                                class:list={[
+                                    'block px-3 py-2 text-sm rounded-md transition-colors',
+                                    currentPath.startsWith(service.href)
+                                        ? 'text-primary bg-accent'
+                                        : 'text-muted-foreground hover:text-foreground hover:bg-accent',
+                                ]}
+                            >
+                                {service.label}
+                            </a>
                         ))
                     }
                 </div>
@@ -228,7 +203,6 @@ const isServicesActive = currentPath.startsWith('/services');
                 >
                 012 655 0284
             </a>
-            <!-- Theme toggle (mobile drawer) -->
             <button
                 id='theme-toggle-mobile'
                 type='button'
@@ -456,14 +430,14 @@ const isServicesActive = currentPath.startsWith('/services');
                     ]}>About</a
                 >
 
-                <!-- Services mega menu -->
-                <div class='relative' id='services-menu-wrapper'>
+                <!-- Services dropdown (click-to-open, stays open while interacting) -->
+                <div class='relative' id='services-wrapper'>
                     <button
                         id='services-trigger'
                         type='button'
                         aria-haspopup='true'
                         aria-expanded='false'
-                        aria-controls='services-mega-menu'
+                        aria-controls='services-dropdown'
                         class:list={[
                             'flex items-center gap-1.5 px-4 py-2 rounded-md text-sm font-medium transition-colors',
                             isServicesActive
@@ -486,75 +460,64 @@ const isServicesActive = currentPath.startsWith('/services');
                             ><path d='m6 9 6 6 6-6'></path></svg
                         >
                     </button>
+
+                    <!-- Dropdown panel — positioned directly below, no gap -->
                     <div
-                        id='services-mega-menu'
-                        role='region'
-                        aria-label='Services menu'
-                        class='hidden absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[860px] bg-background border border-border rounded-xl shadow-xl overflow-hidden'
+                        id='services-dropdown'
+                        role='menu'
+                        aria-label='Services'
+                        class='hidden absolute left-0 top-full w-64 bg-popover border border-border rounded-lg shadow-lg overflow-hidden'
                     >
-                        <div class='grid grid-cols-4 divide-x divide-border'>
-                            {
-                                serviceDivisions.map((service) => (
-                                    <div class='p-5'>
-                                        <a
-                                            href={service.href}
-                                            class='group flex items-start gap-2 mb-3 hover:text-primary transition-colors'
-                                        >
-                                            <span class='font-semibold text-sm text-foreground group-hover:text-primary leading-snug'>
-                                                {service.division}
-                                            </span>
-                                        </a>
-                                        <p class='text-xs text-muted-foreground mb-3 leading-relaxed'>
-                                            {service.description}
-                                        </p>
-                                        <ul class='space-y-1.5'>
-                                            {service.items.map((item) => (
-                                                <li>
-                                                    <a
-                                                        href={item.href}
-                                                        class='flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors group'
-                                                    >
-                                                        <svg
-                                                            xmlns='http://www.w3.org/2000/svg'
-                                                            class='size-3 shrink-0 text-primary/50 group-hover:text-primary transition-colors'
-                                                            viewBox='0 0 24 24'
-                                                            fill='none'
-                                                            stroke='currentColor'
-                                                            stroke-width='2.5'
-                                                            stroke-linecap='round'
-                                                            stroke-linejoin='round'
-                                                            aria-hidden='true'
-                                                        >
-                                                            <path d='m9 18 6-6-6-6' />
-                                                        </svg>
-                                                        {item.label}
-                                                    </a>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                ))
-                            }
-                        </div>
-                        <div
-                            class='bg-muted border-t border-border px-5 py-3 flex items-center justify-between'
+                        <a
+                            href='/services'
+                            role='menuitem'
+                            class='flex items-center gap-2 px-4 py-3 text-sm font-semibold text-primary hover:bg-accent border-b border-border transition-colors'
                         >
-                            <p class='text-xs text-muted-foreground'>
-                                Not sure which service you need?
-                            </p>
-                            <div class='flex items-center gap-3'>
+                            <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                class='size-4 shrink-0'
+                                viewBox='0 0 24 24'
+                                fill='none'
+                                stroke='currentColor'
+                                stroke-width='2'
+                                stroke-linecap='round'
+                                stroke-linejoin='round'
+                                aria-hidden='true'
+                                ><path d='M2 20h20'></path><path
+                                    d='M5 20V8l7-6 7 6v12'></path><path
+                                    d='M9 20v-5h6v5'></path></svg
+                            >
+                            All Services
+                        </a>
+                        {
+                            serviceLinks.map((service) => (
                                 <a
-                                    href='/services'
-                                    class='text-xs font-medium text-primary hover:underline underline-offset-2'
-                                    >View all services →</a
+                                    href={service.href}
+                                    role='menuitem'
+                                    class:list={[
+                                        'flex items-center gap-2 px-4 py-2.5 text-sm transition-colors',
+                                        currentPath.startsWith(service.href)
+                                            ? 'bg-accent text-foreground font-medium'
+                                            : 'text-muted-foreground hover:bg-accent hover:text-foreground',
+                                    ]}
                                 >
-                                <a
-                                    href='/contact'
-                                    class='inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-md hover:bg-primary/90 transition-colors'
-                                    >Get a free quote</a
-                                >
-                            </div>
-                        </div>
+                                    <svg
+                                        xmlns='http://www.w3.org/2000/svg'
+                                        class='size-3.5 shrink-0 text-primary'
+                                        viewBox='0 0 24 24'
+                                        fill='none'
+                                        stroke='currentColor'
+                                        stroke-width='2.5'
+                                        stroke-linecap='round'
+                                        stroke-linejoin='round'
+                                        aria-hidden='true'
+                                    >
+                                        <path d='m9 18 6-6-6-6' />
+                                    </svg>
+                                    {service.label}
+                                </a>
+                            ))
+                        }
                     </div>
                 </div>
 
@@ -602,7 +565,6 @@ const isServicesActive = currentPath.startsWith('/services');
                     >
                     012 655 0284
                 </a>
-                <!-- Theme toggle (desktop) -->
                 <button
                     id='theme-toggle'
                     type='button'
@@ -719,14 +681,12 @@ const isServicesActive = currentPath.startsWith('/services');
     // ── Theme toggle ──────────────────────────────────────────────────────────
     function syncThemeIcons() {
         const isDark = document.documentElement.classList.contains('dark');
-        // Desktop
         document
             .getElementById('sun-desktop')
             ?.classList.toggle('hidden', !isDark);
         document
             .getElementById('moon-desktop')
             ?.classList.toggle('hidden', isDark);
-        // Mobile header
         document
             .getElementById('sun-mobile')
             ?.classList.toggle('hidden', !isDark);
@@ -734,25 +694,67 @@ const isServicesActive = currentPath.startsWith('/services');
             .getElementById('moon-mobile')
             ?.classList.toggle('hidden', isDark);
     }
-
     function toggleTheme() {
         const isDark = document.documentElement.classList.toggle('dark');
         localStorage.setItem('colorTheme', isDark ? 'dark' : 'light');
         syncThemeIcons();
     }
-
     document
         .getElementById('theme-toggle')
         ?.addEventListener('click', toggleTheme);
     document
         .getElementById('theme-toggle-mobile')
         ?.addEventListener('click', toggleTheme);
-
-    // Sync icons on load and after view transitions
     syncThemeIcons();
     document.addEventListener('astro:after-swap', syncThemeIcons);
 
-    // ── Drawer open / close ───────────────────────────────────────────────────
+    // ── Services dropdown (click-to-open, click-outside-to-close) ────────────
+    const servicesTrigger = document.getElementById('services-trigger');
+    const servicesDropdown = document.getElementById('services-dropdown');
+    const servicesChevron = document.getElementById('services-chevron');
+    const servicesWrapper = document.getElementById('services-wrapper');
+
+    function openDropdown() {
+        servicesDropdown?.classList.remove('hidden');
+        servicesTrigger?.setAttribute('aria-expanded', 'true');
+        servicesChevron?.classList.add('rotate-180');
+    }
+    function closeDropdown() {
+        servicesDropdown?.classList.add('hidden');
+        servicesTrigger?.setAttribute('aria-expanded', 'false');
+        servicesChevron?.classList.remove('rotate-180');
+    }
+    function toggleDropdown() {
+        servicesDropdown?.classList.contains('hidden')
+            ? openDropdown()
+            : closeDropdown();
+    }
+
+    servicesTrigger?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleDropdown();
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!servicesWrapper?.contains(e.target as Node)) closeDropdown();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeDropdown();
+            if (
+                !document
+                    .getElementById('mobile-drawer')
+                    ?.classList.contains('translate-x-full')
+            ) {
+                closeDrawer();
+            }
+        }
+    });
+
+    // ── Mobile drawer ─────────────────────────────────────────────────────────
     const drawerOpenBtn = document.getElementById('drawer-open');
     const drawerCloseBtn = document.getElementById('drawer-close');
     const drawer = document.getElementById('mobile-drawer');
@@ -766,7 +768,6 @@ const isServicesActive = currentPath.startsWith('/services');
         document.body.style.overflow = 'hidden';
         (drawer?.querySelector('a, button') as HTMLElement)?.focus();
     }
-
     function closeDrawer() {
         drawer?.classList.add('translate-x-full');
         backdrop?.classList.remove('opacity-100');
@@ -799,42 +800,5 @@ const isServicesActive = currentPath.startsWith('/services');
             mobileServicesPanel?.classList.toggle('hidden') === false;
         mobileServicesToggle.setAttribute('aria-expanded', String(isOpen));
         mobileServicesChevron?.classList.toggle('rotate-180', isOpen);
-    });
-
-    // ── Desktop mega menu ─────────────────────────────────────────────────────
-    const servicesTrigger = document.getElementById('services-trigger');
-    const servicesMegaMenu = document.getElementById('services-mega-menu');
-    const servicesChevron = document.getElementById('services-chevron');
-    const servicesWrapper = document.getElementById('services-menu-wrapper');
-
-    function openMegaMenu() {
-        servicesMegaMenu?.classList.remove('hidden');
-        servicesTrigger?.setAttribute('aria-expanded', 'true');
-        servicesChevron?.classList.add('rotate-180');
-    }
-    function closeMegaMenu() {
-        servicesMegaMenu?.classList.add('hidden');
-        servicesTrigger?.setAttribute('aria-expanded', 'false');
-        servicesChevron?.classList.remove('rotate-180');
-    }
-
-    servicesTrigger?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        servicesMegaMenu?.classList.contains('hidden')
-            ? openMegaMenu()
-            : closeMegaMenu();
-    });
-    servicesWrapper?.addEventListener('mouseenter', openMegaMenu);
-    servicesWrapper?.addEventListener('mouseleave', closeMegaMenu);
-
-    document.addEventListener('click', (e) => {
-        if (!servicesWrapper?.contains(e.target as Node)) closeMegaMenu();
-    });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            if (!drawer?.classList.contains('translate-x-full')) closeDrawer();
-            if (!servicesMegaMenu?.classList.contains('hidden'))
-                closeMegaMenu();
-        }
     });
 </script>

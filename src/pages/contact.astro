@@ -1,0 +1,28 @@
+---
+// NOTE: No prerender = true here — this page needs SSR for the contact form action
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout
+    title='Contact Us'
+    description='Contact Phehlwana Group Investments — call 012 655 0284, email info@phehlwanagroup.co.za, or fill in our enquiry form. Office in Montana Park, Pretoria.'
+>
+    <section class='container mx-auto px-4 py-20 text-center'>
+        <h1 class='text-4xl font-bold mb-4'>Contact Us</h1>
+        <p class='text-muted-foreground mb-6'>
+            This page is under construction.
+        </p>
+        <div class='flex flex-col sm:flex-row gap-4 justify-center'>
+            <a
+                href='tel:+27126550284'
+                class='text-primary font-semibold hover:underline'
+                >📞 012 655 0284</a
+            >
+            <a
+                href='mailto:info@phehlwanagroup.co.za'
+                class='text-primary font-semibold hover:underline'
+                >✉️ info@phehlwanagroup.co.za</a
+            >
+        </div>
+    </section>
+</Layout>
