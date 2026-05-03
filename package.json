@@ -1,5 +1,6 @@
 {
-  "name": "",
+  "name": "phehlwana-group-investments",
+  "description": "Corporate website for phehlwana Group Investments — construction, engineering, cleaning, plant hire and security services in Pretoria, South Africa.",
   "type": "module",
   "version": "0.0.1",
   "engines": {
