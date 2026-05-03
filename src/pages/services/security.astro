@@ -1,14 +1,71 @@
 ---
-import Layout from '@/layouts/Layout.astro';
+import ServiceLayout from '@/layouts/ServiceLayout.astro';
 export const prerender = true;
+
+const services = [
+    {
+        title: 'Manned Guarding',
+        body: 'Professional, uniformed security officers deployed at your premises to deter unauthorised access, monitor activity, and respond to incidents. Available for 24-hour, day-shift, or night-shift coverage.',
+    },
+    {
+        title: 'Access Control',
+        body: 'Management and control of entry and exit points at your facility — including visitor management, vehicle access, boom gates, and turnstile systems.',
+    },
+    {
+        title: 'CCTV Monitoring',
+        body: 'Installation, monitoring, and maintenance of closed-circuit television (CCTV) systems for real-time surveillance and recorded evidence.',
+    },
+    {
+        title: 'Risk Assessment',
+        body: 'Formal security risk assessments to identify vulnerabilities at your site and recommend appropriate countermeasures — in compliance with PSIRA regulations.',
+    },
+    {
+        title: 'Event Security',
+        body: 'Crowd management, access control, and incident response for corporate events, public gatherings, and private functions.',
+    },
+    {
+        title: 'Site Security',
+        body: 'Dedicated security solutions for construction sites, including perimeter control, equipment protection, and after-hours monitoring.',
+    },
+];
 ---
 
-<Layout
+<ServiceLayout
     title='Security Services'
     description='Manned guarding, access control, CCTV surveillance, risk assessment and site security services in Pretoria and Gauteng — Phehlwana Group Investments.'
+    label='Security'
+    subtitle='Professional security solutions for commercial, industrial, and residential clients — from manned guarding and access control to CCTV monitoring and event security.'
+    image='/images/placeholder.svg'
+    imageAlt='Phehlwana Group security officer at a commercial building entrance'
+    serviceParam='Security'
 >
-    <section class='container mx-auto px-4 py-20 text-center'>
-        <h1 class='text-4xl font-bold mb-4'>Security</h1>
-        <p class='text-muted-foreground'>This page is under construction.</p>
-    </section>
-</Layout>
+    <div data-animate>
+        <h2
+            class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
+        >
+            Our Security Services
+        </h2>
+        <div class='grid sm:grid-cols-2 gap-4 mb-8'>
+            {
+                services.map((item) => (
+                    <div class='bg-card border border-border rounded-xl p-5'>
+                        <h3 class='text-sm font-semibold text-foreground mb-2 flex items-center gap-2'>
+                            <span class='size-1.5 rounded-full bg-primary shrink-0' />
+                            {item.title}
+                        </h3>
+                        <p class='text-sm text-muted-foreground leading-relaxed'>
+                            {item.body}
+                        </p>
+                    </div>
+                ))
+            }
+        </div>
+        <p
+            class='text-xs text-muted-foreground bg-accent/40 border border-border rounded-lg px-4 py-3'
+        >
+            All security services are provided in compliance with the Private
+            Security Industry Regulation Act (PSIRA, Act 56 of 2001). PSIRA
+            registration number to be confirmed by client.
+        </p>
+    </div>
+</ServiceLayout>

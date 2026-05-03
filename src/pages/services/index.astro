@@ -1,14 +1,188 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import PageHeader from '@/components/sections/PageHeader.astro';
+import ContactCTA from '@/components/sections/ContactCTA.astro';
+import { serviceDivisions } from '@/data/navigation';
+
 export const prerender = true;
+
+const serviceImages: Record<string, string> = {
+    'Construction & Civil Engineering':
+        '/images/services/service-construction.png',
+    'Mechanical Engineering': '/images/services/service-mechanical.png',
+    'Cleaning & Waste Management': '/images/services/service-cleaning.png',
+    'Plant Hire': '/images/services/service-plant-hire.png',
+    Security: '/images/placeholder.svg',
+};
+
+const serviceDescriptions: Record<string, string> = {
+    'Construction & Civil Engineering':
+        'New builds, renovations, road construction, road maintenance, and safety management — delivered to CIDB standards.',
+    'Mechanical Engineering':
+        'Design, development, installation, and maintenance of mechanical systems and machinery for industrial and commercial clients.',
+    'Cleaning & Waste Management':
+        'Commercial cleaning, industrial hygiene, hazardous waste handling, recycling, and compliant waste disposal.',
+    'Plant Hire':
+        'TLB, excavators, tipper trucks, water carts, bulldozers, generators, and tools — available for wet or dry hire.',
+    Security:
+        'Manned guarding, access control, CCTV monitoring, risk assessment, event security, and site security.',
+};
+
+const processSteps = [
+    {
+        num: '01',
+        title: 'Initial Consultation',
+        body: "Contact us with your project requirements. We'll discuss scope, timeline, and budget.",
+    },
+    {
+        num: '02',
+        title: 'Site Assessment',
+        body: 'Our team visits your site to assess the work and understand the full scope of the project.',
+    },
+    {
+        num: '03',
+        title: 'Proposal & Quote',
+        body: 'We provide a clear, itemised quote with no hidden costs — typically within 1–2 business days.',
+    },
+    {
+        num: '04',
+        title: 'Project Execution',
+        body: 'Our skilled team gets to work, with regular progress updates and strict quality and safety controls.',
+    },
+    {
+        num: '05',
+        title: 'Handover & Support',
+        body: 'We complete a formal handover, address any snags, and remain available for ongoing support.',
+    },
+];
 ---
 
 <Layout
-    title='Our Services'
-    description='Phehlwana Group offers construction, civil engineering, mechanical engineering, cleaning, waste management and plant hire in Pretoria and Gauteng.'
+    title='Our Services | Phehlwana Group Investments — Construction, Engineering & More'
+    description='Phehlwana Group offers construction, civil engineering, mechanical engineering, cleaning, waste management, plant hire and security services across South Africa. Request a free quote today.'
 >
-    <section class='container mx-auto px-4 py-20 text-center'>
-        <h1 class='text-4xl font-bold mb-4'>Our Services</h1>
-        <p class='text-muted-foreground'>This page is under construction.</p>
+    <PageHeader
+        label='Our Services'
+        title='We Provide Best Services'
+        subtitle='Comprehensive solutions across construction, engineering, cleaning, plant hire and security'
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]}
+    />
+
+    <!-- Intro -->
+    <section class='container mx-auto px-4 py-14'>
+        <div class='max-w-3xl mx-auto text-center mb-12' data-animate>
+            <p class='text-muted-foreground leading-relaxed'>
+                At Phehlwana Group, we are committed to delivering excellence
+                across every service we provide. With over a decade of
+                experience and a team of 50+ skilled professionals, we serve
+                government, corporate, and private clients across Gauteng and
+                South Africa. Whether you need a new building constructed, a
+                road maintained, machinery serviced, a facility cleaned,
+                equipment hired, or a site secured — we have the expertise, the
+                equipment, and the people to get it done right.
+            </p>
+        </div>
+
+        <!-- Service cards -->
+        <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {
+                serviceDivisions.map((service) => (
+                    <article
+                        class='group relative bg-card ring-1 ring-border rounded-xl overflow-hidden flex flex-col transition-shadow hover:shadow-lg'
+                        data-animate
+                    >
+                        <a
+                            href={service.href}
+                            class='absolute inset-0 z-10'
+                            aria-label={`Learn more about ${service.division}`}
+                        />
+                        <div class='aspect-video overflow-hidden bg-accent'>
+                            <img
+                                src={
+                                    serviceImages[service.division] ??
+                                    '/images/placeholder.svg'
+                                }
+                                alt=''
+                                width='640'
+                                height='360'
+                                loading='lazy'
+                                decoding='async'
+                                class='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
+                            />
+                        </div>
+                        <div class='flex flex-col flex-1 p-5 gap-2'>
+                            <h2 class='text-base font-semibold text-foreground group-hover:text-primary transition-colors'>
+                                {service.division}
+                            </h2>
+                            <p class='text-sm text-muted-foreground leading-relaxed flex-1'>
+                                {serviceDescriptions[service.division]}
+                            </p>
+                            <p class='text-sm text-muted-foreground italic'>
+                                {service.description}
+                            </p>
+                            <span class='text-xs font-medium text-primary flex items-center gap-1 mt-2'>
+                                Read More
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    class='size-3'
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='currentColor'
+                                    stroke-width='2.5'
+                                    stroke-linecap='round'
+                                    stroke-linejoin='round'
+                                    aria-hidden='true'
+                                >
+                                    <path d='m9 18 6-6-6-6' />
+                                </svg>
+                            </span>
+                        </div>
+                    </article>
+                ))
+            }
+        </div>
     </section>
+
+    <!-- How We Work -->
+    <section class='bg-accent/40 border-y border-border py-14'>
+        <div class='container mx-auto px-4'>
+            <div class='text-center mb-10' data-animate>
+                <p
+                    class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
+                >
+                    Our Process
+                </p>
+                <h2 class='text-2xl font-bold text-foreground'>
+                    Simple, Transparent, Reliable
+                </h2>
+            </div>
+            <div class='grid sm:grid-cols-2 lg:grid-cols-5 gap-4'>
+                {
+                    processSteps.map((step) => (
+                        <div
+                            class='bg-card border border-border rounded-xl p-5 text-center'
+                            data-animate
+                        >
+                            <div class='size-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3'>
+                                <span class='text-xs font-bold text-primary'>
+                                    {step.num}
+                                </span>
+                            </div>
+                            <h3 class='text-sm font-semibold text-foreground mb-2'>
+                                {step.title}
+                            </h3>
+                            <p class='text-xs text-muted-foreground leading-relaxed'>
+                                {step.body}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <ContactCTA
+        heading='Ready to Get Started?'
+        body='Contact us today for a free, no-obligation quote on any of our services. Our team responds within 1 business day.'
+    />
 </Layout>

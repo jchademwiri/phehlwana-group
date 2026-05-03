@@ -1,0 +1,194 @@
+---
+/**
+ * ServiceLayout — shared shell for all 5 individual service pages.
+ *
+ * Props:
+ *   title        — page <title> and h1
+ *   description  — meta description
+ *   label        — eyebrow text (e.g. "Construction & Civil Engineering")
+ *   subtitle     — subtitle below h1
+ *   image        — hero image path
+ *   imageAlt     — alt text for hero image
+ *   serviceParam — value passed to /contact?service= CTA links
+ */
+
+import Layout from '@/layouts/Layout.astro';
+import PageHeader from '@/components/sections/PageHeader.astro';
+import ContactCTA from '@/components/sections/ContactCTA.astro';
+
+interface Props {
+    title: string;
+    description: string;
+    label: string;
+    subtitle: string;
+    image: string;
+    imageAlt: string;
+    serviceParam: string;
+}
+
+const { title, description, label, subtitle, image, imageAlt, serviceParam } =
+    Astro.props;
+
+const processSteps = [
+    {
+        num: '01',
+        title: 'Initial Consultation',
+        body: "Contact us with your project requirements. We'll discuss scope, timeline, and budget.",
+    },
+    {
+        num: '02',
+        title: 'Site Assessment',
+        body: 'Our team visits your site to assess the work and understand the full scope of the project.',
+    },
+    {
+        num: '03',
+        title: 'Detailed Proposal & Quote',
+        body: 'We provide a clear, itemised quote with no hidden costs — typically within 1–2 business days.',
+    },
+    {
+        num: '04',
+        title: 'Project Execution',
+        body: 'Our skilled team gets to work, with regular progress updates and strict quality and safety controls.',
+    },
+    {
+        num: '05',
+        title: 'Handover & Support',
+        body: 'We complete a formal handover, address any snags, and remain available for ongoing support.',
+    },
+];
+---
+
+<Layout
+    title={`${title} | Phehlwana Group Investments`}
+    description={description}
+>
+    <PageHeader
+        label={label}
+        title={title}
+        subtitle={subtitle}
+        breadcrumbs={[
+            { label: 'Home', href: '/' },
+            { label: 'Services', href: '/services' },
+            { label: title },
+        ]}
+    />
+
+    <!-- Hero image -->
+    <div class='container mx-auto px-4 max-w-5xl mt-8'>
+        <div
+            class='aspect-16/6 rounded-2xl overflow-hidden bg-accent shadow-sm'
+        >
+            <img
+                src={image}
+                alt={imageAlt}
+                width='1024'
+                height='384'
+                loading='eager'
+                decoding='async'
+                class='w-full h-full object-cover'
+            />
+        </div>
+    </div>
+
+    <!-- Service content (injected by each page) -->
+    <div class='container mx-auto px-4 max-w-5xl py-12'>
+        <slot />
+    </div>
+
+    <!-- How We Work -->
+    <section class='bg-accent/40 border-y border-border py-14'>
+        <div class='container mx-auto px-4 max-w-5xl'>
+            <div class='text-center mb-10' data-animate>
+                <p
+                    class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
+                >
+                    Our Process
+                </p>
+                <h2 class='text-2xl font-bold text-foreground'>
+                    Simple, Transparent, Reliable
+                </h2>
+            </div>
+            <div class='grid sm:grid-cols-2 lg:grid-cols-5 gap-4'>
+                {
+                    processSteps.map((step) => (
+                        <div
+                            class='bg-card border border-border rounded-xl p-5 text-center'
+                            data-animate
+                        >
+                            <div class='size-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3'>
+                                <span class='text-xs font-bold text-primary'>
+                                    {step.num}
+                                </span>
+                            </div>
+                            <h3 class='text-sm font-semibold text-foreground mb-2'>
+                                {step.title}
+                            </h3>
+                            <p class='text-xs text-muted-foreground leading-relaxed'>
+                                {step.body}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety commitment -->
+    <section class='container mx-auto px-4 max-w-5xl py-14'>
+        <div class='grid md:grid-cols-2 gap-8 items-center' data-animate>
+            <div>
+                <p
+                    class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
+                >
+                    Health &amp; Safety
+                </p>
+                <h2 class='text-2xl font-bold text-foreground mb-4'>
+                    Safety is Non-Negotiable
+                </h2>
+                <p class='text-muted-foreground leading-relaxed'>
+                    At Phehlwana Group, the health and safety of our employees,
+                    clients, and the public is our highest priority. We operate
+                    in full compliance with the Occupational Health and Safety
+                    Act (OHS Act 85 of 1993) and maintain a zero-harm culture
+                    across all our operations.
+                </p>
+            </div>
+            <ul class='space-y-2.5'>
+                {
+                    [
+                        'Dedicated safety officer assigned to every project site',
+                        'Regular toolbox talks and safety briefings before work commences',
+                        'Full PPE provision for all workers on every site',
+                        'Formal risk assessments conducted before any high-risk activity',
+                        'Incident reporting and investigation procedures in place',
+                        'Regular safety audits and inspections throughout project duration',
+                    ].map((item) => (
+                        <li class='flex items-start gap-2.5 text-sm text-muted-foreground'>
+                            <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                class='size-4 text-primary shrink-0 mt-0.5'
+                                viewBox='0 0 24 24'
+                                fill='none'
+                                stroke='currentColor'
+                                stroke-width='2.5'
+                                stroke-linecap='round'
+                                stroke-linejoin='round'
+                                aria-hidden='true'
+                            >
+                                <polyline points='20 6 9 17 4 12' />
+                            </svg>
+                            {item}
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </section>
+
+    <ContactCTA
+        heading='Ready to Get Started?'
+        body='Contact us today for a free, no-obligation quote. Our team responds within 1 business day.'
+        btnLabel='Request a Quote'
+        btnHref={`/contact?service=${encodeURIComponent(serviceParam)}`}
+    />
+</Layout>
