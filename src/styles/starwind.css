@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -180,4 +181,92 @@
 [data-animate].animate-in {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ── Prose / Typography — override @tailwindcss/typography to use design tokens ── */
+.prose {
+  --tw-prose-body: var(--color-foreground);
+  --tw-prose-headings: var(--color-foreground);
+  --tw-prose-lead: var(--color-muted-foreground);
+  --tw-prose-links: var(--color-primary);
+  --tw-prose-bold: var(--color-foreground);
+  --tw-prose-counters: var(--color-muted-foreground);
+  --tw-prose-bullets: var(--color-primary);
+  --tw-prose-hr: var(--color-border);
+  --tw-prose-quotes: var(--color-foreground);
+  --tw-prose-quote-borders: var(--color-primary);
+  --tw-prose-captions: var(--color-muted-foreground);
+  --tw-prose-code: var(--color-foreground);
+  --tw-prose-pre-code: var(--color-foreground);
+  --tw-prose-pre-bg: var(--color-accent);
+  --tw-prose-th-borders: var(--color-border);
+  --tw-prose-td-borders: var(--color-border);
+
+  /* dark mode */
+  --tw-prose-invert-body: var(--color-foreground);
+  --tw-prose-invert-headings: var(--color-foreground);
+  --tw-prose-invert-lead: var(--color-muted-foreground);
+  --tw-prose-invert-links: var(--color-primary);
+  --tw-prose-invert-bold: var(--color-foreground);
+  --tw-prose-invert-counters: var(--color-muted-foreground);
+  --tw-prose-invert-bullets: var(--color-primary);
+  --tw-prose-invert-hr: var(--color-border);
+  --tw-prose-invert-quotes: var(--color-foreground);
+  --tw-prose-invert-quote-borders: var(--color-primary);
+  --tw-prose-invert-captions: var(--color-muted-foreground);
+  --tw-prose-invert-code: var(--color-foreground);
+  --tw-prose-invert-pre-code: var(--color-foreground);
+  --tw-prose-invert-pre-bg: var(--color-accent);
+  --tw-prose-invert-th-borders: var(--color-border);
+  --tw-prose-invert-td-borders: var(--color-border);
+}
+
+/* Tighten up prose defaults to match the site's design language */
+.prose :where(h2):not(:where([class~="not-prose"] *)) {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.375rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+}
+
+.prose :where(h3):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.prose :where(table):not(:where([class~="not-prose"] *)) {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.prose :where(th):not(:where([class~="not-prose"] *)) {
+  background-color: var(--color-accent);
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+}
+
+.prose :where(td):not(:where([class~="not-prose"] *)) {
+  padding: 0.5rem 0.75rem;
+}
+
+.prose :where(blockquote):not(:where([class~="not-prose"] *)) {
+  background-color: color-mix(in srgb, var(--color-primary) 6%, transparent);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.75rem 1rem;
+  font-style: normal;
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *)):not(pre code) {
+  background-color: var(--color-accent);
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.375rem;
+  font-size: 0.875em;
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *)):not(pre code)::before,
+.prose :where(code):not(:where([class~="not-prose"] *)):not(pre code)::after {
+  content: none;
 }

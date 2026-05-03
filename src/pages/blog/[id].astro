@@ -1,0 +1,236 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+    const posts = await getCollection('blog', ({ data }) => data.published);
+    return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+
+// Build TOC from h2 and h3 headings
+const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
+
+function formatDate(date: Date): string {
+    return date.toLocaleDateString('en-ZA', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    });
+}
+
+// Estimate reading time (avg 200 wpm)
+const wordCount = post.body?.split(/\s+/).length ?? 0;
+const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+---
+
+<Layout title={post.data.title} description={post.data.description}>
+
+    <!-- ── Hero header ─────────────────────────────────────────────────────── -->
+    <section class='bg-accent/40 border-b border-border py-12 lg:py-16'>
+        <div class='container mx-auto px-4 max-w-5xl'>
+
+            <!-- Breadcrumb -->
+            <nav aria-label='Breadcrumb' class='mb-6'>
+                <ol class='flex items-center gap-1.5 text-xs text-muted-foreground'>
+                    <li><a href='/' class='hover:text-foreground transition-colors'>Home</a></li>
+                    <li aria-hidden='true'><svg xmlns='http://www.w3.org/2000/svg' class='size-3' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='m9 18 6-6-6-6'/></svg></li>
+                    <li><a href='/blog' class='hover:text-foreground transition-colors'>Blog</a></li>
+                    <li aria-hidden='true'><svg xmlns='http://www.w3.org/2000/svg' class='size-3' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='m9 18 6-6-6-6'/></svg></li>
+                    <li class='text-foreground truncate max-w-xs' aria-current='page'>{post.data.title}</li>
+                </ol>
+            </nav>
+
+            <!-- Tags -->
+            {post.data.tags.length > 0 && (
+                <div class='flex flex-wrap gap-2 mb-5'>
+                    {post.data.tags.map((tag) => (
+                        <span class='inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20'>
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+            )}
+
+            <h1 class='text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-5'>
+                {post.data.title}
+            </h1>
+
+            <p class='text-lg text-muted-foreground leading-relaxed mb-6 max-w-2xl'>
+                {post.data.description}
+            </p>
+
+            <!-- Meta row -->
+            <div class='flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground'>
+                <span class='flex items-center gap-1.5'>
+                    <svg xmlns='http://www.w3.org/2000/svg' class='size-4 text-primary' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><circle cx='12' cy='8' r='4'/><path d='M20 21a8 8 0 1 0-16 0'/></svg>
+                    {post.data.author}
+                </span>
+                <span aria-hidden='true' class='text-border'>|</span>
+                <time datetime={post.data.pubDate.toISOString()} class='flex items-center gap-1.5'>
+                    <svg xmlns='http://www.w3.org/2000/svg' class='size-4 text-primary' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect width='18' height='18' x='3' y='4' rx='2'/><path d='M16 2v4M8 2v4M3 10h18'/></svg>
+                    {formatDate(post.data.pubDate)}
+                </time>
+                <span aria-hidden='true' class='text-border'>|</span>
+                <span class='flex items-center gap-1.5'>
+                    <svg xmlns='http://www.w3.org/2000/svg' class='size-4 text-primary' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 14'/></svg>
+                    {readingTime} min read
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Cover image ──────────────────────────────────────────────────────── -->
+    {post.data.coverImage && (
+        <div class='container mx-auto px-4 max-w-5xl mt-8'>
+            <div class='aspect-16/6 rounded-2xl overflow-hidden bg-accent shadow-sm'>
+                <img
+                    src={post.data.coverImage}
+                    alt={post.data.title}
+                    width='1024'
+                    height='384'
+                    loading='eager'
+                    decoding='async'
+                    class='w-full h-full object-cover'
+                />
+            </div>
+        </div>
+    )}
+
+    <!-- ── Two-column layout: TOC sidebar + article ─────────────────────────── -->
+    <div class='container mx-auto px-4 max-w-5xl py-12'>
+        <div class='lg:grid lg:grid-cols-[1fr_260px] lg:gap-12 items-start'>
+
+            <!-- Article body -->
+            <article>
+                <div class='prose prose-neutral dark:prose-invert max-w-none prose-lg'>
+                    <Content />
+                </div>
+            </article>
+
+            <!-- TOC sidebar — sticky on desktop, hidden on mobile -->
+            {tocHeadings.length > 0 && (
+                <aside
+                    class='hidden lg:block sticky top-32 self-start'
+                    aria-label='Table of contents'
+                >
+                    <div class='bg-card border border-border rounded-xl p-5'>
+                        <p class='text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4'>
+                            On this page
+                        </p>
+                        <nav>
+                            <ul class='space-y-1' id='toc-list'>
+                                {tocHeadings.map((h) => (
+                                    <li>
+                                        <a
+                                            href={`#${h.slug}`}
+                                            class:list={[
+                                                'toc-link block text-sm leading-snug py-1 transition-colors rounded',
+                                                'text-muted-foreground hover:text-foreground',
+                                                h.depth === 3 ? 'pl-4 text-xs' : 'pl-0 font-medium',
+                                            ]}
+                                        >
+                                            {h.text}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Share / copy link -->
+                    <div class='mt-4 bg-card border border-border rounded-xl p-5'>
+                        <p class='text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-3'>
+                            Share
+                        </p>
+                        <button
+                            id='copy-link-btn'
+                            type='button'
+                            class='w-full inline-flex items-center justify-center gap-2 text-sm text-muted-foreground hover:text-foreground border border-border rounded-lg px-3 py-2 transition-colors hover:bg-accent'
+                        >
+                            <svg xmlns='http://www.w3.org/2000/svg' class='size-4' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'/><path d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'/></svg>
+                            <span id='copy-link-label'>Copy link</span>
+                        </button>
+                    </div>
+                </aside>
+            )}
+        </div>
+    </div>
+
+    <!-- ── Bottom bar ───────────────────────────────────────────────────────── -->
+    <div class='border-t border-border bg-accent/30'>
+        <div class='container mx-auto px-4 max-w-5xl py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4'>
+            <a
+                href='/blog'
+                class='inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors'
+            >
+                <svg xmlns='http://www.w3.org/2000/svg' class='size-4' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M19 12H5'/><path d='m12 19-7-7 7-7'/></svg>
+                Back to Blog
+            </a>
+            <a
+                href='/contact'
+                class='inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-5 py-2.5 rounded-lg text-sm hover:bg-primary/90 transition-colors'
+            >
+                Request a Quote
+                <svg xmlns='http://www.w3.org/2000/svg' class='size-4' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M5 12h14'/><path d='m12 5 7 7-7 7'/></svg>
+            </a>
+        </div>
+    </div>
+</Layout>
+
+<script>
+    // ── TOC active heading highlight ──────────────────────────────────────────
+    const tocLinks = document.querySelectorAll<HTMLAnchorElement>('.toc-link');
+
+    if (tocLinks.length > 0) {
+        const headingEls = Array.from(tocLinks)
+            .map((link) => {
+                const id = link.getAttribute('href')?.slice(1);
+                return id ? document.getElementById(id) : null;
+            })
+            .filter(Boolean) as HTMLElement[];
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        tocLinks.forEach((l) => {
+                            l.classList.remove('text-primary', 'font-semibold');
+                            l.classList.add('text-muted-foreground');
+                        });
+                        const active = document.querySelector<HTMLAnchorElement>(
+                            `.toc-link[href="#${entry.target.id}"]`,
+                        );
+                        if (active) {
+                            active.classList.add('text-primary', 'font-semibold');
+                            active.classList.remove('text-muted-foreground');
+                        }
+                    }
+                });
+            },
+            { rootMargin: '-20% 0px -70% 0px' },
+        );
+
+        headingEls.forEach((el) => observer.observe(el));
+    }
+
+    // ── Copy link button ──────────────────────────────────────────────────────
+    const copyBtn   = document.getElementById('copy-link-btn');
+    const copyLabel = document.getElementById('copy-link-label');
+
+    copyBtn?.addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText(window.location.href);
+            if (copyLabel) copyLabel.textContent = 'Copied!';
+            setTimeout(() => {
+                if (copyLabel) copyLabel.textContent = 'Copy link';
+            }, 2000);
+        } catch {
+            // fallback — select the URL
+        }
+    });
+</script>
