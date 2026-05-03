@@ -63,6 +63,7 @@ Keywords:    contact Phehlwana Group, construction quote Pretoria, request quote
 - Industrial Cleaning
 - Waste Management
 - Plant Hire
+- Security
 - General Enquiry
 
 **Submit button:** Send Message
@@ -71,18 +72,29 @@ Keywords:    contact Phehlwana Group, construction quote Pretoria, request quote
 
 ### Form Backend Configuration
 
-**Platform:** [FormSubmit.co](https://formsubmit.co)
+**Platform:** Resend + Astro Server Actions (Phase 6 of the development plan)
 
-**Correct configuration:**
+> **NOTE:** The developer guide confirms the contact form uses **Resend** for email
+> delivery with **React Email** templates — NOT FormSubmit.co. The old site used
+> FormSubmit; the new site uses a proper Astro Server Action.
+
+**How it works:**
+1. User submits the form
+2. Astro Server Action (`src/actions/index.ts`) validates input with Zod
+3. Two emails are sent via Resend:
+   - Notification email → `info@phehlwanagroup.co.za`
+   - Auto-reply confirmation → the person who submitted
+4. On success: redirect to `/thank-you`
+5. On error: form re-renders with error messages and field values preserved
+
+**Environment variables required (set in Vercel before Phase 6):**
 ```
-Action:        https://formsubmit.co/info@phehlwanagroup.co.za
-Redirect:      https://www.phehlwanagroup.co.za/thank-you
-Subject:       New Enquiry from Phehlwana Group Website
-Captcha:       Enable honeypot (_honey field) for spam protection
-Auto-response: See auto-response text below
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxx
+FROM_EMAIL=noreply@phehlwanagroup.co.za   # Must be verified domain in Resend
+TO_EMAIL=info@phehlwanagroup.co.za
 ```
 
-**Auto-response email to sender:**
+**Auto-reply email to sender:**
 > Subject: Thank you for contacting Phehlwana Group Investments
 >
 > Dear [Name],
@@ -90,17 +102,18 @@ Auto-response: See auto-response text below
 > Thank you for reaching out to Phehlwana Group Investments. We have received your
 > message and a member of our team will be in touch within 1 business day.
 >
-> If your matter is urgent, please call us directly on 012 655 0284 or 079 294 7635.
+> If your matter is urgent, please contact us directly:
+> - Office: 012 655 0284
+> - Mobile: 079 294 7635
+> - Email: info@phehlwanagroup.co.za
 >
 > Kind regards,
 > The Phehlwana Group Team
 > www.phehlwanagroup.co.za
 
-> **FIXES APPLIED:**
-> - Redirect URL corrected to `https://www.phehlwanagroup.co.za/thank-you`
-> - Spam protection: use FormSubmit honeypot (`<input type="text" name="_honey" style="display:none">`)
-> - Auto-response rewritten to be professional and include response time commitment
-> - Duplicate `<form>` tags removed — use a single form element
+> **NOTE:** The `?service=` URL parameter pre-populates the Service Type dropdown.
+> Each service page links to `/contact?service=[Service+Name]` so the field is
+> already filled when the user arrives from a service page.
 
 ---
 
@@ -112,11 +125,6 @@ Auto-response: See auto-response text below
 *(This is the standardised address — use this exact format on all pages)*
 
 Google Maps link: [View on Google Maps](https://www.google.com/maps/place/PKN+Office+Park)
-
----
-
-### Email
-**info@phehlwanagroup.co.za**
 
 ---
 
@@ -225,7 +233,8 @@ contributor. Our current certificate is available on request."]**
 
 ## Thank You Page
 
-> **This page must be created at `/thank-you`**
+> **This page already exists as a stub at `src/pages/thank-you.astro`** (built in Phase 0).
+> It will be fully built in Phase 6 alongside the contact form.
 
 **Page title:** Thank You for Getting in Touch!
 
@@ -259,4 +268,5 @@ contributor. Our current certificate is available on request."]**
 | 4 | BBBEE level                   | Current level for FAQ                                              |
 | 5 | Emergency maintenance policy  | Do you offer after-hours emergency response?                       |
 | 6 | CV submission email           | Confirm `careers@phehlwanagroup.co.za` or correct address          |
-| 7 | Create Thank You page         | At `/thank-you` — content provided above                           |
+| 7 | Resend domain verification    | Domain `phehlwanagroup.co.za` must be verified in Resend before Phase 6 |
+| 8 | Security service details      | Add Security to the service type dropdown once confirmed           |

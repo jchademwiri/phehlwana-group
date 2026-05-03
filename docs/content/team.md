@@ -1,7 +1,7 @@
 # Team Page — Phehlwana Group Investments
 
 > **File:** `team.md`
-> **Page:** Our Team (`team.html`)
+> **Page:** Our Team (`/team`)
 > **Last reviewed:** May 2026
 
 ---

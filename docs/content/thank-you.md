@@ -66,7 +66,7 @@ Thank You for Getting in Touch!
 
 ## Auto-Response Email (sent to the user)
 
-This email is sent automatically by FormSubmit when the form is submitted.
+This email is sent automatically by **Resend** via the Astro Server Action when the form is submitted successfully (`src/actions/index.ts` — Phase 6).
 
 **Subject:** Thank you for contacting Phehlwana Group Investments
 

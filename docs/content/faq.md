@@ -44,11 +44,12 @@ Keywords:    Phehlwana Group FAQ, construction questions South Africa, plant hir
 
 **Q: What services does Phehlwana Group Investments offer?**
 
-A: We offer four core service areas:
+A: We offer five core service areas:
 1. **Construction and Civil Engineering** — new builds, renovations, road construction, and maintenance
 2. **Mechanical Engineering** — design, installation, and maintenance of mechanical systems
 3. **Cleaning and Waste Management** — commercial cleaning, industrial hygiene, and waste disposal
 4. **Plant Hire** — equipment hire with or without operators
+5. **Security** — manned guarding, access control, CCTV, event security, and site security
 
 ---
 
@@ -289,6 +290,40 @@ insurance. Our certificate of insurance is available on request."]**
 
 ---
 
+## Category: Security
+
+---
+
+**Q: What security services do you offer?**
+
+A: Our Security division provides:
+- Manned guarding (24-hour, day-shift, or night-shift)
+- Access control and visitor management
+- CCTV installation and monitoring
+- Security risk assessments
+- Event security and crowd management
+- Construction site security
+
+**[TODO: Confirm the full list of security services with the client.]**
+
+---
+
+**Q: Are your security officers PSIRA registered?**
+
+A: **[TODO: Confirm — e.g. "Yes, all our security officers are registered with PSIRA
+(Private Security Industry Regulatory Authority) as required by the Private Security
+Industry Regulation Act (Act 56 of 2001). Our company PSIRA registration number
+is [X]."]**
+
+---
+
+**Q: Do you offer 24-hour security coverage?**
+
+A: **[TODO: Confirm — e.g. "Yes, we offer 24-hour manned guarding for clients who
+require round-the-clock coverage."]**
+
+---
+
 ## Still Have Questions?
 
 **Heading:** Didn't Find Your Answer?
@@ -322,3 +357,6 @@ insurance. Our certificate of insurance is available on request."]**
 | 6 | Plant hire fuel policy            | Who provides fuel, return policy                                   |
 | 7 | Public liability insurance        | Confirm coverage and certificate availability                      |
 | 8 | Emergency maintenance policy      | After-hours response availability                                  |
+| 9 | Security services full list       | Confirm all security services offered                              |
+| 10 | PSIRA registration number        | Required for security FAQ answers                                  |
+| 11 | 24-hour security availability    | Confirm if 24-hour guarding is offered                             |

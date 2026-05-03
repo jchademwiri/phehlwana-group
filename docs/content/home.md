@@ -11,11 +11,11 @@
 ```
 Title:       Phehlwana Group Investments | Construction, Engineering & Plant Hire Pretoria
 Description: Phehlwana Group Investments — trusted construction, civil engineering,
-             mechanical services, cleaning and plant hire in Pretoria, South Africa.
+             mechanical services, cleaning, plant hire and security in Pretoria.
              Established 2015. Call 012 655 0284.
 Keywords:    construction Pretoria, civil engineering South Africa, plant hire Gauteng,
              cleaning services Pretoria, road maintenance, building maintenance,
-             mechanical engineering, waste management South Africa
+             mechanical engineering, waste management, security services South Africa
 ```
 
 ---
@@ -37,14 +37,27 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 
 ## Navigation
 
-| Nav Item      | Link Target | Notes                                           |
-|---------------|-------------|-------------------------------------------------|
-| Home          | `/`         | Active on this page                             |
-| About         | `/about`    |                                                 |
-| Services      | `/services` |                                                 |
-| Explore       | Dropdown    | Contains: Our Blog, Our Team                    |
-| Contact       | `/contact`  |                                                 |
-| Request Quote | `/contact`  | Primary CTA button                              |
+| Nav Item      | Link Target | Notes                                                    |
+|---------------|-------------|----------------------------------------------------------|
+| Home          | `/`         | Active on this page                                      |
+| About         | `/about`    |                                                          |
+| Services      | Dropdown    | 5 divisions — see below                                  |
+| Projects      | `/projects` |                                                          |
+| Contact       | `/contact`  |                                                          |
+| Request Quote | `/contact`  | Primary CTA button                                       |
+
+**Services dropdown (5 divisions):**
+
+| Division                        | URL                        |
+|---------------------------------|----------------------------|
+| Construction & Civil Engineering | `/services/construction`  |
+| Mechanical Engineering          | `/services/mechanical`     |
+| Cleaning & Waste Management     | `/services/cleaning`       |
+| Plant Hire                      | `/services/plant-hire`     |
+| Security                        | `/services/security`       |
+
+> **NOTE:** The developer guide confirms 5 service divisions including Security.
+> The old site only showed 4 — Security must be added to all service listings.
 
 **Phone CTA (desktop):**
 - Label: "Call to Our Experts"
@@ -191,16 +204,18 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 
 ### Service Cards
 
-| # | Service Name                       | Summary                                                                                                                    | Image alt text                                      | CTA                       |
-|---|------------------------------------|----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|---------------------------|
-| 1 | Construction & Civil Engineering   | New builds, renovations, road construction, road maintenance, and safety management — delivered to CIDB standards.         | Construction workers on a building site             | Read More → `/services`   |
-| 2 | Mechanical Engineering             | Design, development, installation, and maintenance of mechanical systems and machinery for industrial and commercial clients. | Mechanical engineer working on industrial equipment | Read More → `/services`   |
-| 3 | Cleaning & Waste Management        | Commercial cleaning, industrial hygiene, hazardous waste handling, recycling, and compliant waste disposal.                | Cleaning team in a commercial building              | Read More → `/services`   |
-| 4 | Plant Hire                         | TLB, excavators, tipper trucks, water carts, bulldozers, generators, and tools — available for wet or dry hire.           | TLB and construction equipment on a project site    | Read More → `/services`   |
+| # | Service Name                       | Summary                                                                                                                    | Image alt text                                      | CTA                                    |
+|---|------------------------------------|----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|----------------------------------------|
+| 1 | Construction & Civil Engineering   | New builds, renovations, road construction, road maintenance, and safety management — delivered to CIDB standards.         | Construction workers on a building site             | Read More → `/services/construction`   |
+| 2 | Mechanical Engineering             | Design, development, installation, and maintenance of mechanical systems and machinery for industrial and commercial clients. | Mechanical engineer working on industrial equipment | Read More → `/services/mechanical`     |
+| 3 | Cleaning & Waste Management        | Commercial cleaning, industrial hygiene, hazardous waste handling, recycling, and compliant waste disposal.                | Cleaning team in a commercial building              | Read More → `/services/cleaning`       |
+| 4 | Plant Hire                         | TLB, excavators, tipper trucks, water carts, bulldozers, generators, and tools — available for wet or dry hire.           | TLB and construction equipment on a project site    | Read More → `/services/plant-hire`     |
+| 5 | Security                           | Manned guarding, access control, CCTV monitoring, risk assessment, event security, and site security.                     | Security officer at a commercial building entrance  | Read More → `/services/security`       |
 
 **Bottom CTA:** View All Services → `/services`
 
-> **[TODO: Replace `blog-1.png` through `blog-4.png` with dedicated service images]**
+> **[TODO: Replace `blog-1.png` through `blog-4.png` with dedicated service images.
+> Add a 5th card image for Security.]**
 
 ---
 
@@ -227,10 +242,8 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 ### Navigation Links
 - About Us → `/about`
 - Services → `/services`
-- Blog → `/blog`
+- Projects → `/projects`
 - Contact → `/contact`
-
-*(Removed "Features" — unclear/irrelevant. FAQ page to be created post-launch.)*
 
 ### Contact Details (Footer)
 
@@ -249,16 +262,21 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 
 ### Social Media
 - Facebook: **[TODO: Add URL]**
-- Twitter/X: **[TODO: Add URL]**
 - Instagram: **[TODO: Add URL]**
 - LinkedIn: **[TODO: Add URL]**
+
+> **NOTE:** The developer guide uses `socialLinks` in `src/data/navigation.ts` as the
+> single source of truth for social URLs. Update that file — not individual pages.
 
 ---
 
 ## Copyright
 
 > © Phehlwana Group Investments 2026. All rights reserved.
-> Designed by [Mothupi Solutions](https://www.mothupisolutions.co.za)
+> Designed by [Apex Web Solutions](https://apexwebsolutions.co.za)
+
+> **NOTE:** Developer credit is Apex Web Solutions per `src/data/navigation.ts`.
+> The old site showed "Mothupi Solutions" — this has been corrected.
 
 ---
 

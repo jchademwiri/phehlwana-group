@@ -196,6 +196,8 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 
 **CTA:** Meet the Full Team → `/team`
 
+> **NOTE:** The developer guide shows the Team page is at `/team` — this is correct.
+
 > **[TODO: Add 3–4 team member cards here as a preview — name, title, photo.
 > Full bios on the Team page.]**
 

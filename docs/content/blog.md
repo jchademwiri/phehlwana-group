@@ -1,7 +1,7 @@
 # Blog Page — Phehlwana Group Investments
 
 > **File:** `blog.md`
-> **Page:** Our Blog (`blog.html`)
+> **Page:** Blog / News (`/blog` — content collection at `src/content/blog/`)
 > **Last reviewed:** May 2026
 
 ---

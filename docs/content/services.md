@@ -11,11 +11,11 @@
 ```
 Title:       Our Services | Phehlwana Group Investments — Construction, Engineering & More
 Description: Phehlwana Group offers construction, civil engineering, mechanical
-             engineering, cleaning, waste management and plant hire across South Africa.
-             Request a free quote today.
+             engineering, cleaning, waste management, plant hire and security services
+             across South Africa. Request a free quote today.
 Keywords:    construction services Pretoria, civil engineering South Africa, plant hire
              Gauteng, commercial cleaning Pretoria, road construction, road maintenance,
-             waste management South Africa, mechanical engineering
+             waste management South Africa, mechanical engineering, security services Pretoria
 ```
 
 ---
@@ -24,7 +24,11 @@ Keywords:    construction services Pretoria, civil engineering South Africa, pla
 
 **Page title:** Our Services
 
-**Page subtitle:** Comprehensive solutions across construction, engineering, cleaning and plant hire
+**Page subtitle:** Comprehensive solutions across construction, engineering, cleaning, plant hire and security
+
+> **NOTE:** The developer guide and `navigation.ts` confirm **5 service divisions**.
+> Each has its own dedicated page at `/services/[slug]`. The services overview page
+> at `/services` links to all five.
 
 ---
 
@@ -40,8 +44,8 @@ Keywords:    construction services Pretoria, civil engineering South Africa, pla
 > we serve government, corporate, and private clients across Gauteng and South Africa.
 >
 > Whether you need a new building constructed, a road maintained, machinery serviced,
-> a facility cleaned, or equipment hired — we have the expertise, the equipment, and
-> the people to get it done right.
+> a facility cleaned, equipment hired, or a site secured — we have the expertise,
+> the equipment, and the people to get it done right.
 
 ---
 
@@ -132,7 +136,7 @@ OHS Act.
 Conducting formal road safety audits (RSA) and site inspections to identify and
 remediate potential hazards and blackspots before they cause incidents.
 
-**CTA:** Request a Construction Quote → `/contact`
+**CTA:** Request a Construction Quote → `/contact?service=Construction+%26+Civil+Engineering`
 
 ---
 
@@ -182,7 +186,7 @@ implement safe work procedures on every project.
 - Commercial and industrial buildings
 - Mining support services — **[TODO: Confirm if mining sector is served]**
 
-**CTA:** Request a Mechanical Engineering Quote → `/contact`
+**CTA:** Request a Mechanical Engineering Quote → `/contact?service=Mechanical+Engineering`
 
 ---
 
@@ -256,7 +260,7 @@ waste, including liner systems, leachate management, and gas capture.
 the National Environmental Management: Waste Act (NEM:WA, Act 59 of 2008) and
 applicable municipal by-laws.
 
-**CTA:** Request a Cleaning or Waste Management Quote → `/contact`
+**CTA:** Request a Cleaning or Waste Management Quote → `/contact?service=Cleaning+%26+Waste+Management`
 
 ---
 
@@ -313,7 +317,62 @@ capital cost of ownership.
 3. Equipment is delivered to your site on the agreed date
 4. On completion, we collect the equipment from your site
 
-**CTA:** Request a Plant Hire Quote → `/contact`
+**CTA:** Request a Plant Hire Quote → `/contact?service=Plant+Hire`
+
+---
+
+## Service 5 — Security
+
+**Page URL:** `/services/security`
+
+**Icon:** `fa-shield-alt` or `fa-user-shield`
+
+**Image:** `public/images/services/security.jpg`
+**Alt text:** "Phehlwana Group security officer at a commercial building entrance"
+
+**Heading:** Security
+
+**Summary:** Professional security solutions for commercial, industrial, and residential
+clients — from manned guarding and access control to CCTV monitoring and event security.
+
+> **NOTE:** Security is confirmed as the 5th service division in `src/data/navigation.ts`
+> and `src/pages/services/security.astro`. Full service details below are to be
+> populated once the client provides specifics (see TODOs).
+
+---
+
+### Manned Guarding
+Professional, uniformed security officers deployed at your premises to deter
+unauthorised access, monitor activity, and respond to incidents. Available for
+24-hour, day-shift, or night-shift coverage.
+
+### Access Control
+Management and control of entry and exit points at your facility — including
+visitor management, vehicle access, boom gates, and turnstile systems.
+
+### CCTV Monitoring
+Installation, monitoring, and maintenance of closed-circuit television (CCTV)
+systems for real-time surveillance and recorded evidence.
+
+### Risk Assessment
+Formal security risk assessments to identify vulnerabilities at your site and
+recommend appropriate countermeasures — in compliance with PSIRA regulations.
+
+### Event Security
+Crowd management, access control, and incident response for corporate events,
+public gatherings, and private functions.
+
+### Site Security
+Dedicated security solutions for construction sites, including perimeter control,
+equipment protection, and after-hours monitoring.
+
+> **[TODO: Confirm the full list of security services offered. Confirm PSIRA
+> registration number and grade. Add any additional services not listed above.]**
+
+**Compliance note:** All security services are provided in compliance with the
+Private Security Industry Regulation Act (PSIRA, Act 56 of 2001).
+
+**CTA:** Request a Security Quote → `/contact?service=Security`
 
 ---
 
@@ -366,6 +425,11 @@ capital cost of ownership.
 - Request a Quote → `/contact` *(primary button)*
 - Call Us: 012 655 0284 *(secondary)*
 
+> **NOTE:** The developer guide specifies that each service page CTA should
+> pre-populate the service field in the contact form using a URL parameter:
+> `/contact?service=[Service+Name]`. This is handled by the Astro Server Action
+> in Phase 6 — the contact form reads the `?service=` param on load.
+
 ---
 
 ## Footer
@@ -378,10 +442,13 @@ capital cost of ownership.
 
 | # | Item                              | Notes                                                              |
 |---|-----------------------------------|--------------------------------------------------------------------|
-| 1 | Service images (4)                | Real photos for each service — construction, mechanical, cleaning, plant |
+| 1 | Service images (5)                | Real photos — construction, mechanical, cleaning, plant hire, security |
 | 2 | CIDB grade for construction       | Add to Construction section                                        |
 | 3 | Plant hire equipment specs        | Capacity, tonnage, kVA for each item                               |
 | 4 | Hire options per equipment        | Confirm wet/dry hire availability for each item                    |
 | 5 | Minimum hire periods              | Daily, weekly, monthly rates or minimums                           |
 | 6 | Service area for plant hire       | Pretoria only? Gauteng? National?                                  |
 | 7 | Mining sector confirmation        | Does Phehlwana serve mining clients for mechanical engineering?    |
+| 8 | Security services full list       | Confirm all security services offered                              |
+| 9 | PSIRA registration number         | Required for security services page                                |
+| 10 | Security service area             | Where does the security division operate?                          |
