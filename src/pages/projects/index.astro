@@ -89,7 +89,7 @@ const categoryColours: Record<string, string> = {
                     <!-- Cover image -->
                     <div class='aspect-16/10 overflow-hidden bg-accent'>
                         <img
-                            src={project.data.coverImage}
+                            src={project.data.coverImage ?? '/images/placeholder.svg'}
                             alt=''
                             width='640'
                             height='400'

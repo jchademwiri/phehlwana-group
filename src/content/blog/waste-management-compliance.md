@@ -3,7 +3,7 @@ title: 'Waste Management Compliance: What Your Business Needs to Know'
 description: 'South Africa waste management legislation is strict — and the penalties for non-compliance are significant. Here is what your business needs to know.'
 pubDate: 2025-06-02T00:00:00Z
 author: 'Phehlwana Group Team'
-coverImage: '/images/blog/waste-management.jpg'
+coverImage: '/images/blog/waste-management.svg'
 tags: ['waste management', 'NEM:WA', 'compliance', 'South Africa', 'hazardous waste']
 published: true
 ---

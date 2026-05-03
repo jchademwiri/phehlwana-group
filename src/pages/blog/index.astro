@@ -56,20 +56,18 @@ function formatDate(date: Date): string {
                             aria-label={`Read: ${post.data.title}`}
                         />
 
-                        <!-- Cover image -->
-                        {post.data.coverImage && (
-                            <div class='aspect-video overflow-hidden bg-accent'>
-                                <img
-                                    src={post.data.coverImage}
-                                    alt=''
-                                    width='640'
-                                    height='360'
-                                    loading='lazy'
-                                    decoding='async'
-                                    class='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
-                                />
-                            </div>
-                        )}
+                        <!-- Cover image — always shown, falls back to branded placeholder -->
+                        <div class='aspect-video overflow-hidden bg-accent'>
+                            <img
+                                src={post.data.coverImage ?? '/images/placeholder.svg'}
+                                alt=''
+                                width='640'
+                                height='360'
+                                loading='lazy'
+                                decoding='async'
+                                class='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
+                            />
+                        </div>
 
                         <!-- Content -->
                         <div class='flex flex-col flex-1 p-5 gap-3'>

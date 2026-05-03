@@ -3,7 +3,7 @@ title: 'Why Regular Building Maintenance Saves You Money'
 description: 'Deferred maintenance is one of the most expensive mistakes a property owner can make. Here is why staying on top of routine upkeep protects your investment.'
 pubDate: 2025-03-10T00:00:00Z
 author: 'Phehlwana Group Team'
-coverImage: '/images/blog/building-maintenance.jpg'
+coverImage: '/images/blog/building-maintenance.svg'
 tags: ['building maintenance', 'property management', 'construction tips', 'Pretoria']
 published: true
 ---

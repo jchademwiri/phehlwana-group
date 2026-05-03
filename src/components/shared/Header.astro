@@ -11,7 +11,7 @@ const isServicesActive = currentPath.startsWith('/services');
 <div
     id='drawer-backdrop'
     aria-hidden='true'
-    class='fixed inset-0 z-60 bg-foreground/50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden'
+    class='fixed inset-0 z-60 bg-foreground/20 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden'
 >
 </div>
 
@@ -21,7 +21,7 @@ const isServicesActive = currentPath.startsWith('/services');
     role='dialog'
     aria-modal='true'
     aria-label='Navigation menu'
-    class='fixed top-0 right-0 z-70 h-full w-80 max-w-[85vw] bg-background shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col lg:hidden'
+    class='fixed top-0 right-0 z-70 h-full w-80 max-w-[85vw] bg-background/70 dark:bg-background/60 backdrop-blur-xl backdrop-saturate-150 shadow-2xl border-l border-border/50 translate-x-full transition-transform duration-300 ease-in-out flex flex-col lg:hidden'
 >
     <!-- Drawer header -->
     <div
@@ -168,6 +168,16 @@ const isServicesActive = currentPath.startsWith('/services');
                 ]}>Projects</a
             >
             <a
+                href='/blog'
+                aria-current={isActive('/blog') ? 'page' : undefined}
+                class:list={[
+                    'px-3 py-2.5 rounded-md text-sm font-medium transition-colors',
+                    isActive('/blog')
+                        ? 'bg-primary text-primary-foreground'
+                        : 'text-foreground hover:bg-accent',
+                ]}>Blog</a
+            >
+            <a
                 href='/contact'
                 aria-current={isActive('/contact') ? 'page' : undefined}
                 class:list={[
@@ -248,9 +258,11 @@ const isServicesActive = currentPath.startsWith('/services');
 </div>
 
 <!-- Sticky header -->
-<header class='w-full bg-background border-b border-border sticky top-0 z-50'>
+<header
+    class='w-full bg-background/80 dark:bg-background/70 backdrop-blur-lg backdrop-saturate-150 border-b border-border/60 sticky top-0 z-50'
+>
     <!-- Topbar (desktop only) -->
-    <div class='hidden lg:block bg-muted border-b border-border'>
+    <div class='hidden lg:block bg-muted/60 border-b border-border/60'>
         <div class='container mx-auto px-4 py-2'>
             <div
                 class='flex items-center justify-between text-sm text-muted-foreground'
@@ -389,12 +401,21 @@ const isServicesActive = currentPath.startsWith('/services');
                 class='flex items-center gap-3 shrink-0'
                 aria-label='Phehlwana Group Investments — Home'
             >
+                <!-- Light mode logo -->
                 <img
                     src='/img/logo.png'
                     alt='Phehlwana Group Investments logo'
                     width='48'
                     height='48'
-                    class='size-10 lg:size-12 object-contain'
+                    class='size-10 lg:size-12 object-contain block dark:hidden'
+                />
+                <!-- Dark mode logo (white version) -->
+                <img
+                    src='/img/logow.png'
+                    alt='Phehlwana Group Investments logo'
+                    width='48'
+                    height='48'
+                    class='size-10 lg:size-12 object-contain hidden dark:block'
                 />
                 <div class='hidden sm:block leading-tight'>
                     <span
@@ -530,6 +551,16 @@ const isServicesActive = currentPath.startsWith('/services');
                             ? 'bg-primary text-primary-foreground'
                             : 'text-foreground hover:bg-accent hover:text-accent-foreground',
                     ]}>Projects</a
+                >
+                <a
+                    href='/blog'
+                    aria-current={isActive('/blog') ? 'page' : undefined}
+                    class:list={[
+                        'px-4 py-2 rounded-md text-sm font-medium transition-colors',
+                        isActive('/blog')
+                            ? 'bg-primary text-primary-foreground'
+                            : 'text-foreground hover:bg-accent hover:text-accent-foreground',
+                    ]}>Blog</a
                 >
                 <a
                     href='/contact'

@@ -32,6 +32,7 @@ export const primaryNavLinks: NavLink[] = [
   { label: 'About', href: '/about' },
   // Services is handled separately via the mega menu
   { label: 'Projects', href: '/projects' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ];
 
