@@ -1,4 +1,5 @@
 ---
+import Analytics from '@vercel/analytics/astro';
 import Footer from '@/components/shared/Footer.astro';
 import Header from '@/components/shared/Header.astro';
 import '@/styles/starwind.css';
@@ -47,6 +48,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
       initTheme();
       document.addEventListener('astro:after-swap', initTheme);
     </script>
+    <Analytics />
   </head>
   <body class='flex min-h-screen flex-col'>
     <a
