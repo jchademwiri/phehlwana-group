@@ -4,15 +4,19 @@ import { glob } from 'astro/loaders';
 const projects = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
   schema: z.object({
-    title:      z.string(),
-    client:     z.string().optional(),
-    location:   z.string(),
-    year:       z.number(),
-    category:   z.enum(['Construction', 'Mechanical', 'Cleaning', 'Plant Hire', 'Road']),
-    coverImage: z.string(),
-    images:     z.array(z.string()).optional(),
-    featured:   z.boolean().default(false),
-    published:  z.boolean().default(true),
+    title:        z.string(),
+    projectNo:    z.string().optional(),
+    description:  z.string().optional(),
+    scopeOfWorks: z.string().optional(),
+    client:       z.string().optional(),
+    location:     z.string(),
+    duration:     z.string().optional(),
+    year:         z.number(),
+    category:     z.enum(['Construction', 'Mechanical', 'Cleaning', 'Plant Hire', 'Road']),
+    coverImage:   z.string(),
+    images:       z.array(z.string()).optional(),
+    featured:     z.boolean().default(false),
+    published:    z.boolean().default(true),
   }),
 });
 

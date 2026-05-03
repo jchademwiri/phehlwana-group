@@ -1,7 +1,11 @@
 ---
 title: 'Industrial Facility Cleaning & Waste Management Contract'
+projectNo: 'PGI-2024-003'
+description: 'Ongoing contract cleaning and waste management programme for a large manufacturing facility — daily industrial cleaning, hazardous waste handling, and full NEM:WA compliance.'
+scopeOfWorks: 'Daily industrial cleaning, HP cleaning during shutdowns, degreasing, segregated waste collection, hazardous waste manifesting, monthly audit reports, and hygiene management.'
 client: 'Manufacturing Client (Confidential)'
 location: 'Rosslyn, Pretoria'
+duration: 'February 2024 – Ongoing'
 year: 2024
 category: 'Cleaning'
 coverImage: '/images/projects/project-06.jpeg'
