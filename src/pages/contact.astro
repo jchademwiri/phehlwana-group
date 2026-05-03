@@ -1,28 +1,638 @@
 ---
-// NOTE: No prerender = true here — this page needs SSR for the contact form action
+import { actions, isInputError } from 'astro:actions';
 import Layout from '@/layouts/Layout.astro';
+
+// Read ?service= param to pre-fill the dropdown
+const serviceParam = Astro.url.searchParams.get('service') ?? '';
+
+// Handle form submission
+const result = Astro.getActionResult(actions.contact);
+
+// On success redirect to thank-you
+if (result && !result.error) {
+    return Astro.redirect('/thank-you');
+}
+
+// Preserve field values on validation error
+const fieldErrors =
+    result?.error && isInputError(result.error) ? result.error.fields : {};
+const prev =
+    result?.error && isInputError(result.error) ? result.error.fields : {};
+
+const services = [
+    'Construction & Civil Engineering',
+    'Road Construction & Maintenance',
+    'Mechanical Engineering',
+    'Commercial Cleaning',
+    'Industrial Cleaning',
+    'Waste Management',
+    'Plant Hire',
+    'Security',
+    'General Enquiry',
+];
+
+const faqs = [
+    {
+        q: 'How quickly do you respond to quote requests?',
+        a: 'We aim to respond to all quote requests within 1 business day. For urgent matters, please call us directly on 012 655 0284.',
+    },
+    {
+        q: 'Do you work outside of Pretoria?',
+        a: 'We serve clients across Gauteng and can accommodate projects in other provinces on request. Contact us to discuss your location.',
+    },
+    {
+        q: 'What information do I need for a quote?',
+        a: 'For the most accurate quote, please provide the project location, scope of work, preferred start date, and any relevant drawings or specifications.',
+    },
+    {
+        q: 'Do you offer plant hire with operators?',
+        a: 'Yes — we offer both wet hire (equipment with operator) and dry hire (equipment only) for most of our fleet. Contact us to discuss the best option.',
+    },
+    {
+        q: 'Do you offer emergency maintenance services?',
+        a: 'For urgent maintenance issues, please call our mobile line on 079 294 7635 or reach us via WhatsApp.',
+    },
+];
 ---
 
 <Layout
     title='Contact Us'
-    description='Contact Phehlwana Group Investments — call 012 655 0284, email info@phehlwanagroup.co.za, or fill in our enquiry form. Office in Montana Park, Pretoria.'
+    description='Get in touch with Phehlwana Group Investments. Request a free quote, ask a question, or visit us at PKN Office Park, Montana Park, Pretoria. We respond within 1 business day.'
 >
-    <section class='container mx-auto px-4 py-20 text-center'>
-        <h1 class='text-4xl font-bold mb-4'>Contact Us</h1>
-        <p class='text-muted-foreground mb-6'>
-            This page is under construction.
-        </p>
-        <div class='flex flex-col sm:flex-row gap-4 justify-center'>
-            <a
-                href='tel:+27126550284'
-                class='text-primary font-semibold hover:underline'
-                >📞 012 655 0284</a
+    <!-- ── Page header ──────────────────────────────────────────────────────── -->
+    <section class='bg-accent/40 border-b border-border py-12 lg:py-16'>
+        <div class='container mx-auto px-4 max-w-5xl'>
+            <p
+                class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
             >
-            <a
-                href='mailto:info@phehlwanagroup.co.za'
-                class='text-primary font-semibold hover:underline'
-                >✉️ info@phehlwanagroup.co.za</a
-            >
+                Contact Us
+            </p>
+            <h1 class='text-4xl font-bold text-foreground mb-3'>
+                Have a Project in Mind?
+            </h1>
+            <p class='text-muted-foreground max-w-xl'>
+                Fill in the form and we'll get back to you within 1 business
+                day. For urgent matters, call us directly.
+            </p>
         </div>
     </section>
+
+    <!-- ── Main content ─────────────────────────────────────────────────────── -->
+    <section class='container mx-auto px-4 max-w-5xl py-14'>
+        <div class='grid lg:grid-cols-[1fr_320px] gap-10'>
+            <!-- ── Contact form ─────────────────────────────────────────────── -->
+            <div>
+                <h2 class='text-xl font-bold text-foreground mb-6'>
+                    Request a Quote or Send a Message
+                </h2>
+
+                {
+                    result?.error && !isInputError(result.error) && (
+                        <div
+                            role='alert'
+                            class='mb-6 flex items-start gap-3 bg-error/10 border border-error/30 text-error rounded-lg px-4 py-3 text-sm'
+                        >
+                            <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                class='size-5 shrink-0 mt-0.5'
+                                viewBox='0 0 24 24'
+                                fill='none'
+                                stroke='currentColor'
+                                stroke-width='2'
+                                stroke-linecap='round'
+                                stroke-linejoin='round'
+                                aria-hidden='true'
+                            >
+                                <>
+                                    <circle cx='12' cy='12' r='10' />
+                                    <line x1='12' y1='8' x2='12' y2='12' />
+                                    <line x1='12' y1='16' x2='12.01' y2='16' />
+                                </>
+                            </svg>
+                            Something went wrong sending your message. Please
+                            try again or call us on 012 655 0284.
+                        </div>
+                    )
+                }
+
+                <form
+                    method='POST'
+                    action={actions.contact}
+                    novalidate
+                    class='space-y-5'
+                >
+                    <!-- Name + Email -->
+                    <div class='grid sm:grid-cols-2 gap-5'>
+                        <div>
+                            <label
+                                for='name'
+                                class='block text-sm font-medium text-foreground mb-1.5'
+                            >
+                                Full Name <span
+                                    class='text-error'
+                                    aria-hidden='true'>*</span
+                                >
+                            </label>
+                            <input
+                                id='name'
+                                name='name'
+                                type='text'
+                                required
+                                autocomplete='name'
+                                placeholder='e.g. John Smith'
+                                class:list={[
+                                    'w-full rounded-lg border bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors',
+                                    fieldErrors.name
+                                        ? 'border-error'
+                                        : 'border-border',
+                                ]}
+                                aria-describedby={fieldErrors.name
+                                    ? 'name-error'
+                                    : undefined}
+                            />
+                            {
+                                fieldErrors.name && (
+                                    <p
+                                        id='name-error'
+                                        class='mt-1.5 text-xs text-error'
+                                        role='alert'
+                                    >
+                                        {fieldErrors.name}
+                                    </p>
+                                )
+                            }
+                        </div>
+                        <div>
+                            <label
+                                for='email'
+                                class='block text-sm font-medium text-foreground mb-1.5'
+                            >
+                                Email Address <span
+                                    class='text-error'
+                                    aria-hidden='true'>*</span
+                                >
+                            </label>
+                            <input
+                                id='email'
+                                name='email'
+                                type='email'
+                                required
+                                autocomplete='email'
+                                placeholder='e.g. john@company.co.za'
+                                class:list={[
+                                    'w-full rounded-lg border bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors',
+                                    fieldErrors.email
+                                        ? 'border-error'
+                                        : 'border-border',
+                                ]}
+                                aria-describedby={fieldErrors.email
+                                    ? 'email-error'
+                                    : undefined}
+                            />
+                            {
+                                fieldErrors.email && (
+                                    <p
+                                        id='email-error'
+                                        class='mt-1.5 text-xs text-error'
+                                        role='alert'
+                                    >
+                                        {fieldErrors.email}
+                                    </p>
+                                )
+                            }
+                        </div>
+                    </div>
+
+                    <!-- Phone + Service -->
+                    <div class='grid sm:grid-cols-2 gap-5'>
+                        <div>
+                            <label
+                                for='phone'
+                                class='block text-sm font-medium text-foreground mb-1.5'
+                            >
+                                Phone Number <span
+                                    class='text-error'
+                                    aria-hidden='true'>*</span
+                                >
+                            </label>
+                            <input
+                                id='phone'
+                                name='phone'
+                                type='tel'
+                                required
+                                autocomplete='tel'
+                                placeholder='e.g. 012 555 0000'
+                                class:list={[
+                                    'w-full rounded-lg border bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors',
+                                    fieldErrors.phone
+                                        ? 'border-error'
+                                        : 'border-border',
+                                ]}
+                                aria-describedby={fieldErrors.phone
+                                    ? 'phone-error'
+                                    : undefined}
+                            />
+                            {
+                                fieldErrors.phone && (
+                                    <p
+                                        id='phone-error'
+                                        class='mt-1.5 text-xs text-error'
+                                        role='alert'
+                                    >
+                                        {fieldErrors.phone}
+                                    </p>
+                                )
+                            }
+                        </div>
+                        <div>
+                            <label
+                                for='service'
+                                class='block text-sm font-medium text-foreground mb-1.5'
+                            >
+                                Service Required <span
+                                    class='text-error'
+                                    aria-hidden='true'>*</span
+                                >
+                            </label>
+                            <select
+                                id='service'
+                                name='service'
+                                required
+                                class:list={[
+                                    'w-full rounded-lg border bg-background px-3.5 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors',
+                                    fieldErrors.service
+                                        ? 'border-error'
+                                        : 'border-border',
+                                ]}
+                                aria-describedby={fieldErrors.service
+                                    ? 'service-error'
+                                    : undefined}
+                            >
+                                <option
+                                    value=''
+                                    disabled
+                                    selected={!serviceParam}
+                                    >— Select a service —</option
+                                >
+                                {
+                                    services.map((s) => (
+                                        <option
+                                            value={s}
+                                            selected={serviceParam === s}
+                                        >
+                                            {s}
+                                        </option>
+                                    ))
+                                }
+                            </select>
+                            {
+                                fieldErrors.service && (
+                                    <p
+                                        id='service-error'
+                                        class='mt-1.5 text-xs text-error'
+                                        role='alert'
+                                    >
+                                        {fieldErrors.service}
+                                    </p>
+                                )
+                            }
+                        </div>
+                    </div>
+
+                    <!-- Subject -->
+                    <div>
+                        <label
+                            for='subject'
+                            class='block text-sm font-medium text-foreground mb-1.5'
+                        >
+                            Subject <span
+                                class='text-xs text-muted-foreground font-normal'
+                                >(optional)</span
+                            >
+                        </label>
+                        <input
+                            id='subject'
+                            name='subject'
+                            type='text'
+                            placeholder='Brief description of your enquiry'
+                            class='w-full rounded-lg border border-border bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors'
+                        />
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label
+                            for='message'
+                            class='block text-sm font-medium text-foreground mb-1.5'
+                        >
+                            Message <span class='text-error' aria-hidden='true'
+                                >*</span
+                            >
+                        </label>
+                        <textarea
+                            id='message'
+                            name='message'
+                            required
+                            rows='5'
+                            placeholder='Tell us about your project — location, scope, timeline, and any other relevant details.'
+                            class:list={[
+                                'w-full rounded-lg border bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors resize-y',
+                                fieldErrors.message
+                                    ? 'border-error'
+                                    : 'border-border',
+                            ]}
+                            aria-describedby={fieldErrors.message
+                                ? 'message-error'
+                                : undefined}></textarea>
+                        {
+                            fieldErrors.message && (
+                                <p
+                                    id='message-error'
+                                    class='mt-1.5 text-xs text-error'
+                                    role='alert'
+                                >
+                                    {fieldErrors.message}
+                                </p>
+                            )
+                        }
+                    </div>
+
+                    <button
+                        type='submit'
+                        class='inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-lg text-sm hover:bg-primary/90 transition-colors focus-visible:outline-2 focus-visible:outline-primary'
+                    >
+                        Send Message
+                        <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            class='size-4'
+                            viewBox='0 0 24 24'
+                            fill='none'
+                            stroke='currentColor'
+                            stroke-width='2'
+                            stroke-linecap='round'
+                            stroke-linejoin='round'
+                            aria-hidden='true'
+                            ><path d='M5 12h14'></path><path d='m12 5 7 7-7 7'
+                            ></path></svg
+                        >
+                    </button>
+                </form>
+            </div>
+
+            <!-- ── Contact info sidebar ─────────────────────────────────────── -->
+            <aside class='space-y-4'>
+                <!-- Address -->
+                <div
+                    class='bg-card border border-border rounded-xl p-5 space-y-4'
+                >
+                    <h2
+                        class='text-sm font-semibold text-muted-foreground uppercase tracking-widest'
+                    >
+                        Get in Touch
+                    </h2>
+
+                    <div class='flex items-start gap-3'>
+                        <div
+                            class='size-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0'
+                        >
+                            <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                class='size-4 text-primary'
+                                viewBox='0 0 24 24'
+                                fill='none'
+                                stroke='currentColor'
+                                stroke-width='2'
+                                stroke-linecap='round'
+                                stroke-linejoin='round'
+                                aria-hidden='true'
+                                ><path
+                                    d='M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z'
+                                ></path><circle cx='12' cy='10' r='3'
+                                ></circle></svg
+                            >
+                        </div>
+                        <div>
+                            <p class='text-xs text-muted-foreground mb-0.5'>
+                                Address
+                            </p>
+                            <a
+                                href='https://maps.google.com/?q=PKN+Office+Park,+62+Taaifontein+Street,+Montana+Park,+0182'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                class='text-sm text-foreground/80 hover:text-primary transition-colors leading-relaxed'
+                            >
+                                Office No. 6, PKN Office Park<br />
+                                62 Taaifontein Street<br />
+                                Montana Park, Pretoria, 0182
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class='flex items-start gap-3'>
+                        <div
+                            class='size-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0'
+                        >
+                            <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                class='size-4 text-primary'
+                                viewBox='0 0 24 24'
+                                fill='none'
+                                stroke='currentColor'
+                                stroke-width='2'
+                                stroke-linecap='round'
+                                stroke-linejoin='round'
+                                aria-hidden='true'
+                                ><path
+                                    d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z'
+                                ></path></svg
+                            >
+                        </div>
+                        <div>
+                            <p class='text-xs text-muted-foreground mb-0.5'>
+                                Phone
+                            </p>
+                            <a
+                                href='tel:+27126550284'
+                                class='text-sm text-foreground/80 hover:text-primary transition-colors block'
+                                >012 655 0284</a
+                            >
+                            <a
+                                href='tel:+27792947635'
+                                class='text-sm text-foreground/80 hover:text-primary transition-colors block'
+                                >079 294 7635</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class='flex items-start gap-3'>
+                        <div
+                            class='size-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0'
+                        >
+                            <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                class='size-4 text-primary'
+                                viewBox='0 0 24 24'
+                                fill='none'
+                                stroke='currentColor'
+                                stroke-width='2'
+                                stroke-linecap='round'
+                                stroke-linejoin='round'
+                                aria-hidden='true'
+                                ><rect width='20' height='16' x='2' y='4' rx='2'
+                                ></rect><path
+                                    d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'
+                                ></path></svg
+                            >
+                        </div>
+                        <div>
+                            <p class='text-xs text-muted-foreground mb-0.5'>
+                                Email
+                            </p>
+                            <a
+                                href='mailto:info@phehlwanagroup.co.za'
+                                class='text-sm text-foreground/80 hover:text-primary transition-colors break-all'
+                                >info@phehlwanagroup.co.za</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class='flex items-start gap-3'>
+                        <div
+                            class='size-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0'
+                        >
+                            <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                class='size-4 text-primary'
+                                viewBox='0 0 24 24'
+                                fill='none'
+                                stroke='currentColor'
+                                stroke-width='2'
+                                stroke-linecap='round'
+                                stroke-linejoin='round'
+                                aria-hidden='true'
+                                ><rect width='18' height='18' x='3' y='4' rx='2'
+                                ></rect><path d='M16 2v4M8 2v4M3 10h18'
+                                ></path></svg
+                            >
+                        </div>
+                        <div>
+                            <p class='text-xs text-muted-foreground mb-0.5'>
+                                Office Hours
+                            </p>
+                            <p class='text-sm text-foreground/80'>
+                                Mon – Fri: 07:30 – 17:00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp CTA -->
+                <a
+                    href='https://wa.me/27792947635'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    class='flex items-center gap-3 bg-[#25d366] text-white font-semibold px-5 py-3.5 rounded-xl text-sm hover:bg-[#1ebe5d] transition-colors w-full justify-center'
+                >
+                    <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        class='size-5'
+                        viewBox='0 0 24 24'
+                        fill='currentColor'
+                        aria-hidden='true'
+                        ><path
+                            d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z'
+                        ></path></svg
+                    >
+                    Chat on WhatsApp
+                </a>
+            </aside>
+        </div>
+    </section>
+
+    <!-- ── Map ──────────────────────────────────────────────────────────────── -->
+    <section class='border-t border-border py-14'>
+        <div class='container mx-auto px-4 max-w-5xl'>
+            <div
+                class='rounded-xl overflow-hidden border border-border shadow-sm'
+            >
+                <iframe
+                    title='Phehlwana Group Investments office location on Google Maps'
+                    src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.762599447415!2d28.2720771750622!3d-25.679163242796296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebfdfb60cc92eaf%3A0xeba42ca9ede1cd67!2sPKN%20Office%20Park!5e0!3m2!1sen!2sza!4v1768891930905!5m2!1sen!2sza'
+                    width='100%'
+                    height='400'
+                    style='border:0;display:block'
+                    allowfullscreen
+                    loading='lazy'
+                    referrerpolicy='no-referrer-when-downgrade'></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FAQ ──────────────────────────────────────────────────────────────── -->
+    <section class='container mx-auto px-4 max-w-3xl py-14'>
+        <p
+            class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
+        >
+            FAQ
+        </p>
+        <h2 class='text-2xl font-bold text-foreground mb-8'>
+            Common Questions
+        </h2>
+
+        <dl class='space-y-4'>
+            {
+                faqs.map((faq, i) => (
+                    <div class='bg-card border border-border rounded-xl overflow-hidden'>
+                        <dt>
+                            <button
+                                type='button'
+                                class='faq-btn w-full flex items-center justify-between gap-4 px-5 py-4 text-left text-sm font-semibold text-foreground hover:bg-accent/50 transition-colors'
+                                aria-expanded='false'
+                                aria-controls={`faq-${i}`}
+                            >
+                                {faq.q}
+                                <svg
+                                    class='faq-icon size-4 text-muted-foreground shrink-0 transition-transform duration-200'
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='currentColor'
+                                    stroke-width='2.5'
+                                    stroke-linecap='round'
+                                    stroke-linejoin='round'
+                                    aria-hidden='true'
+                                >
+                                    <path d='m6 9 6 6 6-6' />
+                                </svg>
+                            </button>
+                        </dt>
+                        <dd
+                            id={`faq-${i}`}
+                            class='hidden px-5 pb-4 text-sm text-muted-foreground leading-relaxed'
+                        >
+                            {faq.a}
+                        </dd>
+                    </div>
+                ))
+            }
+        </dl>
+    </section>
 </Layout>
+
+<script>
+    // FAQ accordion
+    document.querySelectorAll<HTMLButtonElement>('.faq-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            const panel = document.getElementById(
+                btn.getAttribute('aria-controls')!,
+            );
+            btn.setAttribute('aria-expanded', String(!expanded));
+            panel?.classList.toggle('hidden', expanded);
+            btn.querySelector('.faq-icon')?.classList.toggle(
+                'rotate-180',
+                !expanded,
+            );
+        });
+    });
+</script>
