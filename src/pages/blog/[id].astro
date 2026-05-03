@@ -12,8 +12,7 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content, headings } = await render(post);
 
-// Build TOC from h2 and h3 headings
-const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const tocHeadings = headings.filter((h) => h.depth === 1 || h.depth === 2);
 
 function formatDate(date: Date): string {
     return date.toLocaleDateString('en-ZA', {
@@ -23,113 +22,124 @@ function formatDate(date: Date): string {
     });
 }
 
-// Estimate reading time (avg 200 wpm)
 const wordCount = post.body?.split(/\s+/).length ?? 0;
 const readingTime = Math.max(1, Math.ceil(wordCount / 200));
 ---
 
 <Layout title={post.data.title} description={post.data.description}>
 
-    <!-- ── Hero header ─────────────────────────────────────────────────────── -->
-    <section class='bg-accent/40 border-b border-border py-12 lg:py-16'>
-        <div class='container mx-auto px-4'>
+    <!-- ── Hero ─────────────────────────────────────────────────────────────── -->
+    <section class='relative min-h-[420px] lg:min-h-[500px] flex items-end overflow-hidden'>
 
-            <!-- Breadcrumb -->
-            <nav aria-label='Breadcrumb' class='mb-6'>
-                <ol class='flex items-center gap-1.5 text-xs text-muted-foreground'>
-                    <li><a href='/' class='hover:text-foreground transition-colors'>Home</a></li>
-                    <li aria-hidden='true'><svg xmlns='http://www.w3.org/2000/svg' class='size-3' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='m9 18 6-6-6-6'/></svg></li>
-                    <li><a href='/blog' class='hover:text-foreground transition-colors'>Blog</a></li>
-                    <li aria-hidden='true'><svg xmlns='http://www.w3.org/2000/svg' class='size-3' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='m9 18 6-6-6-6'/></svg></li>
-                    <li class='text-foreground truncate max-w-xs' aria-current='page'>{post.data.title}</li>
-                </ol>
-            </nav>
-
-            <!-- Tags -->
-            {post.data.tags.length > 0 && (
-                <div class='flex flex-wrap gap-2 mb-5'>
-                    {post.data.tags.map((tag) => (
-                        <span class='inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20'>
-                            {tag}
-                        </span>
-                    ))}
-                </div>
-            )}
-
-            <h1 class='text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-5'>
-                {post.data.title}
-            </h1>
-
-            <p class='text-lg text-muted-foreground leading-relaxed mb-6 max-w-2xl'>
-                {post.data.description}
-            </p>
-
-            <!-- Meta row -->
-            <div class='flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground'>
-                <span class='flex items-center gap-1.5'>
-                    <svg xmlns='http://www.w3.org/2000/svg' class='size-4 text-primary' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><circle cx='12' cy='8' r='4'/><path d='M20 21a8 8 0 1 0-16 0'/></svg>
-                    {post.data.author}
-                </span>
-                <span aria-hidden='true' class='text-border'>|</span>
-                <time datetime={post.data.pubDate.toISOString()} class='flex items-center gap-1.5'>
-                    <svg xmlns='http://www.w3.org/2000/svg' class='size-4 text-primary' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect width='18' height='18' x='3' y='4' rx='2'/><path d='M16 2v4M8 2v4M3 10h18'/></svg>
-                    {formatDate(post.data.pubDate)}
-                </time>
-                <span aria-hidden='true' class='text-border'>|</span>
-                <span class='flex items-center gap-1.5'>
-                    <svg xmlns='http://www.w3.org/2000/svg' class='size-4 text-primary' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 14'/></svg>
-                    {readingTime} min read
-                </span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Cover image ──────────────────────────────────────────────────────── -->
-    <div class='container mx-auto px-4 mt-8'>
-        <div class='aspect-16/6 rounded-2xl overflow-hidden bg-accent shadow-sm'>
+        <!-- Background cover image -->
+        <div class='absolute inset-0'>
             <img
                 src={post.data.coverImage ?? '/images/placeholder.svg'}
-                alt={post.data.title}
-                width='1024'
-                height='384'
+                alt=''
+                width='1280'
+                height='500'
                 loading='eager'
                 decoding='async'
                 class='w-full h-full object-cover'
             />
+            <!-- Dark gradient overlay — stronger at bottom where text sits -->
+            <div class='absolute inset-0 bg-linear-to-t from-background/95 via-background/50 to-background/20'></div>
         </div>
-    </div>
 
-    <!-- ── Two-column layout: TOC sidebar + article ─────────────────────────── -->
-    <div class='container mx-auto px-4 py-12'>
-        <div class='lg:grid lg:grid-cols-[1fr_260px] lg:gap-12 items-start'>
+        <!-- Glassmorphism content panel -->
+        <div class='relative z-10 w-full pb-10 pt-32 lg:pb-14 lg:pt-40'>
+            <div class='container mx-auto px-4'>
 
-            <!-- Article body -->
-            <article>
-                <div class='prose prose-neutral dark:prose-invert max-w-none prose-lg'>
+                <!-- Breadcrumb -->
+                <nav aria-label='Breadcrumb' class='mb-6'>
+                    <ol class='flex items-center gap-1.5 text-xs text-muted-foreground'>
+                        <li><a href='/' class='hover:text-foreground transition-colors'>Home</a></li>
+                        <li aria-hidden='true'><svg xmlns='http://www.w3.org/2000/svg' class='size-3' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='m9 18 6-6-6-6'/></svg></li>
+                        <li><a href='/blog' class='hover:text-foreground transition-colors'>Blog</a></li>
+                        <li aria-hidden='true'><svg xmlns='http://www.w3.org/2000/svg' class='size-3' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='m9 18 6-6-6-6'/></svg></li>
+                        <li class='text-foreground font-medium truncate max-w-xs' aria-current='page'>{post.data.title}</li>
+                    </ol>
+                </nav>
+
+                <div class='max-w-3xl'>
+                    <!-- Tags -->
+                    {post.data.tags.length > 0 && (
+                        <div class='flex flex-wrap gap-2 mb-5'>
+                            {post.data.tags.map((tag) => (
+                                <span class='inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-background/60 backdrop-blur-sm border border-border/60 text-foreground/80'>
+                                    # {tag}
+                                </span>
+                            ))}
+                        </div>
+                    )}
+
+                    <!-- Title -->
+                    <h1 class='text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight mb-4'>
+                        {post.data.title}
+                    </h1>
+
+                    <!-- Description -->
+                    <p class='text-base text-muted-foreground leading-relaxed mb-7'>
+                        {post.data.description}
+                    </p>
+
+                    <!-- Meta row -->
+                    <div class='flex flex-wrap items-center gap-4 text-sm'>
+                        <span class='flex items-center gap-2 text-foreground/70'>
+                            <span class='size-7 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center shrink-0'>
+                                <svg xmlns='http://www.w3.org/2000/svg' class='size-3.5 text-primary' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><circle cx='12' cy='8' r='4'/><path d='M20 21a8 8 0 1 0-16 0'/></svg>
+                            </span>
+                            {post.data.author}
+                        </span>
+                        <span class='w-px h-4 bg-border/60' aria-hidden='true'></span>
+                        <time datetime={post.data.pubDate.toISOString()} class='flex items-center gap-2 text-muted-foreground'>
+                            <svg xmlns='http://www.w3.org/2000/svg' class='size-4 text-primary' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect width='18' height='18' x='3' y='4' rx='2'/><path d='M16 2v4M8 2v4M3 10h18'/></svg>
+                            {formatDate(post.data.pubDate)}
+                        </time>
+                        <span class='w-px h-4 bg-border/60' aria-hidden='true'></span>
+                        <span class='flex items-center gap-2 text-muted-foreground'>
+                            <svg xmlns='http://www.w3.org/2000/svg' class='size-4 text-primary' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 14'/></svg>
+                            {readingTime} min read
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Two-column: article + TOC sidebar ────────────────────────────────── -->
+    <div class='container mx-auto px-4 py-14'>
+        <div class='lg:grid lg:grid-cols-[1fr_240px] lg:gap-14 items-start'>
+
+            <!-- Article -->
+            <article class='min-w-0'>
+                <div class='prose prose-neutral dark:prose-invert max-w-none prose-lg
+                    prose-headings:scroll-mt-28
+                    prose-a:font-medium'>
                     <Content />
                 </div>
             </article>
 
-            <!-- TOC sidebar — sticky on desktop, hidden on mobile -->
+            <!-- Sidebar -->
             {tocHeadings.length > 0 && (
-                <aside
-                    class='hidden lg:block sticky top-32 self-start'
-                    aria-label='Table of contents'
-                >
-                    <div class='bg-card border border-border rounded-xl p-5'>
-                        <p class='text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4'>
-                            On this page
-                        </p>
-                        <nav>
-                            <ul class='space-y-1' id='toc-list'>
+                <aside class='hidden lg:block sticky top-32 self-start space-y-4' aria-label='Table of contents'>
+
+                    <!-- TOC -->
+                    <div class='bg-card border border-border rounded-xl overflow-hidden'>
+                        <div class='px-4 py-3 border-b border-border bg-accent/40'>
+                            <p class='text-xs font-semibold text-muted-foreground uppercase tracking-widest'>
+                                On this page
+                            </p>
+                        </div>
+                        <nav class='p-4'>
+                            <ul class='space-y-0.5'>
                                 {tocHeadings.map((h) => (
                                     <li>
                                         <a
                                             href={`#${h.slug}`}
                                             class:list={[
-                                                'toc-link block text-sm leading-snug py-1 transition-colors rounded',
-                                                'text-muted-foreground hover:text-foreground',
-                                                h.depth === 3 ? 'pl-4 text-xs' : 'pl-0 font-medium',
+                                                'toc-link block py-1.5 text-sm leading-snug transition-colors',
+                                                'text-muted-foreground hover:text-foreground font-medium',
                                             ]}
                                         >
                                             {h.text}
@@ -137,14 +147,19 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
                                     </li>
                                 ))}
                             </ul>
+                            <a
+                                href='#'
+                                class='mt-4 flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors pt-3 border-t border-border'
+                            >
+                                <svg xmlns='http://www.w3.org/2000/svg' class='size-3' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='m18 15-6-6-6 6'/></svg>
+                                Back to top
+                            </a>
                         </nav>
                     </div>
 
-                    <!-- Share / copy link -->
-                    <div class='mt-4 bg-card border border-border rounded-xl p-5'>
-                        <p class='text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-3'>
-                            Share
-                        </p>
+                    <!-- Copy link -->
+                    <div class='bg-card border border-border rounded-xl p-4'>
+                        <p class='text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-3'>Share</p>
                         <button
                             id='copy-link-btn'
                             type='button'
@@ -153,6 +168,19 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
                             <svg xmlns='http://www.w3.org/2000/svg' class='size-4' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'/><path d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'/></svg>
                             <span id='copy-link-label'>Copy link</span>
                         </button>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class='bg-accent/40 border border-border rounded-xl p-4 text-center'>
+                        <p class='text-xs font-semibold text-foreground mb-1'>Need a quote?</p>
+                        <p class='text-xs text-muted-foreground mb-3'>We respond within 1 business day.</p>
+                        <a
+                            href='/contact'
+                            class='inline-flex w-full items-center justify-center gap-1.5 bg-primary text-primary-foreground font-semibold px-3 py-2 rounded-lg text-xs hover:bg-primary/90 transition-colors'
+                        >
+                            Get in Touch
+                            <svg xmlns='http://www.w3.org/2000/svg' class='size-3' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M5 12h14'/><path d='m12 5 7 7-7 7'/></svg>
+                        </a>
                     </div>
                 </aside>
             )}
@@ -216,7 +244,7 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
         headingEls.forEach((el) => observer.observe(el));
     }
 
-    // ── Copy link button ──────────────────────────────────────────────────────
+    // ── Copy link ─────────────────────────────────────────────────────────────
     const copyBtn   = document.getElementById('copy-link-btn');
     const copyLabel = document.getElementById('copy-link-label');
 
@@ -224,11 +252,7 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
         try {
             await navigator.clipboard.writeText(window.location.href);
             if (copyLabel) copyLabel.textContent = 'Copied!';
-            setTimeout(() => {
-                if (copyLabel) copyLabel.textContent = 'Copy link';
-            }, 2000);
-        } catch {
-            // fallback — select the URL
-        }
+            setTimeout(() => { if (copyLabel) copyLabel.textContent = 'Copy link'; }, 2000);
+        } catch { /* silent fallback */ }
     });
 </script>
