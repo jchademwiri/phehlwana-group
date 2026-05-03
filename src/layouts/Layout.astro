@@ -23,6 +23,30 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
     <meta name='generator' content={Astro.generator} />
     {description && <meta name='description' content={description} />}
     <title>{fullTitle}</title>
+    <!-- Theme init — must run before paint to avoid FOUC -->
+    <script is:inline>
+      function initTheme() {
+        const saved = localStorage.getItem('colorTheme');
+        if (!saved) {
+          const prefersDark = window.matchMedia(
+            '(prefers-color-scheme: dark)',
+          ).matches;
+          document.documentElement.classList.toggle('dark', prefersDark);
+          localStorage.setItem('colorTheme', prefersDark ? 'dark' : 'light');
+        } else if (saved === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else if (saved === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else if (saved === 'system') {
+          const prefersDark = window.matchMedia(
+            '(prefers-color-scheme: dark)',
+          ).matches;
+          document.documentElement.classList.toggle('dark', prefersDark);
+        }
+      }
+      initTheme();
+      document.addEventListener('astro:after-swap', initTheme);
+    </script>
   </head>
   <body class='flex min-h-screen flex-col'>
     <a
