@@ -15,7 +15,7 @@ interface ContactAutoReplyProps {
   name: string;
 }
 
-export const ContactAutoReply = ({ name }: ContactAutoReplyProps) => {
+export const ContactAutoReply = ({ name = 'John Doe' }: ContactAutoReplyProps) => {
   return (
     <Html>
       <Head />

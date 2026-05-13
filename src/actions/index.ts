@@ -3,6 +3,7 @@ import { z } from 'astro:schema';
 import { Resend } from 'resend';
 import { renderAsync } from '@react-email/render';
 import React from 'react';
+import { randomUUID } from 'node:crypto';
 import ContactNotification from '../emails/ContactNotification';
 import ContactAutoReply from '../emails/ContactAutoReply';
 
@@ -21,7 +22,7 @@ export const server = {
             message: z.string().min(20, 'Please enter at least 20 characters.'),
         }),
         handler: async ({ name, email, phone, service, subject, message }) => {
-            const fromEmail  = import.meta.env.FROM_EMAIL  ?? 'noreply@info.phehlwanagroup.co.za';
+            const fromEmail  = import.meta.env.FROM_EMAIL  ?? 'info@info.phehlwanagroup.co.za';
             const toEmail    = import.meta.env.TO_EMAIL    ?? 'info@phehlwanagroup.co.za';
             const subjectLine = subject?.trim() || `New enquiry - ${service}`;
 
@@ -43,22 +44,33 @@ export const server = {
                 })
             );
 
-            // ── Notification email to the business ───────────────────────────
-            await resend.emails.send({
-                from:    `Phehlwana Group Website <${fromEmail}>`,
-                to:      toEmail,
-                replyTo: email,
-                subject: `[Website Enquiry] ${subjectLine}`,
-                html:    notificationHtml,
+            const idempotencyKey = `contact-form/${randomUUID()}`;
+
+            // Send both emails as a single atomic batch
+            const { error } = await resend.batch.send([
+                {
+                    from:    `Phehlwana Group Website <${fromEmail}>`,
+                    to:      [toEmail],
+                    replyTo: email,
+                    subject: `[Website Enquiry] ${subjectLine}`,
+                    html:    notificationHtml,
+                },
+                {
+                    from:    `Phehlwana Group Investments <${fromEmail}>`,
+                    to:      [email],
+                    replyTo: toEmail,
+                    subject: 'Thank you for contacting Phehlwana Group Investments',
+                    html:    autoReplyHtml,
+                }
+            ], {
+                idempotencyKey
             });
 
-            // ── Auto-reply to the sender ──────────────────────────────────────
-            await resend.emails.send({
-                from:    `Phehlwana Group Investments <${fromEmail}>`,
-                to:      email,
-                subject: 'Thank you for contacting Phehlwana Group Investments',
-                html:    autoReplyHtml,
-            });
+            if (error) {
+                console.error('Failed to send contact emails:', error);
+                // Return a user-friendly error to the frontend
+                return { success: false, error: 'Failed to send your message. Please try again.' };
+            }
 
             return { success: true };
         },

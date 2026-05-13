@@ -11,7 +11,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "email": "email dev"
+    "email": "email dev --dir src/emails"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.4",
