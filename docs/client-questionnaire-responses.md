@@ -1,5 +1,5 @@
-# Phehlwana Group Investments — Client Discovery Questionnaire
-## RESPONSES RECEIVED — 3 May 2026
+# Phehlwana Group Investments - Client Discovery Questionnaire
+## RESPONSES RECEIVED - 3 May 2026
 
 **Purpose:** To gather all the information needed to build an accurate, effective, and up-to-date website for Phehlwana Group Investments.
 
@@ -10,31 +10,31 @@
 ## Section 1: Company Information & Legal
 
 **1. Is the company VAT registered? If yes, what is the VAT number?**
-✅ **Yes — VAT Number: 4520316631**
+✅ **Yes - VAT Number: 4520316631**
 
 **2. What is the company's CIDB registration number and current contractor grading?**
 ✅ **Grade: 4CE, 5GB**
-🟡 Full registration number not provided — follow up required.
+🟡 Full registration number not provided - follow up required.
 
 **3. What is the company's current BBBEE level and do you have a valid BBBEE certificate?**
 ✅ **Level 1**
-🟡 Certificate document not yet uploaded — follow up required.
+🟡 Certificate document not yet uploaded - follow up required.
 
 **4. Does the company hold any ISO certifications?**
 ✅ **ISO 45001 (Occupational Health and Safety)**
-🟡 Certificate document not yet uploaded — follow up required.
+🟡 Certificate document not yet uploaded - follow up required.
 
 **5. Does the company belong to any professional associations or industry bodies?**
 ✅ **NHBRC**
-🟡 NHBRC registration number not provided — follow up required.
+🟡 NHBRC registration number not provided - follow up required.
 
 **6. In what year was the company officially established?**
 ✅ **Founded in 2015. Re-registered as Phehlwana Group Investments in 2020 with a new registration number.**
-🟡 The 2020 registration number has not been provided — follow up required.
+🟡 The 2020 registration number has not been provided - follow up required.
 > **Action:** Update all "established 2015" copy to reflect the full story: "Founded in 2015 and incorporated as Phehlwana Group Investments in 2020."
 
 **7. (Not in original questionnaire) What is the correct spelling of the company name?**
-✅ **Phehlwana** (not "Phehlawana") — confirmed.
+✅ **Phehlwana** (not "Phehlawana") - confirmed.
 
 ---
 
@@ -57,7 +57,7 @@ Not answered.
 
 **14. What are the company's official business hours?**
 ✅ **Confirmed correct:** Monday–Friday 07:30–17:00
-🟡 Saturday, Sunday, and public holiday hours not confirmed — add "By appointment" or "Closed" pending confirmation.
+🟡 Saturday, Sunday, and public holiday hours not confirmed - add "By appointment" or "Closed" pending confirmation.
 
 **15. What is the WhatsApp number?**
 ✅ **Confirmed correct:** 079 294 7635
@@ -67,13 +67,13 @@ Not answered.
 ## Section 3: Social Media
 
 **17. Facebook page URL?**
-🟡 **None yet — Billy Maphothoma is currently setting this up.**
+🟡 **None yet - Billy Maphothoma is currently setting this up.**
 
 **18. Instagram handle?**
-🟡 **None yet — Billy Maphothoma is currently setting this up.**
+🟡 **None yet - Billy Maphothoma is currently setting this up.**
 
 **19. LinkedIn company page URL?**
-🟡 **None yet — Billy Maphothoma is currently setting this up.**
+🟡 **None yet - Billy Maphothoma is currently setting this up.**
 
 **20. Google Business Profile?**
 ✅ **Listed as "Phehlwana Group"**
@@ -90,10 +90,10 @@ Not answered.
 | Service | Status |
 |---|---|
 | Construction & Civil Engineering | ✅ Active & Keep |
-| Mechanical Engineering | ⚠️ **NOT confirmed** — client did not tick this service |
+| Mechanical Engineering | ⚠️ **NOT confirmed** - client did not tick this service |
 | Cleaning & Waste Management | ✅ Active & Keep |
 | Plant Hire | ✅ Active & Keep |
-| Security | ❓ Not mentioned — confirm with client |
+| Security | ❓ Not mentioned - confirm with client |
 
 > **Action:** Follow up with client specifically on Mechanical Engineering and Security before publishing those service pages.
 
@@ -106,7 +106,7 @@ Not answered.
 🟡 Equipment specifications (capacity, tonnage, kVA) still required.
 
 **31. Geographic service area:**
-✅ **Nationally** *(previously shown as Gauteng only — update all references)*
+✅ **Nationally** *(previously shown as Gauteng only - update all references)*
 
 **32. Sector:**
 ✅ **Both public and private equally**
@@ -116,10 +116,10 @@ Not answered.
 ## Section 5: People & Team
 
 **44. Founder / CEO / Managing Director:**
-✅ **Nicholas Mahlangu — Group CEO**
+✅ **Nicholas Mahlangu - Group CEO**
 
 **45. Management team details:**
-🟡 Only Nicholas Mahlangu's name was provided. A second name — **Sbusiso Mashilwane** — appears in the qualifications field (Q25), suggesting they are a team member, but their role/title was not provided.
+🟡 Only Nicholas Mahlangu's name was provided. A second name - **Sbusiso Mashilwane** - appears in the qualifications field (Q25), suggesting they are a team member, but their role/title was not provided.
 
 > **Action:** Request:
 > - Nicholas Mahlangu: full bio (2–3 sentences), qualifications, LinkedIn
@@ -127,13 +127,13 @@ Not answered.
 > - Any other management team members to feature
 
 **46. Professional headshots available?**
-🔴 **No — not yet available.**
+🔴 **No - not yet available.**
 
 **47. Technical qualifications / registrations:**
-🟡 Sbusiso Mashilwane mentioned under this field — no specific qualifications listed.
+🟡 Sbusiso Mashilwane mentioned under this field - no specific qualifications listed.
 
 **48. Full-time employee count:**
-🔴 **10 full-time employees** *(previously shown as "50+" — this must be corrected or removed from the site)*
+🔴 **10 full-time employees** *(previously shown as "50+" - this must be corrected or removed from the site)*
 > **Action:** Remove the "50+ Skilled Professionals" stat. Options: (a) display "10+ Full-Time Staff", (b) remove the stat entirely, (c) note "growing team of professionals" without a number. Confirm preferred approach with client.
 
 **49. Subcontractors:**
@@ -159,22 +159,22 @@ Not answered.
 🔴 **Client prefers not to display a project count.** Remove this statistic from all pages.
 
 **54. Awards (currently "20+"):**
-🔴 **No awards.** Client confirmed zero awards. The "20+ Awards Won" claim must be removed from the entire site immediately — it is factually incorrect.
+🔴 **No awards.** Client confirmed zero awards. The "20+ Awards Won" claim must be removed from the entire site immediately - it is factually incorrect.
 
 ---
 
 ## Section 7: Brand & Design
 
 **55. Brand guidelines document:**
-🟡 **No formal document** — but digital assets (logos, colours) exist.
+🟡 **No formal document** - but digital assets (logos, colours) exist.
 > **Action:** Request the logo files and a colour reference (hex codes if available).
 
 **56. Logo formats available:**
 ✅ **PNG with transparent background**
-🟡 No SVG or white/reversed version confirmed — request these if possible.
+🟡 No SVG or white/reversed version confirmed - request these if possible.
 
 **57. Colours:**
-✅ **Grey and blue (primary brand colours)** — complementary colours acceptable.
+✅ **Grey and blue (primary brand colours)** - complementary colours acceptable.
 > **Action:** Request exact hex codes. Until confirmed, the current blue (`#1d4ed8`) and neutral grey palette remain in use.
 
 **58. Tone and feeling:**
@@ -202,15 +202,15 @@ Not specified.
 ✅ Word of mouth, direct tender/RFQ invitations, existing relationships/repeat clients.
 
 **63. Tender/procurement support:**
-✅ **Yes — top priority.** CIDB grading, BBBEE level, and certifications must be prominently displayed.
+✅ **Yes - top priority.** CIDB grading, BBBEE level, and certifications must be prominently displayed.
 > **Action:** Add a dedicated "Credentials" or "Compliance" section to the About page. Display: CIDB 4CE/5GB, BBBEE Level 1, ISO 45001, NHBRC, VAT number.
 
 **64. Client testimonials:**
-✅ **Yes — need help gathering them.**
+✅ **Yes - need help gathering them.**
 > **Action:** Prepare a testimonial request email template and send to the named clients above (City of Tshwane, Sanparks, etc.). Ask for 2–3 sentences per client. Get written permission to publish.
 
 **65. Blog / news content:**
-🟡 **Maybe** — no dedicated writer confirmed.
+🟡 **Maybe** - no dedicated writer confirmed.
 ✅ **Billy Maphothoma** assigned as content manager if blog proceeds.
 > **Action:** Recommend a content calendar of 1 post per month to start. Suggest repurposing the existing 6 pre-written articles.
 
@@ -219,11 +219,11 @@ Not specified.
 ## Section 9: Additional
 
 **66. What's missing from the current site?**
-✅ **Photos** — the biggest gap identified by the client.
+✅ **Photos** - the biggest gap identified by the client.
 > **Action:** Photography is the single most impactful improvement. Strongly recommend a one-day photoshoot covering: team headshots, active project sites, equipment in use.
 
 **67. Sections to remove?**
-✅ **No sections to remove** — but content should be reorganised.
+✅ **No sections to remove** - but content should be reorganised.
 
 **68. Specific priorities / concerns:**
 ✅ **"Most of the click buttons are not working and information is everywhere."**
@@ -236,9 +236,9 @@ Not specified.
 ## Actions Summary
 
 ### Immediate (Before Any Further Development)
-- [ ] Remove "20+ Awards Won" from all pages — **unsubstantiated claim**
-- [ ] Remove "129+ Projects Completed" number — client preference
-- [ ] Update employee stat — remove "50+" or replace with accurate figure
+- [ ] Remove "20+ Awards Won" from all pages - **unsubstantiated claim**
+- [ ] Remove "129+ Projects Completed" number - client preference
+- [ ] Update employee stat - remove "50+" or replace with accurate figure
 - [ ] Update geographic coverage to "Nationally" throughout
 - [ ] Add CIDB (4CE, 5GB), BBBEE (Level 1), ISO 45001, NHBRC, VAT to About page
 - [ ] Add Nicholas Mahlangu as CEO on Team and About pages
@@ -256,12 +256,12 @@ Not specified.
 - [ ] Confirmation on Mechanical Engineering and Security service status
 - [ ] Nicholas Mahlangu and Sbusiso Mashilwane bios and roles
 - [ ] Headshot photos (or arrange photoshoot)
-- [ ] Project details — send submission template
-- [ ] Project photos — request Drive/Dropbox link
-- [ ] Brand colours — request hex codes
+- [ ] Project details - send submission template
+- [ ] Project photos - request Drive/Dropbox link
+- [ ] Brand colours - request hex codes
 - [ ] Logo files (PNG confirmed; request SVG and white versions)
 - [ ] Social media URLs from Billy Maphothoma
-- [ ] Employee count preference — how to display (10, "small team", or omit)
+- [ ] Employee count preference - how to display (10, "small team", or omit)
 - [ ] Preferred employee count display: "10 full-time" / "Growing team" / omit entirely
 
 ---

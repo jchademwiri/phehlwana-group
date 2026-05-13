@@ -1,7 +1,7 @@
-# Blog Page — Phehlwana Group Investments
+# Blog Page - Phehlwana Group Investments
 
 > **File:** `blog.md`
-> **Page:** Blog / News (`/blog` — content collection at `src/content/blog/`)
+> **Page:** Blog / News (`/blog` - content collection at `src/content/blog/`)
 > **Last reviewed:** May 2026
 
 ---
@@ -37,7 +37,7 @@ Keywords:    construction news South Africa, Phehlwana blog, building maintenanc
 **Intro copy:**
 > Stay informed with the latest news, project highlights, and industry insights from
 > Phehlwana Group Investments. From construction milestones to safety tips, compliance
-> guides, and community initiatives — we share what matters to our clients and our team.
+> guides, and community initiatives - we share what matters to our clients and our team.
 
 ---
 
@@ -49,7 +49,7 @@ Keywords:    construction news South Africa, Phehlwana blog, building maintenanc
 
 ---
 
-### Post 1 — Why Regular Building Maintenance Saves You Money
+### Post 1 - Why Regular Building Maintenance Saves You Money
 
 **Category:** Construction Tips
 **Author:** Phehlwana Group Team
@@ -65,7 +65,7 @@ Keywords:    construction news South Africa, Phehlwana blog, building maintenanc
 #### Introduction
 
 Many property owners and facility managers treat building maintenance as an optional
-expense — something to deal with when a problem becomes impossible to ignore. The
+expense - something to deal with when a problem becomes impossible to ignore. The
 reality is the opposite: routine maintenance is one of the most cost-effective
 investments you can make in your property.
 
@@ -78,20 +78,20 @@ that every R1 spent on preventive maintenance saves between R4 and R10 in reacti
 repair costs down the line.
 
 In South Africa, common building maintenance issues include:
-- **Roof leaks and damaged gutters** — especially after summer storms
-- **Rising damp and waterproofing failures** — a major issue in older buildings
-- **Electrical faults** — a safety risk and a compliance liability
-- **Plumbing deterioration** — burst pipes, blocked drains, and geyser failures
-- **Structural cracks** — often caused by soil movement or poor original construction
+- **Roof leaks and damaged gutters** - especially after summer storms
+- **Rising damp and waterproofing failures** - a major issue in older buildings
+- **Electrical faults** - a safety risk and a compliance liability
+- **Plumbing deterioration** - burst pipes, blocked drains, and geyser failures
+- **Structural cracks** - often caused by soil movement or poor original construction
 
 #### What a Good Maintenance Programme Looks Like
 
 A structured maintenance programme typically includes:
 
-1. **Annual building inspection** — a full assessment of the structure, roof, plumbing, and electrical systems
-2. **Seasonal checks** — gutters and drainage before the rainy season; HVAC systems before summer
-3. **Reactive maintenance protocol** — a clear process for reporting and addressing issues quickly
-4. **Planned replacement schedule** — knowing when major components (roof, geysers, lifts) are due for replacement
+1. **Annual building inspection** - a full assessment of the structure, roof, plumbing, and electrical systems
+2. **Seasonal checks** - gutters and drainage before the rainy season; HVAC systems before summer
+3. **Reactive maintenance protocol** - a clear process for reporting and addressing issues quickly
+4. **Planned replacement schedule** - knowing when major components (roof, geysers, lifts) are due for replacement
 
 #### How Phehlwana Group Can Help
 
@@ -106,14 +106,14 @@ their buildings and their budgets.
 
 ---
 
-### Post 2 — Understanding the OHS Act: What Every Construction Site Must Have
+### Post 2 - Understanding the OHS Act: What Every Construction Site Must Have
 
 **Category:** Safety & Compliance
 **Author:** Phehlwana Group Team
 **Date:** **[TODO: Set publication date]**
 **Featured image:** `public/images/blog/ohs-safety.jpg`
 **Image alt text:** "Construction workers wearing PPE on a South African building site"
-**Excerpt:** The Occupational Health and Safety Act is not optional — and non-compliance can shut your site down. Here's what every construction site in South Africa must have in place.
+**Excerpt:** The Occupational Health and Safety Act is not optional - and non-compliance can shut your site down. Here's what every construction site in South Africa must have in place.
 
 ---
 
@@ -124,7 +124,7 @@ their buildings and their budgets.
 The Occupational Health and Safety Act (OHS Act, Act 85 of 1993) is the primary
 legislation governing workplace safety in South Africa. For construction sites, the
 Construction Regulations (2014) add a further layer of specific requirements. Failure
-to comply can result in site shutdowns, fines, and — most importantly — preventable
+to comply can result in site shutdowns, fines, and - most importantly - preventable
 injuries and fatalities.
 
 #### Key OHS Requirements for Construction Sites
@@ -139,7 +139,7 @@ This person is responsible for monitoring compliance, conducting inspections, an
 investigating incidents.
 
 **3. Risk Assessments**
-Formal risk assessments must be conducted before any high-risk activity begins —
+Formal risk assessments must be conducted before any high-risk activity begins -
 including working at heights, excavation work, and the use of heavy machinery.
 
 **4. Personal Protective Equipment (PPE)**
@@ -157,7 +157,7 @@ Regular safety briefings (toolbox talks) must be conducted before work begins ea
 day or before any new activity starts. These must be documented and signed by attendees.
 
 **6. Incident Reporting**
-All workplace incidents — including near-misses — must be reported and investigated.
+All workplace incidents - including near-misses - must be reported and investigated.
 Serious incidents must be reported to the Department of Employment and Labour.
 
 **7. First Aid**
@@ -166,7 +166,7 @@ A stocked first aid kit and a trained first aider must be present on every site.
 #### The Consequences of Non-Compliance
 
 An inspector from the Department of Employment and Labour can issue a prohibition
-notice — stopping all work on your site immediately — if OHS requirements are not
+notice - stopping all work on your site immediately - if OHS requirements are not
 met. Fines and criminal prosecution are also possible in serious cases.
 
 #### How Phehlwana Group Ensures Compliance
@@ -180,7 +180,7 @@ and Construction Regulations on every site.
 
 ---
 
-### Post 3 — Wet Hire vs Dry Hire: Which Plant Hire Option is Right for Your Project?
+### Post 3 - Wet Hire vs Dry Hire: Which Plant Hire Option is Right for Your Project?
 
 **Category:** Plant Hire
 **Author:** Phehlwana Group Team
@@ -196,8 +196,8 @@ and Construction Regulations on every site.
 #### Introduction
 
 When hiring construction equipment, you'll typically be offered two options: wet hire
-or dry hire. Understanding the difference — and knowing which is right for your
-project — can save you time, money, and headaches.
+or dry hire. Understanding the difference - and knowing which is right for your
+project - can save you time, money, and headaches.
 
 #### What is Wet Hire?
 
@@ -219,7 +219,7 @@ company, not the client.
 
 #### What is Dry Hire?
 
-Dry hire means you hire the equipment only — you provide your own qualified operator.
+Dry hire means you hire the equipment only - you provide your own qualified operator.
 You are responsible for the safe operation of the equipment during the hire period.
 
 **Best for:**
@@ -244,7 +244,7 @@ You are responsible for the safe operation of the equipment during the hire peri
 
 #### Phehlwana Group Plant Hire
 
-We offer both wet and dry hire options for our full fleet — TLBs, excavators,
+We offer both wet and dry hire options for our full fleet - TLBs, excavators,
 tipper trucks, water carts, bulldozers, and generators. Our operators are experienced,
 safety-trained, and familiar with South African construction site requirements.
 
@@ -254,14 +254,14 @@ Contact us to discuss your project and we'll recommend the right option for you.
 
 ---
 
-### Post 4 — How Proper Waste Management Keeps Your Business Compliant
+### Post 4 - How Proper Waste Management Keeps Your Business Compliant
 
 **Category:** Cleaning & Waste
 **Author:** Phehlwana Group Team
 **Date:** **[TODO: Set publication date]**
 **Featured image:** `public/images/blog/waste-management.jpg`
 **Image alt text:** "Waste management and recycling bins at a commercial facility"
-**Excerpt:** South Africa's waste management legislation is strict — and the penalties for non-compliance are significant. Here's what your business needs to know.
+**Excerpt:** South Africa's waste management legislation is strict - and the penalties for non-compliance are significant. Here's what your business needs to know.
 
 ---
 
@@ -279,7 +279,7 @@ your waste is stored, transported, and disposed of.
 **Duty of Care**
 Under NEM:WA, every person who generates waste has a duty of care to ensure that
 waste is managed in a manner that does not endanger health or the environment. This
-duty extends to the entire waste chain — from generation to final disposal.
+duty extends to the entire waste chain - from generation to final disposal.
 
 **Waste Classification**
 Waste must be correctly classified as general waste or hazardous waste. Hazardous
@@ -323,7 +323,7 @@ Our waste management service ensures your business stays fully compliant. We pro
 
 ---
 
-### Post 5 — 5 Signs Your Building Needs a Maintenance Assessment Now
+### Post 5 - 5 Signs Your Building Needs a Maintenance Assessment Now
 
 **Category:** Construction Tips
 **Author:** Phehlwana Group Team
@@ -339,7 +339,7 @@ Our waste management service ensures your business stays fully compliant. We pro
 #### Introduction
 
 Buildings don't fail overnight. Most serious structural and maintenance problems
-develop slowly — giving you warning signs long before they become emergencies.
+develop slowly - giving you warning signs long before they become emergencies.
 Knowing what to look for can save you significant money and disruption.
 
 #### Sign 1: Cracks in Walls or Ceilings
@@ -365,7 +365,7 @@ is far more expensive to repair than the roof itself.
 #### Sign 4: Electrical Issues
 
 Frequently tripping circuit breakers, flickering lights, or burning smells from
-outlets are signs of electrical problems. These are not just inconveniences —
+outlets are signs of electrical problems. These are not just inconveniences -
 they are fire hazards and must be addressed by a qualified electrician.
 
 #### Sign 5: Plumbing Problems
@@ -384,14 +384,14 @@ and provide a clear, honest quote for the necessary repairs.
 
 ---
 
-### Post 6 — Phehlwana Group's Commitment to Local Employment and Community Development
+### Post 6 - Phehlwana Group's Commitment to Local Employment and Community Development
 
 **Category:** Community
 **Author:** Phehlwana Group Team
 **Date:** **[TODO: Set publication date]**
 **Featured image:** `public/images/blog/community.jpg`
 **Image alt text:** "Phehlwana Group team members on a community project"
-**Excerpt:** At Phehlwana Group, we believe that building South Africa means more than constructing buildings — it means investing in the people and communities we work in.
+**Excerpt:** At Phehlwana Group, we believe that building South Africa means more than constructing buildings - it means investing in the people and communities we work in.
 
 ---
 
@@ -401,7 +401,7 @@ and provide a clear, honest quote for the necessary repairs.
 
 Since our founding in 2015, Phehlwana Group Investments has been committed to more
 than just delivering quality projects. We believe that a construction company has a
-responsibility to the communities it operates in — and that responsibility goes beyond
+responsibility to the communities it operates in - and that responsibility goes beyond
 the boundaries of any single project site.
 
 #### Local Employment First
@@ -414,14 +414,14 @@ smoothly for everyone involved.
 #### Skills Development and Training
 
 The South African construction sector faces a significant skills shortage. We address
-this by investing in the development of our people — providing on-the-job training,
+this by investing in the development of our people - providing on-the-job training,
 supporting workers in obtaining formal trade qualifications, and mentoring junior
 staff to grow into senior roles.
 
 #### BBBEE Commitment
 
 Phehlwana Group is a proudly BBBEE-compliant business. Our transformation commitments
-are not just about compliance — they reflect our genuine belief that a more equitable
+are not just about compliance - they reflect our genuine belief that a more equitable
 economy benefits everyone.
 
 > **[TODO: Add specific transformation initiatives (Level 1 BBBEE status confirmed)]**
@@ -442,13 +442,13 @@ Use this structure for all future posts:
 
 ```
 ---
-title:       [Compelling, keyword-rich headline — max 60 characters for SEO]
+title:       [Compelling, keyword-rich headline - max 60 characters for SEO]
 category:    [Construction / Safety / Plant Hire / Cleaning / Community / Projects]
 author:      [Full name and job title]
 date:        [YYYY-MM-DD]
 image:       [public/images/blog/filename.jpg]
 imageAlt:    [Descriptive alt text]
-excerpt:     [2–3 sentence summary for the listing page — max 160 characters]
+excerpt:     [2–3 sentence summary for the listing page - max 160 characters]
 tags:        [3–5 relevant tags]
 ---
 
@@ -479,13 +479,13 @@ tags:        [3–5 relevant tags]
 | Month 2   | How Proper Waste Management Keeps You Compliant    | Cleaning & Waste  | Ready to publish |
 | Month 3   | 5 Signs Your Building Needs a Maintenance Assessment | Construction Tips | Ready to publish |
 | Month 3   | Our Commitment to Local Employment                 | Community         | Ready to publish |
-| Month 4+  | Project showcase — **[TODO: Real completed project]** | Projects       | Needs client input |
+| Month 4+  | Project showcase - **[TODO: Real completed project]** | Projects       | Needs client input |
 
 ---
 
 ## Footer
 
-*(Same footer as all other pages — see `home.md` for footer content details)*
+*(Same footer as all other pages - see `home.md` for footer content details)*
 
 ---
 
@@ -493,7 +493,7 @@ tags:        [3–5 relevant tags]
 
 | # | Item                          | Notes                                                        |
 |---|-------------------------------|--------------------------------------------------------------|
-| 1 | Blog post images (6)          | One real photo per post — see image paths above              |
+| 1 | Blog post images (6)          | One real photo per post - see image paths above              |
 | 2 | Publication dates             | Set dates for each post                                      |
 | 3 | Author names                  | Replace "Phehlwana Group Team" with real author names/titles |
 | 4 | Project showcase post         | Write based on a real completed project with photos          |

@@ -1,9 +1,9 @@
-# Phehlwana Group Investments — Developer Guide
+# Phehlwana Group Investments - Developer Guide
 
 **Project:** Website Rebuild
 **Repo:** https://github.com/jchademwiri/phehlwana-group.git
 **Live Site:** https://phehlwanagroup.co.za
-**Document Version:** 5.0 — May 2026
+**Document Version:** 5.0 - May 2026
 **Last Updated:** Reflects actual project state as of Phase 1 + partial Phase 5 & 6 completion
 
 ---
@@ -12,16 +12,16 @@
 
 | Phase | Status | Notes |
 |---|---|---|
-| 0 — Foundation & Config | ✅ Complete | |
-| 1 — Shared Layout & Navigation | ✅ Complete | |
-| 2 — Home Page | ⏳ Pending client content | Stub only |
-| 3 — About Page | ⏳ Pending client content | Stub only |
-| 4 — Services Pages | ⏳ Pending client content | All 6 stubs exist |
-| 5 — Projects Portfolio | ✅ Functional | 4 real projects + detail pages live |
-| 6 — Contact, Email & Utility | ✅ Functional | Form + Resend action built |
-| 7 — SEO & Analytics | ⏳ Not started | |
-| 8 — Performance & Accessibility | ⏳ Not started | |
-| 9 — Pre-Launch & Go Live | ⏳ Not started | |
+| 0 - Foundation & Config | ✅ Complete | |
+| 1 - Shared Layout & Navigation | ✅ Complete | |
+| 2 - Home Page | ⏳ Pending client content | Stub only |
+| 3 - About Page | ⏳ Pending client content | Stub only |
+| 4 - Services Pages | ⏳ Pending client content | All 6 stubs exist |
+| 5 - Projects Portfolio | ✅ Functional | 4 real projects + detail pages live |
+| 6 - Contact, Email & Utility | ✅ Functional | Form + Resend action built |
+| 7 - SEO & Analytics | ⏳ Not started | |
+| 8 - Performance & Accessibility | ⏳ Not started | |
+| 9 - Pre-Launch & Go Live | ⏳ Not started | |
 
 ---
 
@@ -34,8 +34,8 @@ Styling:            Tailwind CSS v4    (via @tailwindcss/vite)
 Typography:         @tailwindcss/typography (prose formatting for MD content)
 Forms:              @tailwindcss/forms
 JavaScript:         Vanilla JS only in UI layer
-React:              Installed — used for @astrojs/react integration
-Email:              Resend v6 (installed — needs API key + domain verification)
+React:              Installed - used for @astrojs/react integration
+Email:              Resend v6 (installed - needs API key + domain verification)
 Animations:         CSS @keyframes + Intersection Observer (public/scripts/animations.js)
 Analytics:          @vercel/analytics (installed)
 Deployment:         Vercel (@astrojs/vercel adapter)
@@ -45,7 +45,7 @@ Node:               >=24.x
 
 ---
 
-## 2. Project Structure — Actual Current State
+## 2. Project Structure - Actual Current State
 
 ```
 phehlwana-group/
@@ -56,8 +56,8 @@ phehlwana-group/
 │   ├── site.webmanifest
 │   ├── robots.txt                    ✅ Created
 │   ├── img/
-│   │   ├── logo.png                  ⚠️ Placeholder — replace with final brand asset
-│   │   └── logow.png                 ⚠️ Placeholder — replace with final brand asset
+│   │   ├── logo.png                  ⚠️ Placeholder - replace with final brand asset
+│   │   └── logow.png                 ⚠️ Placeholder - replace with final brand asset
 │   ├── images/
 │   │   ├── placeholder.svg           ✅ Branded SVG fallback image
 │   │   ├── about-1.png               ⚠️ Placeholder from old site
@@ -78,8 +78,8 @@ phehlwana-group/
 │   │   │   ├── service-construction.png  ⚠️ Placeholder
 │   │   │   ├── service-mechanical.png    ⚠️ Placeholder
 │   │   │   └── service-plant-hire.png    ⚠️ Placeholder
-│   │   └── team/                     ❌ Empty — awaiting client headshots
-│   ├── docs/                         ❌ Empty — awaiting client PDFs
+│   │   └── team/                     ❌ Empty - awaiting client headshots
+│   ├── docs/                         ❌ Empty - awaiting client PDFs
 │   └── scripts/
 │       └── animations.js             ✅ Scroll animation (Intersection Observer)
 │
@@ -88,7 +88,7 @@ phehlwana-group/
 │   │   └── index.ts                  ✅ Resend contact form action (Zod validation)
 │   │
 │   ├── assets/
-│   │   └── images/                   ✅ Folder structure — for Astro <Image /> component
+│   │   └── images/                   ✅ Folder structure - for Astro <Image /> component
 │   │       ├── about/ hero/ blog/ projects/ services/ team/
 │   │       ├── bg-page-header.jpg
 │   │       └── contact-illustration.png
@@ -99,7 +99,7 @@ phehlwana-group/
 │   │   │   ├── Header.astro          ✅ Glassmorphism sticky header, topbar, dropdown, mobile drawer
 │   │   │   └── Footer.astro          ✅ 4-column, theme-aware, logo switches light/dark
 │   │   ├── helpful-links.astro       ✅ Used on 404 page
-│   │   └── sections/                 ⏳ Empty — Phase 2+ builds these
+│   │   └── sections/                 ⏳ Empty - Phase 2+ builds these
 │   │
 │   ├── content/
 │   │   ├── blog/
@@ -109,32 +109,32 @@ phehlwana-group/
 │   │   │   ├── wet-hire-vs-dry-hire.md              ✅ Published
 │   │   │   └── placeholder.md                       ✅ Draft (published: false)
 │   │   └── projects/
-│   │       ├── montana-park-office-renovation.md    ✅ Published — Construction
-│   │       ├── tshwane-road-resurfacing.md          ✅ Published — Road
-│   │       ├── industrial-facility-cleaning-contract.md  ✅ Published — Cleaning
-│   │       ├── gauteng-civil-earthworks-plant-hire.md    ✅ Published — Plant Hire
+│   │       ├── montana-park-office-renovation.md    ✅ Published - Construction
+│   │       ├── tshwane-road-resurfacing.md          ✅ Published - Road
+│   │       ├── industrial-facility-cleaning-contract.md  ✅ Published - Cleaning
+│   │       ├── gauteng-civil-earthworks-plant-hire.md    ✅ Published - Plant Hire
 │   │       └── placeholder.md                       ✅ Draft (published: false)
 │   │
-│   ├── content.config.ts             ✅ Astro v6 glob loader — projects + blog schemas
+│   ├── content.config.ts             ✅ Astro v6 glob loader - projects + blog schemas
 │   │
 │   ├── data/
 │   │   └── navigation.ts             ✅ Single source of truth for all nav links
 │   │
 │   ├── layouts/
-│   │   └── Layout.astro              ✅ Root layout — CSS, Header, Footer, dark mode, analytics
+│   │   └── Layout.astro              ✅ Root layout - CSS, Header, Footer, dark mode, analytics
 │   │
 │   ├── pages/
 │   │   ├── index.astro               ⏳ Stub
 │   │   ├── about.astro               ⏳ Stub
-│   │   ├── contact.astro             ✅ Full page — form, map, FAQ, contact info
+│   │   ├── contact.astro             ✅ Full page - form, map, FAQ, contact info
 │   │   ├── thank-you.astro           ✅ Confirmation page
 │   │   ├── 404.astro                 ✅ Branded 404
 │   │   ├── blog/
 │   │   │   ├── index.astro           ✅ Blog listing with card grid
-│   │   │   └── [id].astro            ✅ Blog post detail — TOC sidebar, prose, reading time
+│   │   │   └── [id].astro            ✅ Blog post detail - TOC sidebar, prose, reading time
 │   │   ├── projects/
 │   │   │   ├── index.astro           ✅ Project grid with category filter
-│   │   │   └── [id].astro            ✅ Project detail — gallery, sidebar, description
+│   │   │   └── [id].astro            ✅ Project detail - gallery, sidebar, description
 │   │   └── services/
 │   │       ├── index.astro           ⏳ Stub
 │   │       ├── construction.astro    ⏳ Stub
@@ -149,7 +149,7 @@ phehlwana-group/
 ├── astro.config.mjs                  ✅ site URL, static output, Vercel adapter, sitemap
 ├── src/content.config.ts             ✅ Astro v6 content collections (glob loader)
 ├── tsconfig.json                     ✅ @/ path alias, strict mode
-├── .env                              ✅ Placeholder values — replace before launch
+├── .env                              ✅ Placeholder values - replace before launch
 ├── .env.example                      ✅ Safe to commit
 ├── .gitignore                        ✅ Excludes .env, dist, node_modules
 └── package.json                      ✅ All dependencies installed
@@ -159,18 +159,18 @@ phehlwana-group/
 
 ## 3. What Has Been Built
 
-### `src/data/navigation.ts` — Single Source of Truth
+### `src/data/navigation.ts` - Single Source of Truth
 
 All navigation links live here. Update this file and every component updates automatically.
 
 **Exports:**
-- `primaryNavLinks` — Home, About, Projects, Blog, Contact
-- `serviceDivisions` — 5 service divisions (no sub-items until service pages have real content with anchor IDs)
-- `serviceLinks` — flat list derived from `serviceDivisions` (used in footer + dropdown)
-- `quickLinks` — full site nav for footer
-- `legalLinks` — empty array (add Privacy Policy etc. once pages exist)
-- `developer` — Apex Web Solutions credit
-- `socialLinks` — social media hrefs (currently `#` — update when client confirms)
+- `primaryNavLinks` - Home, About, Projects, Blog, Contact
+- `serviceDivisions` - 5 service divisions (no sub-items until service pages have real content with anchor IDs)
+- `serviceLinks` - flat list derived from `serviceDivisions` (used in footer + dropdown)
+- `quickLinks` - full site nav for footer
+- `legalLinks` - empty array (add Privacy Policy etc. once pages exist)
+- `developer` - Apex Web Solutions credit
+- `socialLinks` - social media hrefs (currently `#` - update when client confirms)
 
 **Service divisions (5):**
 1. Construction & Civil Engineering → `/services/construction`
@@ -179,16 +179,16 @@ All navigation links live here. Update this file and every component updates aut
 4. Plant Hire → `/services/plant-hire`
 5. Security → `/services/security`
 
-> **Note:** `ServiceItem` and `items` arrays were removed from `serviceDivisions` — all service pages are stubs with no anchor IDs. Re-add sub-items once service pages have real sectioned content.
+> **Note:** `ServiceItem` and `items` arrays were removed from `serviceDivisions` - all service pages are stubs with no anchor IDs. Re-add sub-items once service pages have real sectioned content.
 
 ---
 
-### `src/layouts/Layout.astro` — Root Layout
+### `src/layouts/Layout.astro` - Root Layout
 
 Every page uses this layout. Provides:
 - `lang="en-ZA"` on `<html>`
 - Starwind CSS import
-- Dark mode `initTheme` script (runs before paint — no FOUC)
+- Dark mode `initTheme` script (runs before paint - no FOUC)
 - `astro:after-swap` listener for View Transitions compatibility
 - Skip-to-content accessibility link
 - `<Header />` and `<Footer />` on every page
@@ -227,7 +227,7 @@ Every page uses this layout. Provides:
 
 ---
 
-### Blog — `/blog` and `/blog/[id]`
+### Blog - `/blog` and `/blog/[id]`
 
 **Listing page (`blog/index.astro`):**
 - Card grid (1/2/3 columns), sorted newest first
@@ -237,11 +237,11 @@ Every page uses this layout. Provides:
 
 **Detail page (`blog/[id].astro`):**
 - Two-column layout: article + sticky TOC sidebar (desktop only)
-- TOC built from `headings` returned by Astro's `render()` — h2 and h3
+- TOC built from `headings` returned by Astro's `render()` - h2 and h3
 - Active heading highlight via `IntersectionObserver`
 - Copy link button in sidebar
 - Reading time estimate (200 wpm)
-- `prose-lg` with `@tailwindcss/typography` — fully themed to CSS variables
+- `prose-lg` with `@tailwindcss/typography` - fully themed to CSS variables
 - Cover image always shown (falls back to placeholder)
 
 **Content schema (blog):**
@@ -257,7 +257,7 @@ published:   z.boolean().default(false)
 
 ---
 
-### Projects — `/projects` and `/projects/[id]`
+### Projects - `/projects` and `/projects/[id]`
 
 **Listing page (`projects/index.astro`):**
 - Category filter buttons (All / Construction / Road / Mechanical / Cleaning / Plant Hire)
@@ -292,9 +292,9 @@ published:    z.boolean().default(true)
 
 ---
 
-### Contact — `/contact`
+### Contact - `/contact`
 
-**Full page built.** No `export const prerender = true` — SSR required for the form action.
+**Full page built.** No `export const prerender = true` - SSR required for the form action.
 
 - Two-column layout: form + contact info sidebar
 - Service dropdown pre-fills from `?service=` URL param
@@ -306,7 +306,7 @@ published:    z.boolean().default(true)
 - Google Maps embed (constrained to `max-w-5xl`, rounded, bordered)
 - FAQ accordion (5 questions, JS-powered, `aria-expanded`)
 
-**`src/actions/index.ts`** — Astro Action:
+**`src/actions/index.ts`** - Astro Action:
 - Validates: name (min 2), email (format), phone (SA 10-digit regex `^0[0-9]{9}$`), service (required), message (min 20)
 - Sends notification email to `TO_EMAIL` with all field values
 - Sends branded auto-reply to submitter
@@ -316,23 +316,23 @@ published:    z.boolean().default(true)
 
 ### Placeholder Image System
 
-`public/images/placeholder.svg` — branded SVG fallback used when no real image exists.
+`public/images/placeholder.svg` - branded SVG fallback used when no real image exists.
 
 Topic-specific blog cover SVGs in `public/images/blog/`:
-- `building-maintenance.svg` — blue, building + wrench icon
-- `ohs-safety.svg` — green, hard hat + OHS shield
-- `plant-hire-guide.svg` — amber, TLB excavator
-- `waste-management.svg` — emerald, bin + recycling arrows
+- `building-maintenance.svg` - blue, building + wrench icon
+- `ohs-safety.svg` - green, hard hat + OHS shield
+- `plant-hire-guide.svg` - amber, TLB excavator
+- `waste-management.svg` - emerald, bin + recycling arrows
 
 All SVGs share: dark navy gradient, grid overlay, left accent bar, category label pill, title, divider, `phehlwanagroup.co.za` watermark.
 
 ---
 
-## 4. Theming — Brand Colours
+## 4. Theming - Brand Colours
 
 Primary colour is currently `--color-blue-700` (`#1d4ed8`). Update `src/styles/starwind.css` once brand colours are confirmed.
 
-**Token rule — never use hardcoded Tailwind palette classes:**
+**Token rule - never use hardcoded Tailwind palette classes:**
 
 | ❌ Don't use | ✅ Use instead |
 |---|---|
@@ -344,7 +344,7 @@ Primary colour is currently `--color-blue-700` (`#1d4ed8`). Update `src/styles/s
 
 ---
 
-## 5. Content Collections — Astro v6 Format
+## 5. Content Collections - Astro v6 Format
 
 Config at `src/content.config.ts` (not `src/content/config.ts`). Uses Astro v6 glob loaders.
 
@@ -362,19 +362,19 @@ Two collections: `projects` and `blog`. See schemas in section 3 above.
 
 ---
 
-## 6. Typography — `@tailwindcss/typography`
+## 6. Typography - `@tailwindcss/typography`
 
 Installed and configured. Add `prose prose-neutral dark:prose-invert prose-lg` to any container rendering Markdown content.
 
-Prose variables are overridden in `src/styles/starwind.css` to use the site's CSS design tokens — so prose respects light/dark mode automatically. Custom rules also applied for:
-- `h2` — bottom border separator
-- `blockquote` — tinted primary background
-- `code` — pill-style inline code
-- `table` — accent header background
+Prose variables are overridden in `src/styles/starwind.css` to use the site's CSS design tokens - so prose respects light/dark mode automatically. Custom rules also applied for:
+- `h2` - bottom border separator
+- `blockquote` - tinted primary background
+- `code` - pill-style inline code
+- `table` - accent header background
 
 ---
 
-## 7. Navigation — How to Update
+## 7. Navigation - How to Update
 
 All navigation is centralised in `src/data/navigation.ts`.
 
@@ -411,11 +411,11 @@ Current `.env` has placeholder values. Replace `RESEND_API_KEY`, `FROM_EMAIL`, a
 
 ---
 
-## 9. SEO — Current State
+## 9. SEO - Current State
 
 **Done:**
 - `site: 'https://phehlwanagroup.co.za'` in `astro.config.mjs`
-- `@astrojs/sitemap` — auto-generates `sitemap-index.xml` on build
+- `@astrojs/sitemap` - auto-generates `sitemap-index.xml` on build
 - `public/robots.txt` created
 - `lang="en-ZA"` on `<html>`
 - All pages have `<title>` and `<meta name="description">`
@@ -440,13 +440,13 @@ Individual routes needing SSR use `export const prerender = false`. The contact 
 **Build:** `bun run build`
 **Preview:** `bun run preview`
 
-Not yet connected to Vercel — happens in Phase 9.
+Not yet connected to Vercel - happens in Phase 9.
 
 ---
 
-## 11. Starwind Components — Installed
+## 11. Starwind Components - Installed
 
-All 19 components in `src/components/starwind/`. Fully editable — you own the code.
+All 19 components in `src/components/starwind/`. Fully editable - you own the code.
 
 | Component | Used in |
 |---|---|
@@ -457,12 +457,12 @@ All 19 components in `src/components/starwind/`. Fully editable — you own the 
 | `button` | CTAs throughout |
 | `card` | Services grid, project cards |
 | `dialog` | Project lightbox (future) |
-| `dropdown` | Not used — custom dropdown built in Header |
+| `dropdown` | Not used - custom dropdown built in Header |
 | `input` | Contact form |
 | `input-group` | Contact form |
 | `label` | Contact form |
 | `separator` | Layout dividers |
-| `sheet` | Not used — custom drawer built in Header |
+| `sheet` | Not used - custom drawer built in Header |
 | `skeleton` | Loading states |
 | `spinner` | Loading states |
 | `tabs` | Service category tabs (Phase 4) |
@@ -483,7 +483,7 @@ All 19 components in `src/components/starwind/`. Fully editable — you own the 
 | Branded placeholder | `public/images/placeholder.svg` | ✅ Created |
 | Blog covers (×4) | `public/images/blog/*.svg` | ✅ Branded SVGs created |
 | Project photos (×9) | `public/images/projects/project-01 to 09.jpeg` | ✅ Real photos |
-| Service images (×4) | `public/images/services/` | ⚠️ Placeholders — no Security image |
+| Service images (×4) | `public/images/services/` | ⚠️ Placeholders - no Security image |
 | Hero images | `public/images/hero/` | ⚠️ Placeholders from old site |
 | Team headshots | `public/images/team/` | ❌ Empty |
 | OG image | `public/images/og-image.jpg` | ❌ Missing |

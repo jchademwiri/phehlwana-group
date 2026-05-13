@@ -1,8 +1,8 @@
-# Thank You Page — Phehlwana Group Investments
+# Thank You Page - Phehlwana Group Investments
 
 > **File:** `thank-you.md`
 > **Page:** Thank You (`/thank-you`)
-> **Status:** 🟢 Ready — no client TODOs required
+> **Status:** 🟢 Ready - no client TODOs required
 > **Last reviewed:** May 2026
 > **Triggered by:** Contact form submission redirect
 
@@ -56,7 +56,7 @@ Thank You for Getting in Touch!
 
 ## Design Notes
 
-- Keep this page simple and clean — it's a confirmation, not a sales page
+- Keep this page simple and clean - it's a confirmation, not a sales page
 - Use the standard header and footer
 - Consider adding a subtle animation or icon (e.g. a checkmark or envelope icon) to
   reinforce the "message received" feeling
@@ -66,7 +66,7 @@ Thank You for Getting in Touch!
 
 ## Auto-Response Email (sent to the user)
 
-This email is sent automatically by **Resend** via the Astro Server Action when the form is submitted successfully (`src/actions/index.ts` — Phase 6).
+This email is sent automatically by **Resend** via the Astro Server Action when the form is submitted successfully (`src/actions/index.ts` - Phase 6).
 
 **Subject:** Thank you for contacting Phehlwana Group Investments
 

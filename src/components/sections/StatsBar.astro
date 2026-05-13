@@ -1,88 +1,86 @@
 ---
 /**
- * StatsBar — animated counter strip
+ * StatsBar - animated counter strip
  * Uses the existing data-animate + Intersection Observer from animations.js
  * Numbers count up when scrolled into view via a lightweight inline script.
  */
 
 const stats = [
-    { text: 'Level 1', label: 'BBBEE Level', isNumber: false },
-    { text: '4CE/5GB', label: 'CIDB Grade', isNumber: false },
-    { value: 10, suffix: '+', label: 'Years in Business', isNumber: true },
-    { text: 'National', label: 'Coverage', isNumber: false },
+  { text: 'Level 1', label: 'BBBEE Level', isNumber: false },
+  { text: '4CE/5GB', label: 'CIDB Grade', isNumber: false },
+  { value: 10, suffix: '+', label: 'Years in Business', isNumber: true },
+  { text: 'National', label: 'Coverage', isNumber: false },
 ];
 ---
 
 <section class='bg-accent/60 border-y border-border py-12'>
-    <div class='container mx-auto px-4'>
-        <dl class='grid grid-cols-2 lg:grid-cols-4 gap-8 text-center'>
-            {
-                stats.map((stat) => (
-                    <div data-animate>
-                        <dt class='text-4xl font-bold mb-1 tabular-nums text-foreground'>
-                            {stat.isNumber ? (
-                                <span
-                                    class='stat-counter'
-                                    data-target={stat.value}
-                                    data-suffix={stat.suffix}
-                                >
-                                    0{stat.suffix}
-                                </span>
-                            ) : (
-                                <span>{stat.text}</span>
-                            )}
-                        </dt>
-                        <dd class='text-sm text-muted-foreground font-medium uppercase tracking-wide'>
-                            {stat.label}
-                        </dd>
-                    </div>
-                ))
-            }
-        </dl>
-    </div>
+  <div class='container mx-auto px-4'>
+    <dl class='grid grid-cols-2 lg:grid-cols-4 gap-8 text-center'>
+      {
+        stats.map((stat) => (
+          <div data-animate>
+            <dt class='text-4xl font-bold mb-1 tabular-nums text-foreground'>
+              {stat.isNumber ? (
+                <span
+                  class='stat-counter'
+                  data-target={stat.value}
+                  data-suffix={stat.suffix}
+                >
+                  0{stat.suffix}
+                </span>
+              ) : (
+                <span>{stat.text}</span>
+              )}
+            </dt>
+            <dd class='text-sm text-muted-foreground font-medium uppercase tracking-wide'>
+              {stat.label}
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
 </section>
 
 <script>
-    // Count-up animation — fires once when the section enters the viewport
-    const counters = document.querySelectorAll<HTMLElement>('.stat-counter');
+  // Count-up animation - fires once when the section enters the viewport
+  const counters = document.querySelectorAll<HTMLElement>('.stat-counter');
 
-    const animate = (el: HTMLElement) => {
-        const target = parseInt(el.dataset.target ?? '0', 10);
-        const suffix = el.dataset.suffix ?? '';
-        const duration = 1400; // ms
-        const steps = 40;
-        const increment = target / steps;
-        let current = 0;
-        let step = 0;
+  const animate = (el: HTMLElement) => {
+    const target = parseInt(el.dataset.target ?? '0', 10);
+    const suffix = el.dataset.suffix ?? '';
+    const duration = 1400; // ms
+    const steps = 40;
+    const increment = target / steps;
+    let current = 0;
+    let step = 0;
 
-        const tick = () => {
-            step++;
-            current = step >= steps ? target : Math.round(increment * step);
-            el.textContent = current + suffix;
-            if (step < steps) requestAnimationFrame(tick);
-        };
-
-        requestAnimationFrame(tick);
+    const tick = () => {
+      step++;
+      current = step >= steps ? target : Math.round(increment * step);
+      el.textContent = current + suffix;
+      if (step < steps) requestAnimationFrame(tick);
     };
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const counter =
-                        entry.target.querySelector<HTMLElement>(
-                            '.stat-counter',
-                        );
-                    if (counter) animate(counter);
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.3 },
-    );
+    requestAnimationFrame(tick);
+  };
 
-    counters.forEach((counter) => {
-        const parent = counter.closest('[data-animate]');
-        if (parent) observer.observe(parent);
-    });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const counter =
+            entry.target.querySelector<HTMLElement>('.stat-counter');
+          if (counter) animate(counter);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 },
+  );
+
+  counters.forEach((counter) => {
+    const parent = counter.closest('[data-animate]');
+    if (parent) observer.observe(parent);
+  });
 </script>

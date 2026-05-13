@@ -1,8 +1,8 @@
-# Phehlwana Group Investments — Client Discovery Questionnaire
+# Phehlwana Group Investments - Client Discovery Questionnaire
 
 **Purpose:** To gather all the information needed to build an accurate, effective, and up-to-date website for Phehlwana Group Investments.
 
-**Instructions:** Please answer as many questions as possible. If you're unsure about something, note it and we can discuss. There are no wrong answers — the more detail you provide, the better the website will represent your company.
+**Instructions:** Please answer as many questions as possible. If you're unsure about something, note it and we can discuss. There are no wrong answers - the more detail you provide, the better the website will represent your company.
 
 ---
 
@@ -11,7 +11,7 @@
 **1. Is the company VAT registered? If yes, what is the VAT number?**
 
 **2. What is the company's CIDB registration number and current contractor grading?**
-*(e.g., 5CE, 6GB — this is important for government and municipal tender credibility)*
+*(e.g., 5CE, 6GB - this is important for government and municipal tender credibility)*
 
 **3. What is the company's current BBBEE level and do you have a valid BBBEE certificate?**
 
@@ -24,27 +24,27 @@
 **6. Are there any other certifications or accreditations the company holds that should be displayed on the website?**
 
 **7. In what year was the company officially established?**
-*(We have 2015 — please confirm or correct)*
+*(We have 2015 - please confirm or correct)*
 
-**8. We noticed the company name is spelled two ways across the current website — "Phehlwana" and "Phehlawana". Which is the correct spelling?**
+**8. We noticed the company name is spelled two ways across the current website - "Phehlwana" and "Phehlawana". Which is the correct spelling?**
 
 ---
 
 ## Section 2: Contact Details
 
 **9. What is the primary physical address of the office?**
-*(We have: Office No 06, PKN Office Park, 62 Taaifontein Street, Montana Park, Pretoria, 0182 — please confirm or correct)*
+*(We have: Office No 06, PKN Office Park, 62 Taaifontein Street, Montana Park, Pretoria, 0182 - please confirm or correct)*
 
 **10. Is there a secondary or site office address?**
 
 **11. What is the main office telephone number?**
-*(We have: 012 655 0284 — please confirm or correct)*
+*(We have: 012 655 0284 - please confirm or correct)*
 
 **12. What is the cell/mobile number for client enquiries?**
-*(We have: 079 294 7635 — please confirm or correct)*
+*(We have: 079 294 7635 - please confirm or correct)*
 
 **13. What is the primary email address for general enquiries?**
-*(We have: info@phehlwanagroup.co.za — please confirm or correct)*
+*(We have: info@phehlwanagroup.co.za - please confirm or correct)*
 
 **14. Is there a separate email address for quotes or tender submissions?**
 
@@ -52,7 +52,7 @@
 *(e.g., Monday–Friday 08:00–17:00)*
 
 **16. What is the WhatsApp number for client enquiries?**
-*(We have: 079 294 7635 — please confirm or correct)*
+*(We have: 079 294 7635 - please confirm or correct)*
 
 ---
 
@@ -78,18 +78,18 @@
 **23. Can you provide an updated "About Us" write-up (2–4 paragraphs) to replace the current website text?**
 
 **24. What is the company's Vision statement?**
-*(We have: "To become a premier service provider in all the sectors it operates by delivering quality service" — please confirm or update)*
+*(We have: "To become a premier service provider in all the sectors it operates by delivering quality service" - please confirm or update)*
 
 **25. What is the company's Mission statement?**
-*(We have: "To lead, grow and offer quality service" — please confirm or update)*
+*(We have: "To lead, grow and offer quality service" - please confirm or update)*
 
 **26. Does the company have a set of core values? If yes, please list them.**
 
 **27. Can you verify or update the following statistics currently shown on the website:**
-- 129+ Projects Completed — is this accurate?
-- 20+ Awards Won — what are these awards specifically? Please list names and years.
-- 50+ Skilled Professionals — is this accurate?
-- 6+ Management Team — is this accurate?
+- 129+ Projects Completed - is this accurate?
+- 20+ Awards Won - what are these awards specifically? Please list names and years.
+- 50+ Skilled Professionals - is this accurate?
+- 6+ Management Team - is this accurate?
 
 ---
 
@@ -102,12 +102,12 @@
 - Mechanical Engineering
 - Cleaning Services (Commercial & Industrial)
 - Waste Management
-- Plant Hire — TLB
-- Plant Hire — Tipper Trucks
-- Plant Hire — Water Carts
-- Plant Hire — Excavators
-- Plant Hire — Bulldozers
-- Plant Hire — Generators
+- Plant Hire - TLB
+- Plant Hire - Tipper Trucks
+- Plant Hire - Water Carts
+- Plant Hire - Excavators
+- Plant Hire - Bulldozers
+- Plant Hire - Generators
 - Electrical Installations
 - Plumbing
 - Landscaping
@@ -118,7 +118,7 @@
 **30. Are there any new services the company has added since the website was last updated?**
 
 **31. Which services would you most like to grow or promote through the new website?**
-*(All services will be featured equally — this helps us know where to focus calls to action)*
+*(All services will be featured equally - this helps us know where to focus calls to action)*
 
 **32. Does the company offer free quotes? If yes, what is the typical turnaround time?**
 
@@ -146,9 +146,9 @@
 
 **41. Do you have any written testimonials or references from past clients that we can use?**
 
-**42. The website currently states 129+ projects completed — please confirm this number is accurate and up to date.**
+**42. The website currently states 129+ projects completed - please confirm this number is accurate and up to date.**
 
-**43. The website states 20+ awards won — please provide the name, awarding body, and year for each award so they can be displayed correctly.**
+**43. The website states 20+ awards won - please provide the name, awarding body, and year for each award so they can be displayed correctly.**
 
 ---
 
@@ -163,7 +163,7 @@
 *(e.g., Pr.Eng, SACPCMP, SAIOH, SAMTRAC)*
 
 **47. How many full-time employees does the company currently have?**
-*(We show 50+ on the website — please confirm or update)*
+*(We show 50+ on the website - please confirm or update)*
 
 ---
 
@@ -213,7 +213,7 @@
 
 **62. Are there any pages or sections from the current website you definitely want removed or significantly changed?**
 
-**63. Is there anything important about the company — its history, values, achievements, or capabilities — that is currently missing from the website and should be included?**
+**63. Is there anything important about the company - its history, values, achievements, or capabilities - that is currently missing from the website and should be included?**
 
 ---
 
@@ -223,7 +223,7 @@
 *If yes, please share via Google Drive, Dropbox, or WeTransfer.*
 
 **65. If you do not have professional photos, are you willing to arrange a photoshoot before the site launches?**
-*(This is strongly recommended — stock photos significantly reduce credibility for a construction company)*
+*(This is strongly recommended - stock photos significantly reduce credibility for a construction company)*
 
 **66. Do you have any video content (project walkthroughs, company overview, client testimonials) that could be used on the website?**
 

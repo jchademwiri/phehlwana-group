@@ -1,7 +1,7 @@
 ---
 title: 'Industrial Facility Cleaning & Waste Management Contract'
 projectNo: 'PGI-2024-003'
-description: 'Ongoing contract cleaning and waste management programme for a large manufacturing facility — daily industrial cleaning, hazardous waste handling, and full NEM:WA compliance.'
+description: 'Ongoing contract cleaning and waste management programme for a large manufacturing facility - daily industrial cleaning, hazardous waste handling, and full NEM:WA compliance.'
 scopeOfWorks: 'Daily industrial cleaning, HP cleaning during shutdowns, degreasing, segregated waste collection, hazardous waste manifesting, monthly audit reports, and hygiene management.'
 client: 'Manufacturing Client (Confidential)'
 location: 'Rosslyn, Pretoria'
@@ -25,14 +25,14 @@ Phehlwana Group provides a dedicated on-site cleaning team supported by our wast
 - Daily industrial cleaning of production floors, walkways, and welfare facilities
 - High-pressure (HP) cleaning of machinery and production equipment during scheduled shutdowns
 - Degreasing of workshop floors and loading bays
-- Segregated waste collection — general, recyclable, and hazardous waste streams
+- Segregated waste collection - general, recyclable, and hazardous waste streams
 - Hazardous waste manifesting and licensed disposal in compliance with NEM:WA
 - Monthly waste audit reports provided to the client's environmental compliance team
 - Hygiene and sanitation management including washroom services and consumable supply
 
 ## Compliance and Documentation
 
-All hazardous waste generated at the facility is classified, manifested, and disposed of at licensed facilities. Phehlwana Group provides the client with a complete audit trail for every waste load removed from site — supporting their ISO 14001 environmental management obligations.
+All hazardous waste generated at the facility is classified, manifested, and disposed of at licensed facilities. Phehlwana Group provides the client with a complete audit trail for every waste load removed from site - supporting their ISO 14001 environmental management obligations.
 
 ## Results
 

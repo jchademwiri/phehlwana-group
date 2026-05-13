@@ -4,7 +4,7 @@
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ── Global container — single source of truth for max content width ── */
+/* ── Global container - single source of truth for max content width ── */
 @utility container {
   margin-inline: auto;
   padding-inline: 1rem;
@@ -178,7 +178,7 @@
   }
 }
 
-/* ── Scroll animation — used with data-animate attribute ── */
+/* ── Scroll animation - used with data-animate attribute ── */
 [data-animate] {
   opacity: 0;
   transform: translateY(20px);
@@ -190,7 +190,7 @@
   transform: translateY(0);
 }
 
-/* ── Prose / Typography — override @tailwindcss/typography to use design tokens ── */
+/* ── Prose / Typography - override @tailwindcss/typography to use design tokens ── */
 .prose {
   --tw-prose-body: var(--color-foreground);
   --tw-prose-headings: var(--color-foreground);

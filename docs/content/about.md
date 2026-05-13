@@ -1,4 +1,4 @@
-# About Page — Phehlwana Group Investments
+# About Page - Phehlwana Group Investments
 
 > **File:** `about.md`
 > **Page:** About Us (`about.html`)
@@ -9,7 +9,7 @@
 ## SEO / Meta
 
 ```
-Title:       About Us | Phehlwana Group Investments — Construction & Engineering Pretoria
+Title:       About Us | Phehlwana Group Investments - Construction & Engineering Pretoria
 Description: Phehlwana Group Investments has been delivering quality construction,
              engineering, cleaning and plant hire services since 2015. Learn about our
              story, values, and the team behind every project.
@@ -27,7 +27,7 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 
 ---
 
-## Section 1 — Company Overview
+## Section 1 - Company Overview
 
 **Section label:** About Phehlwana Group Investments
 
@@ -35,16 +35,16 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 > Phehlwana Group Investments is a South African small-to-medium enterprise established
 > in 2015. Over the past decade, our highly professional and experienced team has built
 > a deep understanding of the construction, engineering, and facilities management
-> sectors — delivering quality results for government, corporate, and private clients
+> sectors - delivering quality results for government, corporate, and private clients
 > nationally.
 >
 > Our business approach is built on a clear strategy: leverage local expertise, maintain
 > the highest standards of quality and safety, and develop lasting partnerships with our
-> clients. We don't just complete projects — we build relationships.
+> clients. We don't just complete projects - we build relationships.
 
 ---
 
-## Section 2 — Vision, Mission & Values
+## Section 2 - Vision, Mission & Values
 
 ### Vision
 > To be the most trusted and preferred multi-disciplinary service provider in South
@@ -61,17 +61,17 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 | Value                    | Description                                                                                          |
 |--------------------------|------------------------------------------------------------------------------------------------------|
 | Adaptable Solutions      | We tailor our approach to each client's unique needs, project scope, and budget requirements.        |
-| Uncompromising Quality   | Every project is executed to the highest standards — on time, within budget, and built to last.      |
+| Uncompromising Quality   | Every project is executed to the highest standards - on time, within budget, and built to last.      |
 | Client-First Partnerships | We build long-term relationships based on trust, open communication, and consistent delivery.       |
 | Safety Above All         | The health and safety of our people, clients, and communities is non-negotiable on every site.       |
 | Community Impact         | We prioritise local employment, skills development, and meaningful contribution to the communities we work in. |
-| Integrity in Everything  | We operate with honesty and transparency — in our pricing, our timelines, and our workmanship.       |
+| Integrity in Everything  | We operate with honesty and transparency - in our pricing, our timelines, and our workmanship.       |
 
 **CTA:** View Our Services → `/services`
 
 ---
 
-## Section 3 — Our Story
+## Section 3 - Our Story
 
 **Section label:** Our Story
 
@@ -85,13 +85,13 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 > the job done right.
 >
 > In the years that followed, Phehlwana Group expanded its service offering to include
-> mechanical engineering, cleaning and waste management, and plant hire — becoming a
+> mechanical engineering, cleaning and waste management, and plant hire - becoming a
 > true one-stop solution for clients across the construction and facilities management
 > sectors. Each new service area was built on the same foundation: experienced people,
 > quality execution, and a genuine commitment to client success.
 >
 > Today, with 10 full-time professionals, and a growing national footprint, Phehlwana
-> Group Investments continues to grow — driven by the same values that shaped the
+> Group Investments continues to grow - driven by the same values that shaped the
 > company from day one.
 
 > **[TODO: Review and personalise this narrative with the founding director's actual story,
@@ -99,7 +99,7 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 
 ---
 
-## Section 4 — Stats / Achievements
+## Section 4 - Stats / Achievements
 
 | Stat                  | Value | Notes                                                                    |
 |-----------------------|-------|--------------------------------------------------------------------------|
@@ -115,7 +115,7 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 
 ---
 
-## Section 5 — Why Choose Us
+## Section 5 - Why Choose Us
 
 **Section label:** Why Choose Phehlwana Group
 
@@ -124,17 +124,17 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 | # | Differentiator                        | Detail                                                                                                    |
 |---|---------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | 1 | 10+ Years of Proven Experience        | A decade of delivering quality construction, engineering, and facilities services across South Africa.    |
-| 2 | Multi-Disciplinary Capability         | One company, four service areas — construction, mechanical engineering, cleaning, and plant hire.         |
+| 2 | Multi-Disciplinary Capability         | One company, four service areas - construction, mechanical engineering, cleaning, and plant hire.         |
 | 3 | Safety-First Culture                  | Dedicated safety officers on every site, full OHS Act compliance, and a zero-harm commitment.             |
 | 4 | Local Expertise, National Standards   | Deep knowledge of the South African market, combined with internationally recognised quality standards.   |
 | 5 | End-to-End Project Management         | From initial consultation and site assessment through to handover and ongoing maintenance support.        |
-| 6 | Transparent Pricing                   | Detailed, honest quotations with no hidden costs — so you always know what you're paying for.             |
+| 6 | Transparent Pricing                   | Detailed, honest quotations with no hidden costs - so you always know what you're paying for.             |
 | 7 | BBBEE Compliant                       | Proudly contributing to transformation in the South African construction sector as a Level 1 Contributor. |
 | 8 | Responsive and Reliable               | We respond to quote requests within 1 business day and keep clients informed throughout every project.    |
 
 ---
 
-## Section 6 — Accreditations & Certifications
+## Section 6 - Accreditations & Certifications
 
 **Section label:** Accreditations & Compliance
 
@@ -151,7 +151,7 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 | OHS Act Compliance                   | Occupational Health and Safety Act 85 of 1993              |
 | NHBRC Registration                   | **[TODO: Confirm if applicable]**                          |
 | NEM:WA Compliance (Waste Management) | National Environmental Management: Waste Act               |
-| Industry Body Memberships            | **[TODO: e.g. MBA, SAFCEC, CESA — confirm memberships]**   |
+| Industry Body Memberships            | **[TODO: e.g. MBA, SAFCEC, CESA - confirm memberships]**   |
 
 > **NOTE:** This section is critical for winning government tenders and corporate
 > procurement. Procurement officers check for CIDB grading and BBBEE status immediately.
@@ -159,13 +159,13 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 
 ---
 
-## Section 7 — Awards & Recognition (Removed)
+## Section 7 - Awards & Recognition (Removed)
 
 > Removed as client confirmed there are no verifiable awards to list.
 
 ---
 
-## Section 8 — Meet the Team (Preview)
+## Section 8 - Meet the Team (Preview)
 
 **Section label:** Our Team
 
@@ -178,14 +178,14 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 
 **CTA:** Meet the Full Team → `/team`
 
-> **NOTE:** The developer guide shows the Team page is at `/team` — this is correct.
+> **NOTE:** The developer guide shows the Team page is at `/team` - this is correct.
 
-> **[TODO: Add 3–4 team member cards here as a preview — name, title, photo.
+> **[TODO: Add 3–4 team member cards here as a preview - name, title, photo.
 > Full bios on the Team page.]**
 
 ---
 
-## Section 9 — Client Testimonials *(New)*
+## Section 9 - Client Testimonials *(New)*
 
 **Section label:** What Our Clients Say
 
@@ -203,13 +203,13 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 > team was professional, communicative, and the quality of work exceeded our expectations.
 > We wouldn't hesitate to use them again."*
 >
-> — **[Client Name]**, **[Job Title]**, **[Company Name]**
+> - **[Client Name]**, **[Job Title]**, **[Company Name]**
 
 ---
 
 ## Footer
 
-*(Same footer as all other pages — see `home.md` for footer content details)*
+*(Same footer as all other pages - see `home.md` for footer content details)*
 
 ---
 

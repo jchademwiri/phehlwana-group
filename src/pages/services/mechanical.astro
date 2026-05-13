@@ -3,121 +3,118 @@ import ServiceLayout from '@/layouts/ServiceLayout.astro';
 export const prerender = true;
 
 const services = [
-    {
-        title: 'Design & Development',
-        body: 'Creating detailed 3D models, mechanical drawings, and technical data sheets for new components, systems, and machinery. Our engineers work closely with clients to develop solutions that meet exact operational requirements.',
-    },
-    {
-        title: 'Manufacturing & Production',
-        body: 'Managing the fabrication and assembly of mechanical components and machines, including material selection, tooling, and quality control throughout the manufacturing process.',
-    },
-    {
-        title: 'Maintenance & Reliability',
-        body: 'Providing scheduled preventive maintenance, troubleshooting, equipment rebuilding, and emergency repairs to ensure long-term operational efficiency and minimise downtime.',
-    },
-    {
-        title: 'System Analysis',
-        body: 'Conducting stress analysis, fluid dynamics testing, and thermodynamic evaluations to optimise the performance and longevity of mechanical systems.',
-    },
-    {
-        title: 'Installation & Commissioning',
-        body: 'Ensuring all equipment is correctly installed, calibrated, and commissioned according to strict technical specifications and manufacturer requirements before handover.',
-    },
-    {
-        title: 'Safety Management',
-        body: 'All mechanical engineering work is carried out in full compliance with the Occupational Health and Safety Act (OHS Act 85 of 1993). Our engineers conduct risk assessments and implement safe work procedures on every project.',
-    },
+  {
+    title: 'Design & Development',
+    body: 'Creating detailed 3D models, mechanical drawings, and technical data sheets for new components, systems, and machinery. Our engineers work closely with clients to develop solutions that meet exact operational requirements.',
+  },
+  {
+    title: 'Manufacturing & Production',
+    body: 'Managing the fabrication and assembly of mechanical components and machines, including material selection, tooling, and quality control throughout the manufacturing process.',
+  },
+  {
+    title: 'Maintenance & Reliability',
+    body: 'Providing scheduled preventive maintenance, troubleshooting, equipment rebuilding, and emergency repairs to ensure long-term operational efficiency and minimise downtime.',
+  },
+  {
+    title: 'System Analysis',
+    body: 'Conducting stress analysis, fluid dynamics testing, and thermodynamic evaluations to optimise the performance and longevity of mechanical systems.',
+  },
+  {
+    title: 'Installation & Commissioning',
+    body: 'Ensuring all equipment is correctly installed, calibrated, and commissioned according to strict technical specifications and manufacturer requirements before handover.',
+  },
+  {
+    title: 'Safety Management',
+    body: 'All mechanical engineering work is carried out in full compliance with the Occupational Health and Safety Act (OHS Act 85 of 1993). Our engineers conduct risk assessments and implement safe work procedures on every project.',
+  },
 ];
 
 const industries = [
-    'Manufacturing and production facilities',
-    'Municipal infrastructure',
-    'Commercial and industrial buildings',
+  'Manufacturing and production facilities',
+  'Municipal infrastructure',
+  'Commercial and industrial buildings',
 ];
 ---
 
 <ServiceLayout
-    title='Mechanical Engineering'
-    description='Design, manufacturing, maintenance, system analysis and commissioning of mechanical systems — Phehlwana Group Investments, Pretoria.'
-    label='Mechanical Engineering'
-    subtitle='Design, development, installation, and maintenance of mechanical systems and machinery for industrial, commercial, and municipal clients.'
-    image='/images/services/service-mechanical.png'
-    imageAlt='Mechanical engineer inspecting industrial machinery'
-    serviceParam='Mechanical Engineering'
+  title='Mechanical Engineering'
+  description='Design, manufacturing, maintenance, system analysis and commissioning of mechanical systems - Phehlwana Group Investments, Pretoria.'
+  label='Mechanical Engineering'
+  subtitle='Design, development, installation, and maintenance of mechanical systems and machinery for industrial, commercial, and municipal clients.'
+  image='/images/services/service-mechanical.png'
+  imageAlt='Mechanical engineer inspecting industrial machinery'
+  serviceParam='Mechanical Engineering'
 >
-    <div data-animate>
-        <h2
-            class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
-        >
-            Our Mechanical Engineering Services
-        </h2>
-        <div class='grid sm:grid-cols-2 gap-4 mb-10'>
-            {
-                services.map((item) => (
-                    <div class='bg-card border border-border rounded-xl p-5'>
-                        <h3 class='text-sm font-semibold text-foreground mb-2 flex items-center gap-2'>
-                            <span class='size-1.5 rounded-full bg-primary shrink-0' />
-                            {item.title}
-                        </h3>
-                        <p class='text-sm text-muted-foreground leading-relaxed'>
-                            {item.body}
-                        </p>
-                    </div>
-                ))
-            }
-        </div>
-
-        <div class='bg-accent/40 border border-border rounded-xl p-6'>
-            <h3 class='text-sm font-semibold text-foreground mb-3'>
-                Industries Served
+  <div data-animate>
+    <h2
+      class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
+    >
+      Our Mechanical Engineering Services
+    </h2>
+    <div class='grid sm:grid-cols-2 gap-4 mb-10'>
+      {
+        services.map((item) => (
+          <div class='bg-card border border-border rounded-xl p-5'>
+            <h3 class='text-sm font-semibold text-foreground mb-2 flex items-center gap-2'>
+              <span class='size-1.5 rounded-full bg-primary shrink-0' />
+              {item.title}
             </h3>
-            <ul class='space-y-2'>
-                {
-                    industries.map((industry) => (
-                        <li class='flex items-center gap-2 text-sm text-muted-foreground'>
-                            <svg
-                                xmlns='http://www.w3.org/2000/svg'
-                                class='size-4 text-primary shrink-0'
-                                viewBox='0 0 24 24'
-                                fill='none'
-                                stroke='currentColor'
-                                stroke-width='2.5'
-                                stroke-linecap='round'
-                                stroke-linejoin='round'
-                                aria-hidden='true'
-                            >
-                                <polyline points='20 6 9 17 4 12' />
-                            </svg>
-                            {industry}
-                        </li>
-                    ))
-                }
-                <li
-                    class='flex items-center gap-2 text-sm text-muted-foreground/60 italic'
-                >
-                    <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        class='size-4 text-muted-foreground/40 shrink-0'
-                        viewBox='0 0 24 24'
-                        fill='none'
-                        stroke='currentColor'
-                        stroke-width='2'
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
-                        aria-hidden='true'
-                        ><circle cx='12' cy='12' r='10'></circle><line
-                            x1='12'
-                            y1='8'
-                            x2='12'
-                            y2='12'></line><line
-                            x1='12'
-                            y1='16'
-                            x2='12.01'
-                            y2='16'></line></svg
-                    >
-                    Mining support services — contact us to discuss your requirements
-                </li>
-            </ul>
-        </div>
+            <p class='text-sm text-muted-foreground leading-relaxed'>
+              {item.body}
+            </p>
+          </div>
+        ))
+      }
     </div>
+
+    <div class='bg-accent/40 border border-border rounded-xl p-6'>
+      <h3 class='text-sm font-semibold text-foreground mb-3'>
+        Industries Served
+      </h3>
+      <ul class='space-y-2'>
+        {
+          industries.map((industry) => (
+            <li class='flex items-center gap-2 text-sm text-muted-foreground'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                class='size-4 text-primary shrink-0'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                stroke-width='2.5'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                aria-hidden='true'
+              >
+                <polyline points='20 6 9 17 4 12' />
+              </svg>
+              {industry}
+            </li>
+          ))
+        }
+        <li
+          class='flex items-center gap-2 text-sm text-muted-foreground/60 italic'
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            class='size-4 text-muted-foreground/40 shrink-0'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            aria-hidden='true'
+            ><circle cx='12' cy='12' r='10'></circle><line
+              x1='12'
+              y1='8'
+              x2='12'
+              y2='12'></line><line x1='12' y1='16' x2='12.01' y2='16'
+            ></line></svg
+          >
+          Mining support services - contact us to discuss your requirements
+        </li>
+      </ul>
+    </div>
+  </div>
 </ServiceLayout>

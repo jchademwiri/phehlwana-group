@@ -1,4 +1,4 @@
-# Home Page — Phehlwana Group Investments
+# Home Page - Phehlwana Group Investments
 
 > **File:** `home.md`
 > **Page:** Homepage (`index.html`)
@@ -10,7 +10,7 @@
 
 ```
 Title:       Phehlwana Group Investments | Construction, Engineering & Plant Hire Pretoria
-Description: Phehlwana Group Investments — trusted construction, civil engineering,
+Description: Phehlwana Group Investments - trusted construction, civil engineering,
              mechanical services, cleaning, plant hire and security in Pretoria.
              Established 2015. Call 012 655 0284.
 Keywords:    construction Pretoria, civil engineering South Africa, plant hire Gauteng,
@@ -26,10 +26,10 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 |--------------|----------------------------------------------------------------------|
 | Address      | Office No. 6, PKN Office Park, 62 Taaifontein Street, Montana Park, Pretoria, 0182 |
 | Email        | info@phehlwanagroup.co.za                                            |
-| Social Links | Facebook, Twitter, Instagram, LinkedIn — **[TODO: Add actual profile URLs]** |
+| Social Links | Facebook, Twitter, Instagram, LinkedIn - **[TODO: Add actual profile URLs]** |
 | Language     | English *(remove IsiNdebele, Sesotho, IsiZulu, Sepedi unless actively translated)* |
 
-> **NOTE — Languages:** The old site listed 5 languages in the dropdown but the site
+> **NOTE - Languages:** The old site listed 5 languages in the dropdown but the site
 > content is English-only. Remove the other language options until translations are
 > available, or they will mislead visitors.
 
@@ -41,7 +41,7 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 |---------------|-------------|----------------------------------------------------------|
 | Home          | `/`         | Active on this page                                      |
 | About         | `/about`    |                                                          |
-| Services      | Dropdown    | 5 divisions — see below                                  |
+| Services      | Dropdown    | 5 divisions - see below                                  |
 | Projects      | `/projects` |                                                          |
 | Contact       | `/contact`  |                                                          |
 | Request Quote | `/contact`  | Primary CTA button                                       |
@@ -57,7 +57,7 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 | Security                        | `/services/security`       |
 
 > **NOTE:** The developer guide confirms 5 service divisions including Security.
-> The old site only showed 4 — Security must be added to all service listings.
+> The old site only showed 4 - Security must be added to all service listings.
 
 **Phone CTA (desktop):**
 - Label: "Call to Our Experts"
@@ -68,7 +68,7 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 
 ## Hero / Carousel
 
-### Slide 1 — Construction and Maintenance
+### Slide 1 - Construction and Maintenance
 
 **Eyebrow:** Welcome to Phehlwana Group Investments
 
@@ -77,7 +77,7 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 **Body copy:**
 > From new builds to routine upkeep, we keep your facilities safe, functional, and
 > looking their best. Our experienced teams handle everything from structural work to
-> emergency repairs — so you can focus on what matters most.
+> emergency repairs - so you can focus on what matters most.
 
 **CTAs:**
 - Learn More → `/services` *(primary)*
@@ -90,7 +90,7 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 
 ---
 
-### Slide 2 — Safety Management and Plant Hire
+### Slide 2 - Safety Management and Plant Hire
 
 **Eyebrow:** Welcome to Phehlwana Group Investments
 
@@ -98,7 +98,7 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 
 **Body copy:**
 > We combine the logistical benefits of hiring specialised equipment with strict
-> compliance to South African health and safety legislation — protecting your people,
+> compliance to South African health and safety legislation - protecting your people,
 > your assets, and your project timelines.
 
 **CTAs:**
@@ -112,7 +112,7 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 
 ---
 
-### Slide 3 — Cleaning and Waste Management *(New — recommended addition)*
+### Slide 3 - Cleaning and Waste Management *(New - recommended addition)*
 
 **Eyebrow:** Welcome to Phehlwana Group Investments
 
@@ -136,7 +136,7 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 
 ## About Section (Homepage Snapshot)
 
-### Left Column — Company Overview
+### Left Column - Company Overview
 
 **Section label:** About Phehlwana Group Investments
 
@@ -144,12 +144,12 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 > Phehlwana Group Investments is a South African small-to-medium enterprise established
 > in 2015. Over the past decade, our highly professional and experienced team has built
 > a deep understanding of the construction, engineering, and facilities management
-> sectors — delivering quality results for government, corporate, and private clients
+> sectors - delivering quality results for government, corporate, and private clients
 > nationally.
 >
 > Our business approach is built on a clear strategy: leverage local expertise, maintain
 > the highest standards of quality and safety, and develop lasting partnerships with our
-> clients. We don't just complete projects — we build relationships.
+> clients. We don't just complete projects - we build relationships.
 
 **Vision:**
 > To be the most trusted and preferred multi-disciplinary service provider in South
@@ -163,15 +163,15 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 
 **Our Values:**
 
-- ✅ **Adaptable solutions** — We tailor our approach to each client's unique needs and project requirements.
-- ✅ **Uncompromising quality** — Every project is executed to the highest standards, on time and within budget.
-- ✅ **Client-first relationships** — We build long-term partnerships based on trust, transparency, and results.
+- ✅ **Adaptable solutions** - We tailor our approach to each client's unique needs and project requirements.
+- ✅ **Uncompromising quality** - Every project is executed to the highest standards, on time and within budget.
+- ✅ **Client-first relationships** - We build long-term partnerships based on trust, transparency, and results.
 
 **CTA:** Learn More About Us → `/about`
 
 ---
 
-### Right Column — Stats
+### Right Column - Stats
 
 | Stat                  | Value | Display text                  |
 |-----------------------|-------|-------------------------------|
@@ -181,7 +181,7 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 | Coverage              | National | "Coverage"                 |
 
 **Image:** `public/images/hero/about-site-photo.jpg`
-**Alt text:** "Phehlwana Group project site — construction work in progress"
+**Alt text:** "Phehlwana Group project site - construction work in progress"
 
 > **[TODO: Replace `sed.png` with a real project or team photo]**
 
@@ -204,10 +204,10 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 
 | # | Service Name                       | Summary                                                                                                                    | Image alt text                                      | CTA                                    |
 |---|------------------------------------|----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|----------------------------------------|
-| 1 | Construction & Civil Engineering   | New builds, renovations, road construction, road maintenance, and safety management — delivered to CIDB standards.         | Construction workers on a building site             | Read More → `/services/construction`   |
+| 1 | Construction & Civil Engineering   | New builds, renovations, road construction, road maintenance, and safety management - delivered to CIDB standards.         | Construction workers on a building site             | Read More → `/services/construction`   |
 | 2 | Mechanical Engineering             | Design, development, installation, and maintenance of mechanical systems and machinery for industrial and commercial clients. | Mechanical engineer working on industrial equipment | Read More → `/services/mechanical`     |
 | 3 | Cleaning & Waste Management        | Commercial cleaning, industrial hygiene, hazardous waste handling, recycling, and compliant waste disposal.                | Cleaning team in a commercial building              | Read More → `/services/cleaning`       |
-| 4 | Plant Hire                         | TLB, excavators, tipper trucks, water carts, bulldozers, generators, and tools — available for wet or dry hire.           | TLB and construction equipment on a project site    | Read More → `/services/plant-hire`     |
+| 4 | Plant Hire                         | TLB, excavators, tipper trucks, water carts, bulldozers, generators, and tools - available for wet or dry hire.           | TLB and construction equipment on a project site    | Read More → `/services/plant-hire`     |
 | 5 | Security                           | Manned guarding, access control, CCTV monitoring, risk assessment, event security, and site security.                     | Security officer at a commercial building entrance  | Read More → `/services/security`       |
 
 **Bottom CTA:** View All Services → `/services`
@@ -217,14 +217,14 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 
 ---
 
-## Trust / Accreditation Strip *(New — recommended addition)*
+## Trust / Accreditation Strip *(New - recommended addition)*
 
 > Add a horizontal strip between the Services section and the Footer showing
 > accreditation logos and trust signals.
 
 **Suggested content:**
-- CIDB Registered — Grade 4CE, 5GB
-- BBBEE Compliant — Level 1
+- CIDB Registered - Grade 4CE, 5GB
+- BBBEE Compliant - Level 1
 - OHS Act Compliant
 - NEM:WA Compliant
 - 10+ Years in Business
@@ -235,7 +235,7 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 
 ### Company Blurb
 > We pride ourselves on our ability to meet the latest client specifications and deliver
-> on every concept — from the first consultation to final handover.
+> on every concept - from the first consultation to final handover.
 
 ### Navigation Links
 - About Us → `/about`
@@ -264,7 +264,7 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 - LinkedIn: **[TODO: Add URL]**
 
 > **NOTE:** The developer guide uses `socialLinks` in `src/data/navigation.ts` as the
-> single source of truth for social URLs. Update that file — not individual pages.
+> single source of truth for social URLs. Update that file - not individual pages.
 
 ---
 
@@ -274,7 +274,7 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 > Designed by [Apex Web Solutions](https://apexwebsolutions.co.za)
 
 > **NOTE:** Developer credit is Apex Web Solutions per `src/data/navigation.ts`.
-> The old site showed "Mothupi Solutions" — this has been corrected.
+> The old site showed "Mothupi Solutions" - this has been corrected.
 
 ---
 
@@ -284,7 +284,7 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 |---|-------------------------------|--------------------------------------------------------------|
 | 1 | Hero images (3 slides)        | Real project/site photography                                |
 | 2 | About section image           | Team photo or completed project                              |
-| 3 | Service card images (4)       | One per service — real photos                                |
+| 3 | Service card images (4)       | One per service - real photos                                |
 | 4 | Social media profile URLs     | Facebook, Twitter/X, Instagram, LinkedIn                     |
 | 5 | CIDB registration details     | Grade and registration number                                |
 | 6 | BBBEE level                   | Current certificate level                                    |

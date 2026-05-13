@@ -1,4 +1,4 @@
-# Contact Page — Phehlwana Group Investments
+# Contact Page - Phehlwana Group Investments
 
 > **File:** `contact.md`
 > **Page:** Contact Us (`contact.html`)
@@ -9,7 +9,7 @@
 ## SEO / Meta
 
 ```
-Title:       Contact Us | Phehlwana Group Investments — Get a Free Quote
+Title:       Contact Us | Phehlwana Group Investments - Get a Free Quote
 Description: Get in touch with Phehlwana Group Investments. Request a free quote,
              ask a question, or visit us at PKN Office Park, Montana, Pretoria.
              We respond within 1 business day.
@@ -23,7 +23,7 @@ Keywords:    contact Phehlwana Group, construction quote Pretoria, request quote
 
 **Page title:** Contact Us
 
-**Page subtitle:** Have a project in mind? We're here to help — get in touch and we'll respond within 1 business day.
+**Page subtitle:** Have a project in mind? We're here to help - get in touch and we'll respond within 1 business day.
 
 ---
 
@@ -51,7 +51,7 @@ Keywords:    contact Phehlwana Group, construction quote Pretoria, request quote
 | Full Name       | text     | Your Name          | e.g. John Smith          | Yes      | Min 2 characters                        |
 | Email Address   | email    | Your Email         | e.g. john@company.co.za  | Yes      | Valid email format                      |
 | Phone Number    | tel      | Your Phone         | e.g. 012 555 0000        | Yes      | SA format: 10 digits, starts with 0     |
-| Service Type    | select   | Service Required   | — Select a service —     | Yes      | Dropdown — see options below            |
+| Service Type    | select   | Service Required   | - Select a service -     | Yes      | Dropdown - see options below            |
 | Subject         | text     | Subject            | Brief description         | No       |                                         |
 | Message         | textarea | Your Message       | Tell us about your project | Yes     | Min 20 characters                       |
 
@@ -75,7 +75,7 @@ Keywords:    contact Phehlwana Group, construction quote Pretoria, request quote
 **Platform:** Resend + Astro Server Actions (Phase 6 of the development plan)
 
 > **NOTE:** The developer guide confirms the contact form uses **Resend** for email
-> delivery with **React Email** templates — NOT FormSubmit.co. The old site used
+> delivery with **React Email** templates - NOT FormSubmit.co. The old site used
 > FormSubmit; the new site uses a proper Astro Server Action.
 
 **How it works:**
@@ -122,7 +122,7 @@ TO_EMAIL=info@phehlwanagroup.co.za
 ### Address
 **Office No. 6, PKN Office Park, 62 Taaifontein Street, Montana Park, Pretoria, 0182**
 
-*(This is the standardised address — use this exact format on all pages)*
+*(This is the standardised address - use this exact format on all pages)*
 
 Google Maps link: [View on Google Maps](https://www.google.com/maps/place/PKN+Office+Park)
 
@@ -136,7 +136,7 @@ Google Maps link: [View on Google Maps](https://www.google.com/maps/place/PKN+Of
 | Mobile/Direct | 079 294 7635   | Urgent matters, after-hours WhatsApp   |
 
 **WhatsApp:** [Chat on WhatsApp](https://wa.me/27792947635)
-*(Link format: `https://wa.me/27792947635` — removes the leading 0, adds country code 27)*
+*(Link format: `https://wa.me/27792947635` - removes the leading 0, adds country code 27)*
 
 ---
 
@@ -145,8 +145,8 @@ Google Maps link: [View on Google Maps](https://www.google.com/maps/place/PKN+Of
 | Day              | Hours                                    |
 |------------------|------------------------------------------|
 | Monday – Friday  | 07:30 – 17:00                            |
-| Saturday         | **[TODO: Confirm — e.g. 08:00 – 13:00]** |
-| Sunday           | **[TODO: Confirm — e.g. Closed]**        |
+| Saturday         | **[TODO: Confirm - e.g. 08:00 – 13:00]** |
+| Sunday           | **[TODO: Confirm - e.g. Closed]**        |
 | Public Holidays  | **[TODO: Confirm]**                      |
 
 ---
@@ -202,7 +202,7 @@ A: Yes, Phehlwana Group Investments is registered with the CIDB at Grade 4CE, 5G
 ---
 
 **Q: Do you offer emergency maintenance services?**
-A: **[TODO: Confirm — e.g. "Yes, we offer emergency maintenance response for existing
+A: **[TODO: Confirm - e.g. "Yes, we offer emergency maintenance response for existing
 clients. For urgent maintenance issues, please call 079 294 7635."]**
 
 ---
@@ -251,7 +251,7 @@ A: Yes, Phehlwana Group Investments is a Level 1 BBBEE contributor. Our current 
 
 ## Footer
 
-*(Same footer as all other pages — see `home.md` for footer content details)*
+*(Same footer as all other pages - see `home.md` for footer content details)*
 
 ---
 

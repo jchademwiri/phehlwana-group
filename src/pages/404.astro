@@ -4,180 +4,173 @@ import HelpfulLinks from '@/components/helpful-links.astro';
 ---
 
 <Layout
-    title='Page Not Found'
-    description="The page you're looking for doesn't exist. Find your way back to Phehlwana Group Investments."
+  title='Page Not Found'
+  description="The page you're looking for doesn't exist. Find your way back to Phehlwana Group Investments."
 >
-    <div class='relative isolate overflow-hidden'>
-        <!-- Background: grid + blobs — all semantic tokens -->
-        <div class='absolute inset-0 -z-10' aria-hidden='true'>
-            <!-- Fade to page background at the bottom -->
-            <div
-                class='absolute inset-0 bg-linear-to-b from-transparent via-transparent to-background'
-            >
-            </div>
-            <!-- Dot grid -->
-            <svg
-                class='absolute inset-0 h-full w-full stroke-border/50 mask-[radial-gradient(ellipse_at_center,white_20%,transparent_75%)]'
-                aria-hidden='true'
-            >
-                <defs>
-                    <pattern
-                        id='404-grid'
-                        width='40'
-                        height='40'
-                        patternUnits='userSpaceOnUse'
-                    >
-                        <path d='M.5 40V.5H40' fill='none'></path>
-                    </pattern>
-                </defs>
-                <rect width='100%' height='100%' fill='url(#404-grid)'></rect>
-            </svg>
-            <!-- Ambient blobs -->
-            <div
-                class='absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/8 rounded-full blur-3xl'
-            >
-            </div>
-            <div
-                class='absolute bottom-0 right-0 w-[400px] h-[300px] bg-primary/5 rounded-full blur-3xl'
-            >
-            </div>
-        </div>
-
-        <!-- ── Hero ── -->
-        <section
-            class='min-h-[75vh] flex flex-col items-center justify-center px-4 pt-40 pb-24 text-center'
-        >
-            <!-- Badge -->
-            <div
-                class='inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-semibold px-3 py-1.5 rounded-full mb-8 border border-primary/20'
-            >
-                <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    class='size-3.5'
-                    viewBox='0 0 24 24'
-                    fill='none'
-                    stroke='currentColor'
-                    stroke-width='2.5'
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    aria-hidden='true'
-                    ><circle cx='12' cy='12' r='10'></circle><path d='M12 8v4'
-                    ></path><path d='M12 16h.01'></path></svg
-                >
-                Error 404
-            </div>
-
-            <!-- Giant 404 numeral -->
-            <div class='relative mb-6 select-none' aria-hidden='true'>
-                <span
-                    class='block text-[8rem] sm:text-[12rem] lg:text-[16rem] font-black leading-none tracking-tighter bg-linear-to-b from-foreground/20 to-foreground/5 bg-clip-text text-transparent'
-                >
-                    404
-                </span>
-                <!-- Floating icon card centred over the middle zero -->
-                <div
-                    class='absolute inset-0 flex items-center justify-center pointer-events-none'
-                >
-                    <div class='relative'>
-                        <div
-                            class='size-16 sm:size-20 rounded-2xl bg-background border border-border shadow-lg flex items-center justify-center'
-                        >
-                            <svg
-                                xmlns='http://www.w3.org/2000/svg'
-                                class='size-8 sm:size-10 text-primary'
-                                viewBox='0 0 24 24'
-                                fill='none'
-                                stroke='currentColor'
-                                stroke-width='1.5'
-                                stroke-linecap='round'
-                                stroke-linejoin='round'
-                                aria-hidden='true'
-                            >
-                                <circle cx='11' cy='11' r='8'></circle>
-                                <path d='m21 21-4.35-4.35'></path>
-                                <path d='M11 8v3'></path>
-                                <path d='M11 14h.01'></path>
-                            </svg>
-                        </div>
-                        <!-- Pulse dot -->
-                        <span
-                            class='absolute -top-1 -right-1 flex size-3'
-                            aria-hidden='true'
-                        >
-                            <span
-                                class='animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75'
-                            ></span>
-                            <span
-                                class='relative inline-flex rounded-full size-3 bg-primary'
-                            ></span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Copy -->
-            <h1
-                class='text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight'
-            >
-                Page not found
-            </h1>
-            <p
-                class='text-muted-foreground text-base sm:text-lg max-w-md mx-auto mb-10 leading-relaxed'
-            >
-                The page you're looking for doesn't exist or may have been
-                moved. Let's get you back on track.
-            </p>
-
-            <!-- CTAs -->
-            <div
-                class='flex flex-col sm:flex-row items-center justify-center gap-3'
-            >
-                <a
-                    href='/'
-                    class='inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:bg-primary/90 active:scale-95 transition-all shadow-sm w-full sm:w-auto justify-center'
-                >
-                    <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        class='size-4'
-                        viewBox='0 0 24 24'
-                        fill='none'
-                        stroke='currentColor'
-                        stroke-width='2'
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
-                        aria-hidden='true'
-                        ><path
-                            d='m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'
-                        ></path><polyline points='9 22 9 12 15 12 15 22'
-                        ></polyline></svg
-                    >
-                    Back to Home
-                </a>
-                <a
-                    href='/contact'
-                    class='inline-flex items-center gap-2 bg-background border border-border text-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:bg-accent active:scale-95 transition-all shadow-sm w-full sm:w-auto justify-center'
-                >
-                    <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        class='size-4'
-                        viewBox='0 0 24 24'
-                        fill='none'
-                        stroke='currentColor'
-                        stroke-width='2'
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
-                        aria-hidden='true'
-                        ><rect width='20' height='16' x='2' y='4' rx='2'
-                        ></rect><path
-                            d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'
-                        ></path></svg
-                    >
-                    Contact Us
-                </a>
-            </div>
-        </section>
-
-        <!-- ── Helpful links ── -->
-        <!-- <HelpfulLinks /> -->
+  <div class='relative isolate overflow-hidden'>
+    <!-- Background: grid + blobs - all semantic tokens -->
+    <div class='absolute inset-0 -z-10' aria-hidden='true'>
+      <!-- Fade to page background at the bottom -->
+      <div
+        class='absolute inset-0 bg-linear-to-b from-transparent via-transparent to-background'
+      >
+      </div>
+      <!-- Dot grid -->
+      <svg
+        class='absolute inset-0 h-full w-full stroke-border/50 mask-[radial-gradient(ellipse_at_center,white_20%,transparent_75%)]'
+        aria-hidden='true'
+      >
+        <defs>
+          <pattern
+            id='404-grid'
+            width='40'
+            height='40'
+            patternUnits='userSpaceOnUse'
+          >
+            <path d='M.5 40V.5H40' fill='none'></path>
+          </pattern>
+        </defs>
+        <rect width='100%' height='100%' fill='url(#404-grid)'></rect>
+      </svg>
+      <!-- Ambient blobs -->
+      <div
+        class='absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/8 rounded-full blur-3xl'
+      >
+      </div>
+      <div
+        class='absolute bottom-0 right-0 w-[400px] h-[300px] bg-primary/5 rounded-full blur-3xl'
+      >
+      </div>
     </div>
+
+    <!-- ── Hero ── -->
+    <section
+      class='min-h-[75vh] flex flex-col items-center justify-center px-4 pt-40 pb-24 text-center'
+    >
+      <!-- Badge -->
+      <div
+        class='inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-semibold px-3 py-1.5 rounded-full mb-8 border border-primary/20'
+      >
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          class='size-3.5'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke='currentColor'
+          stroke-width='2.5'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          aria-hidden='true'
+          ><circle cx='12' cy='12' r='10'></circle><path d='M12 8v4'
+          ></path><path d='M12 16h.01'></path></svg
+        >
+        Error 404
+      </div>
+
+      <!-- Giant 404 numeral -->
+      <div class='relative mb-6 select-none' aria-hidden='true'>
+        <span
+          class='block text-[8rem] sm:text-[12rem] lg:text-[16rem] font-black leading-none tracking-tighter bg-linear-to-b from-foreground/20 to-foreground/5 bg-clip-text text-transparent'
+        >
+          404
+        </span>
+        <!-- Floating icon card centred over the middle zero -->
+        <div
+          class='absolute inset-0 flex items-center justify-center pointer-events-none'
+        >
+          <div class='relative'>
+            <div
+              class='size-16 sm:size-20 rounded-2xl bg-background border border-border shadow-lg flex items-center justify-center'
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                class='size-8 sm:size-10 text-primary'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                stroke-width='1.5'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                aria-hidden='true'
+              >
+                <circle cx='11' cy='11' r='8'></circle>
+                <path d='m21 21-4.35-4.35'></path>
+                <path d='M11 8v3'></path>
+                <path d='M11 14h.01'></path>
+              </svg>
+            </div>
+            <!-- Pulse dot -->
+            <span
+              class='absolute -top-1 -right-1 flex size-3'
+              aria-hidden='true'
+            >
+              <span
+                class='animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75'
+              ></span>
+              <span class='relative inline-flex rounded-full size-3 bg-primary'
+              ></span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copy -->
+      <h1
+        class='text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight'
+      >
+        Page not found
+      </h1>
+      <p
+        class='text-muted-foreground text-base sm:text-lg max-w-md mx-auto mb-10 leading-relaxed'
+      >
+        The page you're looking for doesn't exist or may have been moved. Let's
+        get you back on track.
+      </p>
+
+      <!-- CTAs -->
+      <div class='flex flex-col sm:flex-row items-center justify-center gap-3'>
+        <a
+          href='/'
+          class='inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:bg-primary/90 active:scale-95 transition-all shadow-sm w-full sm:w-auto justify-center'
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            class='size-4'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            aria-hidden='true'
+            ><path d='m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'
+            ></path><polyline points='9 22 9 12 15 12 15 22'></polyline></svg
+          >
+          Back to Home
+        </a>
+        <a
+          href='/contact'
+          class='inline-flex items-center gap-2 bg-background border border-border text-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:bg-accent active:scale-95 transition-all shadow-sm w-full sm:w-auto justify-center'
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            class='size-4'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            aria-hidden='true'
+            ><rect width='20' height='16' x='2' y='4' rx='2'></rect><path
+              d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'></path></svg
+          >
+          Contact Us
+        </a>
+      </div>
+    </section>
+
+    <!-- ── Helpful links ── -->
+    <!-- <HelpfulLinks /> -->
+  </div>
 </Layout>

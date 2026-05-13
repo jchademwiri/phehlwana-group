@@ -19,7 +19,7 @@ export const server = {
         handler: async ({ name, email, phone, service, subject, message }) => {
             const fromEmail  = import.meta.env.FROM_EMAIL  ?? 'noreply@phehlwanagroup.co.za';
             const toEmail    = import.meta.env.TO_EMAIL    ?? 'info@phehlwanagroup.co.za';
-            const subjectLine = subject?.trim() || `New enquiry — ${service}`;
+            const subjectLine = subject?.trim() || `New enquiry - ${service}`;
 
             // ── Notification email to the business ───────────────────────────
             await resend.emails.send({

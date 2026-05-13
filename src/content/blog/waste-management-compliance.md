@@ -1,6 +1,6 @@
 ---
 title: 'Waste Management Compliance: What Your Business Needs to Know'
-description: 'South Africa waste management legislation is strict — and the penalties for non-compliance are significant. Here is what your business needs to know.'
+description: 'South Africa waste management legislation is strict - and the penalties for non-compliance are significant. Here is what your business needs to know.'
 pubDate: 2025-06-02T00:00:00Z
 author: 'Phehlwana Group Team'
 coverImage: '/images/blog/waste-management.svg'
@@ -8,17 +8,17 @@ tags: ['waste management', 'NEM:WA', 'compliance', 'South Africa', 'hazardous wa
 published: true
 ---
 
-Waste management in South Africa is governed by the National Environmental Management: Waste Act (NEM:WA, Act 59 of 2008) and its associated regulations. Whether you run a small office or a large industrial facility, you have legal obligations around how your waste is stored, transported, and disposed of — and the penalties for getting it wrong are significant.
+Waste management in South Africa is governed by the National Environmental Management: Waste Act (NEM:WA, Act 59 of 2008) and its associated regulations. Whether you run a small office or a large industrial facility, you have legal obligations around how your waste is stored, transported, and disposed of - and the penalties for getting it wrong are significant.
 
 ## What the Law Requires
 
 ### Duty of Care
 
-Under NEM:WA, every person who generates waste has a duty of care to ensure that waste is managed in a manner that does not endanger health or the environment. Critically, this duty extends to the entire waste chain — from generation to final disposal. If you hand your waste to an unlicensed contractor who dumps it illegally, you can still be held liable.
+Under NEM:WA, every person who generates waste has a duty of care to ensure that waste is managed in a manner that does not endanger health or the environment. Critically, this duty extends to the entire waste chain - from generation to final disposal. If you hand your waste to an unlicensed contractor who dumps it illegally, you can still be held liable.
 
 ### Waste Classification
 
-Waste must be correctly classified as general waste or hazardous waste. Hazardous waste — including chemical, medical, and certain industrial waste — has strict handling, transport, and disposal requirements that differ significantly from general waste. Misclassifying hazardous waste as general waste is a common and costly compliance failure.
+Waste must be correctly classified as general waste or hazardous waste. Hazardous waste - including chemical, medical, and certain industrial waste - has strict handling, transport, and disposal requirements that differ significantly from general waste. Misclassifying hazardous waste as general waste is a common and costly compliance failure.
 
 ### Waste Manifests
 
@@ -26,7 +26,7 @@ When hazardous waste is transported, a waste manifest (tracking document) must a
 
 ### Registered Waste Facilities
 
-Waste may only be disposed of at registered and licensed waste management facilities. Illegal dumping — whether by your own staff or a contractor acting on your behalf — carries significant penalties under both NEM:WA and municipal by-laws.
+Waste may only be disposed of at registered and licensed waste management facilities. Illegal dumping - whether by your own staff or a contractor acting on your behalf - carries significant penalties under both NEM:WA and municipal by-laws.
 
 ## Common Compliance Failures
 
@@ -59,6 +59,6 @@ Our waste management service ensures your business stays fully compliant. We pro
 - Documentation and record-keeping for audit purposes
 - Hazardous waste handling by trained, certified personnel
 
-We work with commercial, industrial, and construction clients across Gauteng to take the complexity out of waste compliance — so you can focus on running your business.
+We work with commercial, industrial, and construction clients across Gauteng to take the complexity out of waste compliance - so you can focus on running your business.
 
 [Contact us](/contact?service=Cleaning+%26+Waste+Management) to discuss your waste management requirements.

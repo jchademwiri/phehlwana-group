@@ -1,7 +1,7 @@
 ---
-title: 'Residential Estate Bulk Earthworks — Plant Hire'
+title: 'Residential Estate Bulk Earthworks - Plant Hire'
 projectNo: 'PGI-2023-004'
-description: 'Wet hire of a full earthmoving fleet for bulk earthworks on a 14-hectare residential estate — TLBs, excavators, tipper trucks, and water cart with experienced operators.'
+description: 'Wet hire of a full earthmoving fleet for bulk earthworks on a 14-hectare residential estate - TLBs, excavators, tipper trucks, and water cart with experienced operators.'
 scopeOfWorks: 'Bulk cut and fill, stormwater pond excavation, services trenching, compaction to geotechnical spec, and dust suppression across a 14-hectare development site.'
 client: 'Property Developer (Confidential)'
 location: 'Centurion, Gauteng'
@@ -22,10 +22,10 @@ Wet hire of a full earthmoving fleet for bulk earthworks on a new residential es
 
 The following plant was supplied on a wet hire basis for this project:
 
-- **2× TLB (Tractor Loader Backhoe)** — bulk excavation, trench digging for services, and material loading
-- **1× 20-tonne tracked excavator** — bulk cut and fill earthworks
-- **3× tipper trucks** — spoil removal and imported fill material delivery
-- **1× water cart** — dust suppression across the 14-hectare site
+- **2× TLB (Tractor Loader Backhoe)** - bulk excavation, trench digging for services, and material loading
+- **1× 20-tonne tracked excavator** - bulk cut and fill earthworks
+- **3× tipper trucks** - spoil removal and imported fill material delivery
+- **1× water cart** - dust suppression across the 14-hectare site
 
 All equipment was operated by Phehlwana Group's own operators, who were inducted onto the site and worked under the developer's principal contractor.
 

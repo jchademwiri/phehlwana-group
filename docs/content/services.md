@@ -1,4 +1,4 @@
-# Services Page — Phehlwana Group Investments
+# Services Page - Phehlwana Group Investments
 
 > **File:** `services.md`
 > **Page:** Our Services (`service.html`)
@@ -9,7 +9,7 @@
 ## SEO / Meta
 
 ```
-Title:       Our Services | Phehlwana Group Investments — Construction, Engineering & More
+Title:       Our Services | Phehlwana Group Investments - Construction, Engineering & More
 Description: Phehlwana Group offers construction, civil engineering, mechanical
              engineering, cleaning, waste management, plant hire and security services
              across South Africa. Request a free quote today.
@@ -44,12 +44,12 @@ Keywords:    construction services Pretoria, civil engineering South Africa, pla
 > we serve government, corporate, and private clients nationally.
 >
 > Whether you need a new building constructed, a road maintained, machinery serviced,
-> a facility cleaned, equipment hired, or a site secured — we have the expertise,
+> a facility cleaned, equipment hired, or a site secured - we have the expertise,
 > the equipment, and the people to get it done right.
 
 ---
 
-## Service 1 — Construction and Civil Engineering
+## Service 1 - Construction and Civil Engineering
 
 **Icon:** `fa-hard-hat` or `fa-building` *(replace the hospital icon)*
 
@@ -58,18 +58,18 @@ Keywords:    construction services Pretoria, civil engineering South Africa, pla
 
 **Heading:** Construction and Civil Engineering
 
-**Summary:** From new builds and renovations to road construction and safety management — we deliver quality civil and building work to CIDB standards.
+**Summary:** From new builds and renovations to road construction and safety management - we deliver quality civil and building work to CIDB standards.
 
 ---
 
-### 1A — General Building Construction and Maintenance
+### 1A - General Building Construction and Maintenance
 
 #### New Builds
 Constructing houses, offices, factories, schools, clinics, and other commercial and
 public facilities. We manage the full build process from foundation to final handover.
 
 #### Renovations & Remodelling
-Updating and transforming existing spaces — kitchens, bathrooms, offices, and entire
+Updating and transforming existing spaces - kitchens, bathrooms, offices, and entire
 buildings. We handle structural changes including adding or removing walls, partitions,
 and mezzanine floors.
 
@@ -83,7 +83,7 @@ Painting, tiling, ceilings, plastering, drywalling, built-in cupboards, and comp
 internal fit-outs. We work with clients to achieve the finish and aesthetic they envision.
 
 #### Specialised Trades
-Electrical installations, plumbing, drainage, waterproofing, and carpentry — all
+Electrical installations, plumbing, drainage, waterproofing, and carpentry - all
 carried out by qualified tradespeople.
 
 #### External Works
@@ -97,7 +97,7 @@ extends the life of your building.
 
 ---
 
-### 1B — Road Construction, Maintenance & Safety Management
+### 1B - Road Construction, Maintenance & Safety Management
 
 #### Road Construction & Maintenance
 
@@ -128,8 +128,8 @@ Implementing flagging operations, temporary speed limit signage, and traffic flo
 management to guide road users safely around construction sites.
 
 **Worker Protection**
-Enforcing the use of personal protective equipment (PPE) on all road sites — including
-high-visibility clothing, hard hats, and steel-toed boots — in compliance with the
+Enforcing the use of personal protective equipment (PPE) on all road sites - including
+high-visibility clothing, hard hats, and steel-toed boots - in compliance with the
 OHS Act.
 
 **Road Safety Audits & Inspections**
@@ -140,7 +140,7 @@ remediate potential hazards and blackspots before they cause incidents.
 
 ---
 
-## Service 2 — Mechanical Engineering
+## Service 2 - Mechanical Engineering
 
 **Icon:** `fa-cogs` or `fa-tools`
 
@@ -184,13 +184,13 @@ implement safe work procedures on every project.
 - Manufacturing and production facilities
 - Municipal infrastructure
 - Commercial and industrial buildings
-- Mining support services — **[TODO: Confirm if mining sector is served]**
+- Mining support services - **[TODO: Confirm if mining sector is served]**
 
 **CTA:** Request a Mechanical Engineering Quote → `/contact?service=Mechanical+Engineering`
 
 ---
 
-## Service 3 — Cleaning and Waste Management
+## Service 3 - Cleaning and Waste Management
 
 **Icon:** `fa-broom` or `fa-recycle`
 
@@ -199,7 +199,7 @@ implement safe work procedures on every project.
 
 **Heading:** Cleaning and Waste Management
 
-**Summary:** From daily commercial cleaning to hazardous waste disposal — we deliver
+**Summary:** From daily commercial cleaning to hazardous waste disposal - we deliver
 hygienic, compliant, and environmentally responsible solutions.
 
 ---
@@ -212,7 +212,7 @@ centres, schools, clinics, and public buildings. We provide dedicated cleaning t
 on flexible contracts tailored to your operational needs.
 
 #### Industrial Cleaning
-Specialised cleaning for factories, warehouses, and processing plants — including
+Specialised cleaning for factories, warehouses, and processing plants - including
 high-pressure (HP) cleaning, tank cleaning, industrial vacuuming, and degreasing.
 
 #### Hygiene & Sanitation
@@ -226,7 +226,7 @@ and post-construction clean-ups.
 
 #### Hazardous Materials (Hazmat) Cleaning
 Safe removal and disposal of contaminated materials, asbestos stripping, and incident
-scene management — carried out by trained personnel with the correct PPE and in
+scene management - carried out by trained personnel with the correct PPE and in
 compliance with NEM:WA regulations.
 
 ---
@@ -234,13 +234,13 @@ compliance with NEM:WA regulations.
 ### Waste Management Services
 
 #### Collection & Transportation
-Regular scheduled collection of domestic, commercial, and industrial waste — including
+Regular scheduled collection of domestic, commercial, and industrial waste - including
 door-to-door and onsite collection services. All waste is transported in compliant
 vehicles with proper waste manifests.
 
 #### Recycling & Sorting
 Onsite or offsite separation of recyclable waste streams including paper, plastic,
-glass, and metal — reducing landfill dependency and supporting your organisation's
+glass, and metal - reducing landfill dependency and supporting your organisation's
 sustainability goals.
 
 #### Hazardous Waste Management
@@ -264,7 +264,7 @@ applicable municipal by-laws.
 
 ---
 
-## Service 4 — Plant Hire
+## Service 4 - Plant Hire
 
 **Icon:** `fa-truck` or `fa-tractor`
 
@@ -273,7 +273,7 @@ applicable municipal by-laws.
 
 **Heading:** Plant Hire
 
-**Summary:** Flexible equipment hire for construction, landscaping, and civil projects —
+**Summary:** Flexible equipment hire for construction, landscaping, and civil projects -
 available with or without an operator, delivered to your site.
 
 ---
@@ -282,12 +282,12 @@ available with or without an operator, delivered to your site.
 
 We offer flexible plant and equipment hire for construction, landscaping, road
 maintenance, and civil engineering projects. Whether you're a large contractor or
-an individual homeowner, we provide the right equipment for the job — without the
+an individual homeowner, we provide the right equipment for the job - without the
 capital cost of ownership.
 
 **Hire options:**
-- **Wet Hire** — Equipment supplied with a qualified, experienced operator
-- **Dry Hire** — Equipment supplied without an operator (client provides their own)
+- **Wet Hire** - Equipment supplied with a qualified, experienced operator
+- **Dry Hire** - Equipment supplied without an operator (client provides their own)
 
 > **[TODO: Confirm which hire options are available for each equipment type]**
 
@@ -300,13 +300,13 @@ capital cost of ownership.
 | TLB (Tractor Loader Backhoe) | Versatile earthmoving machine for digging, loading, and grading              | Yes                |
 | Excavators             | Tracked excavators for bulk earthworks, trenching, and demolition                   | Yes                |
 | Bulldozers             | Heavy-duty dozing and land clearing for large civil projects                        | Yes                |
-| Tipper Trucks          | Bulk material transport — soil, sand, gravel, rubble, and aggregate                 | Yes                |
+| Tipper Trucks          | Bulk material transport - soil, sand, gravel, rubble, and aggregate                 | Yes                |
 | Water Carts            | Dust suppression and water supply on construction and road sites                    | Yes                |
 | Generators             | Portable power supply for sites without mains electricity                           | No (dry hire)      |
 | Tools & Equipment      | Hand tools, power tools, and small plant for hire                                   | N/A                |
 | Grader                 | Road grading and surface levelling                                                  | Yes                |
 
-> **[TODO: Add equipment specifications — e.g. TLB capacity, truck tonnage, generator kVA]**
+> **[TODO: Add equipment specifications - e.g. TLB capacity, truck tonnage, generator kVA]**
 > **[TODO: Confirm minimum hire periods and delivery/collection areas]**
 
 ### Service Area
@@ -322,7 +322,7 @@ We provide plant hire services nationally across South Africa.
 
 ---
 
-## Service 5 — Security
+## Service 5 - Security
 
 **Page URL:** `/services/security`
 
@@ -334,7 +334,7 @@ We provide plant hire services nationally across South Africa.
 **Heading:** Security
 
 **Summary:** Professional security solutions for commercial, industrial, and residential
-clients — from manned guarding and access control to CCTV monitoring and event security.
+clients - from manned guarding and access control to CCTV monitoring and event security.
 
 > **NOTE:** Security is confirmed as the 5th service division in `src/data/navigation.ts`
 > and `src/pages/services/security.astro`. Full service details below are to be
@@ -348,7 +348,7 @@ unauthorised access, monitor activity, and respond to incidents. Available for
 24-hour, day-shift, or night-shift coverage.
 
 ### Access Control
-Management and control of entry and exit points at your facility — including
+Management and control of entry and exit points at your facility - including
 visitor management, vehicle access, boom gates, and turnstile systems.
 
 ### CCTV Monitoring
@@ -357,7 +357,7 @@ systems for real-time surveillance and recorded evidence.
 
 ### Risk Assessment
 Formal security risk assessments to identify vulnerabilities at your site and
-recommend appropriate countermeasures — in compliance with PSIRA regulations.
+recommend appropriate countermeasures - in compliance with PSIRA regulations.
 
 ### Event Security
 Crowd management, access control, and incident response for corporate events,
@@ -377,7 +377,7 @@ Private Security Industry Regulation Act (PSIRA, Act 56 of 2001).
 
 ---
 
-## Section — How We Work
+## Section - How We Work
 
 **Section label:** Our Process
 
@@ -387,13 +387,13 @@ Private Security Industry Regulation Act (PSIRA, Act 56 of 2001).
 |------|--------------------------|------------------------------------------------------------------------------------------------------|
 | 01   | Initial Consultation     | Contact us with your project requirements. We'll discuss scope, timeline, and budget.                |
 | 02   | Site Assessment          | Our team visits your site to assess the work and understand the full scope of the project.           |
-| 03   | Detailed Proposal & Quote | We provide a clear, itemised quote with no hidden costs — typically within 1–2 business days.       |
+| 03   | Detailed Proposal & Quote | We provide a clear, itemised quote with no hidden costs - typically within 1–2 business days.       |
 | 04   | Project Execution        | Our skilled team gets to work, with regular progress updates and strict quality and safety controls. |
 | 05   | Handover & Support       | We complete a formal handover, address any snags, and remain available for ongoing support.          |
 
 ---
 
-## Section — Safety Commitment
+## Section - Safety Commitment
 
 **Section label:** Health & Safety
 
@@ -429,13 +429,13 @@ Private Security Industry Regulation Act (PSIRA, Act 56 of 2001).
 > **NOTE:** The developer guide specifies that each service page CTA should
 > pre-populate the service field in the contact form using a URL parameter:
 > `/contact?service=[Service+Name]`. This is handled by the Astro Server Action
-> in Phase 6 — the contact form reads the `?service=` param on load.
+> in Phase 6 - the contact form reads the `?service=` param on load.
 
 ---
 
 ## Footer
 
-*(Same footer as all other pages — see `home.md` for footer content details)*
+*(Same footer as all other pages - see `home.md` for footer content details)*
 
 ---
 
@@ -443,7 +443,7 @@ Private Security Industry Regulation Act (PSIRA, Act 56 of 2001).
 
 | # | Item                              | Notes                                                              |
 |---|-----------------------------------|--------------------------------------------------------------------|
-| 1 | Service images (5)                | Real photos — construction, mechanical, cleaning, plant hire, security |
+| 1 | Service images (5)                | Real photos - construction, mechanical, cleaning, plant hire, security |
 | 2 | CIDB grade for construction       | Add to Construction section                                        |
 | 3 | Plant hire equipment specs        | Capacity, tonnage, kVA for each item                               |
 | 4 | Hire options per equipment        | Confirm wet/dry hire availability for each item                    |

@@ -24,7 +24,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
     <meta name='generator' content={Astro.generator} />
     {description && <meta name='description' content={description} />}
     <title>{fullTitle}</title>
-    <!-- Theme init — must run before paint to avoid FOUC -->
+    <!-- Theme init - must run before paint to avoid FOUC -->
     <script is:inline>
       function initTheme() {
         const saved = localStorage.getItem('colorTheme');

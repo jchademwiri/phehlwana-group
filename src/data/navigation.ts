@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Navigation data — single source of truth for all links used in Header,
+// Navigation data - single source of truth for all links used in Header,
 // Footer, and any other component that needs site navigation.
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -51,7 +51,7 @@ export const developer = {
   external: true,
 };
 
-// ── Service divisions — dropdown menu data ────────────────────────────────────
+// ── Service divisions - dropdown menu data ────────────────────────────────────
 // Items removed: service pages are placeholders with no anchor sections yet.
 // Re-add items per division once the service pages have real content with IDs.
 export const serviceDivisions: ServiceDivision[] = [

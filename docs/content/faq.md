@@ -1,8 +1,8 @@
-# FAQ Page — Phehlwana Group Investments
+# FAQ Page - Phehlwana Group Investments
 
 > **File:** `faq.md`
 > **Page:** Frequently Asked Questions (`/faq`)
-> **Status:** 🟡 New page — content written, client TODOs marked
+> **Status:** 🟡 New page - content written, client TODOs marked
 > **Last reviewed:** May 2026
 
 ---
@@ -10,7 +10,7 @@
 ## SEO / Meta
 
 ```
-Title:       FAQ | Phehlwana Group Investments — Common Questions Answered
+Title:       FAQ | Phehlwana Group Investments - Common Questions Answered
 Description: Find answers to common questions about Phehlwana Group's construction,
              engineering, cleaning, and plant hire services. Get a free quote today.
 Keywords:    Phehlwana Group FAQ, construction questions South Africa, plant hire FAQ,
@@ -34,7 +34,7 @@ Keywords:    Phehlwana Group FAQ, construction questions South Africa, plant hir
 **Body copy:**
 > We've compiled answers to the questions we hear most often from new and existing
 > clients. If you don't find what you're looking for here, please don't hesitate to
-> contact us directly — we're happy to help.
+> contact us directly - we're happy to help.
 
 ---
 
@@ -45,11 +45,11 @@ Keywords:    Phehlwana Group FAQ, construction questions South Africa, plant hir
 **Q: What services does Phehlwana Group Investments offer?**
 
 A: We offer five core service areas:
-1. **Construction and Civil Engineering** — new builds, renovations, road construction, and maintenance
-2. **Mechanical Engineering** — design, installation, and maintenance of mechanical systems
-3. **Cleaning and Waste Management** — commercial cleaning, industrial hygiene, and waste disposal
-4. **Plant Hire** — equipment hire with or without operators
-5. **Security** — manned guarding, access control, CCTV, event security, and site security
+1. **Construction and Civil Engineering** - new builds, renovations, road construction, and maintenance
+2. **Mechanical Engineering** - design, installation, and maintenance of mechanical systems
+3. **Cleaning and Waste Management** - commercial cleaning, industrial hygiene, and waste disposal
+4. **Plant Hire** - equipment hire with or without operators
+5. **Security** - manned guarding, access control, CCTV, event security, and site security
 
 ---
 
@@ -101,7 +101,7 @@ We respond to all quote requests within 1 business day.
 A: The more detail you can provide, the more accurate your quote will be. Helpful
 information includes:
 - Project location and site address
-- Scope of work — what needs to be done
+- Scope of work - what needs to be done
 - Preferred start date and project timeline
 - Any relevant drawings, plans, or specifications
 - Your budget range (if known)
@@ -187,7 +187,7 @@ A: Our plant hire fleet includes:
 - Generators
 - Hand tools and power tools
 
-**[TODO: Add equipment specifications — capacity, tonnage, kVA. Also note that Grader should be added as a hire option once specs are confirmed.]**
+**[TODO: Add equipment specifications - capacity, tonnage, kVA. Also note that Grader should be added as a hire option once specs are confirmed.]**
 
 ---
 
@@ -204,21 +204,21 @@ to take responsibility for the safe operation of the equipment. See our
 
 **Q: What is the minimum hire period?**
 
-A: **[TODO: Confirm minimum hire periods — e.g. "Our minimum hire period is 1 day
+A: **[TODO: Confirm minimum hire periods - e.g. "Our minimum hire period is 1 day
 for most equipment. Weekly and monthly rates are also available."]**
 
 ---
 
 **Q: Do you deliver and collect the equipment?**
 
-A: **[TODO: Confirm — e.g. "Yes, we deliver and collect all hired equipment to and
+A: **[TODO: Confirm - e.g. "Yes, we deliver and collect all hired equipment to and
 from your site. Delivery charges may apply depending on distance."]**
 
 ---
 
 **Q: Do I need to provide fuel for hired equipment?**
 
-A: **[TODO: Confirm fuel policy — e.g. "Equipment is delivered with a full tank.
+A: **[TODO: Confirm fuel policy - e.g. "Equipment is delivered with a full tank.
 Clients are responsible for fuel during the hire period. Equipment must be returned
 with a full tank, or a refuelling charge will apply."]**
 
@@ -253,7 +253,7 @@ with the correct PPE and disposed of at licensed facilities.
 
 **Q: Do you provide cleaning staff or cleaning equipment?**
 
-A: We provide both — our cleaning teams arrive fully equipped with all necessary
+A: We provide both - our cleaning teams arrive fully equipped with all necessary
 cleaning materials and equipment. You don't need to supply anything.
 
 ---
@@ -280,7 +280,7 @@ boots, gloves, and safety glasses as a minimum.
 
 **Q: Do you carry public liability insurance?**
 
-A: **[TODO: Confirm — e.g. "Yes, Phehlwana Group Investments carries public liability
+A: **[TODO: Confirm - e.g. "Yes, Phehlwana Group Investments carries public liability
 insurance. Our certificate of insurance is available on request."]**
 
 ---
@@ -305,7 +305,7 @@ A: Our Security division provides:
 
 **Q: Are your security officers PSIRA registered?**
 
-A: **[TODO: Confirm — e.g. "Yes, all our security officers are registered with PSIRA
+A: **[TODO: Confirm - e.g. "Yes, all our security officers are registered with PSIRA
 (Private Security Industry Regulatory Authority) as required by the Private Security
 Industry Regulation Act (Act 56 of 2001). Our company PSIRA registration number
 is [X]."]**
@@ -314,7 +314,7 @@ is [X]."]**
 
 **Q: Do you offer 24-hour security coverage?**
 
-A: **[TODO: Confirm — e.g. "Yes, we offer 24-hour manned guarding for clients who
+A: **[TODO: Confirm - e.g. "Yes, we offer 24-hour manned guarding for clients who
 require round-the-clock coverage."]**
 
 ---
@@ -336,7 +336,7 @@ require round-the-clock coverage."]**
 
 ## Footer
 
-*(Same footer as all other pages — see `home.md` for footer content details)*
+*(Same footer as all other pages - see `home.md` for footer content details)*
 
 ---
 

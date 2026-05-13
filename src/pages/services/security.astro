@@ -3,86 +3,84 @@ import ServiceLayout from '@/layouts/ServiceLayout.astro';
 export const prerender = true;
 
 const services = [
-    {
-        title: 'Manned Guarding',
-        body: 'Professional, uniformed security officers deployed at your premises to deter unauthorised access, monitor activity, and respond to incidents. Available for 24-hour, day-shift, or night-shift coverage.',
-    },
-    {
-        title: 'Access Control',
-        body: 'Management and control of entry and exit points at your facility — including visitor management, vehicle access, boom gates, and turnstile systems.',
-    },
-    {
-        title: 'CCTV Monitoring',
-        body: 'Installation, monitoring, and maintenance of closed-circuit television (CCTV) systems for real-time surveillance and recorded evidence.',
-    },
-    {
-        title: 'Risk Assessment',
-        body: 'Formal security risk assessments to identify vulnerabilities at your site and recommend appropriate countermeasures — in compliance with PSIRA regulations.',
-    },
-    {
-        title: 'Event Security',
-        body: 'Crowd management, access control, and incident response for corporate events, public gatherings, and private functions.',
-    },
-    {
-        title: 'Site Security',
-        body: 'Dedicated security solutions for construction sites, including perimeter control, equipment protection, and after-hours monitoring.',
-    },
+  {
+    title: 'Manned Guarding',
+    body: 'Professional, uniformed security officers deployed at your premises to deter unauthorised access, monitor activity, and respond to incidents. Available for 24-hour, day-shift, or night-shift coverage.',
+  },
+  {
+    title: 'Access Control',
+    body: 'Management and control of entry and exit points at your facility - including visitor management, vehicle access, boom gates, and turnstile systems.',
+  },
+  {
+    title: 'CCTV Monitoring',
+    body: 'Installation, monitoring, and maintenance of closed-circuit television (CCTV) systems for real-time surveillance and recorded evidence.',
+  },
+  {
+    title: 'Risk Assessment',
+    body: 'Formal security risk assessments to identify vulnerabilities at your site and recommend appropriate countermeasures - in compliance with PSIRA regulations.',
+  },
+  {
+    title: 'Event Security',
+    body: 'Crowd management, access control, and incident response for corporate events, public gatherings, and private functions.',
+  },
+  {
+    title: 'Site Security',
+    body: 'Dedicated security solutions for construction sites, including perimeter control, equipment protection, and after-hours monitoring.',
+  },
 ];
 ---
 
 <ServiceLayout
-    title='Security Services'
-    description='Manned guarding, access control, CCTV surveillance, risk assessment and site security services in Pretoria and Gauteng — Phehlwana Group Investments.'
-    label='Security'
-    subtitle='Professional security solutions for commercial, industrial, and residential clients — from manned guarding and access control to CCTV monitoring and event security.'
-    image='/images/placeholder.svg'
-    imageAlt='Phehlwana Group security officer at a commercial building entrance'
-    serviceParam='Security'
+  title='Security Services'
+  description='Manned guarding, access control, CCTV surveillance, risk assessment and site security services in Pretoria and Gauteng - Phehlwana Group Investments.'
+  label='Security'
+  subtitle='Professional security solutions for commercial, industrial, and residential clients - from manned guarding and access control to CCTV monitoring and event security.'
+  image='/images/placeholder.svg'
+  imageAlt='Phehlwana Group security officer at a commercial building entrance'
+  serviceParam='Security'
 >
-    <div data-animate>
-        <h2
-            class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
-        >
-            Our Security Services
-        </h2>
-        <div class='grid sm:grid-cols-2 gap-4 mb-8'>
-            {
-                services.map((item) => (
-                    <div class='bg-card border border-border rounded-xl p-5'>
-                        <h3 class='text-sm font-semibold text-foreground mb-2 flex items-center gap-2'>
-                            <span class='size-1.5 rounded-full bg-primary shrink-0' />
-                            {item.title}
-                        </h3>
-                        <p class='text-sm text-muted-foreground leading-relaxed'>
-                            {item.body}
-                        </p>
-                    </div>
-                ))
-            }
-        </div>
-        <div
-            class='flex items-start gap-3 bg-accent/40 border border-border rounded-xl px-4 py-3 mt-2'
-        >
-            <svg
-                xmlns='http://www.w3.org/2000/svg'
-                class='size-4 text-primary shrink-0 mt-0.5'
-                viewBox='0 0 24 24'
-                fill='none'
-                stroke='currentColor'
-                stroke-width='2'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                aria-hidden='true'
-                ><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'
-                ></path></svg
-            >
-            <p class='text-xs text-muted-foreground leading-relaxed'>
-                All security services are provided in compliance with the <strong
-                    class='text-foreground'
-                    >Private Security Industry Regulation Act (PSIRA, Act 56 of
-                    2001)</strong
-                >. PSIRA registration number to be confirmed by client.
+  <div data-animate>
+    <h2
+      class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
+    >
+      Our Security Services
+    </h2>
+    <div class='grid sm:grid-cols-2 gap-4 mb-8'>
+      {
+        services.map((item) => (
+          <div class='bg-card border border-border rounded-xl p-5'>
+            <h3 class='text-sm font-semibold text-foreground mb-2 flex items-center gap-2'>
+              <span class='size-1.5 rounded-full bg-primary shrink-0' />
+              {item.title}
+            </h3>
+            <p class='text-sm text-muted-foreground leading-relaxed'>
+              {item.body}
             </p>
-        </div>
+          </div>
+        ))
+      }
     </div>
+    <div
+      class='flex items-start gap-3 bg-accent/40 border border-border rounded-xl px-4 py-3 mt-2'
+    >
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        class='size-4 text-primary shrink-0 mt-0.5'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        aria-hidden='true'
+        ><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'></path></svg
+      >
+      <p class='text-xs text-muted-foreground leading-relaxed'>
+        All security services are provided in compliance with the <strong
+          class='text-foreground'
+          >Private Security Industry Regulation Act (PSIRA, Act 56 of 2001)</strong
+        >. PSIRA registration number to be confirmed by client.
+      </p>
+    </div>
+  </div>
 </ServiceLayout>

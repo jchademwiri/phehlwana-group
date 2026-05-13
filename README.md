@@ -1,6 +1,6 @@
-# Phehlwana Group Investments — Website
+# Phehlwana Group Investments - Website
 
-> Corporate website for [Phehlwana Group Investments](https://phehlwanagroup.co.za) — a South African construction, engineering, cleaning, plant hire, and security company based in Pretoria.
+> Corporate website for [Phehlwana Group Investments](https://phehlwanagroup.co.za) - a South African construction, engineering, cleaning, plant hire, and security company based in Pretoria.
 
 **Live site:** https://phehlwanagroup.co.za  
 **Repo:** https://github.com/jchademwiri/phehlwana-group.git  
@@ -35,7 +35,7 @@ Before you begin, make sure you have the following installed:
 | [Bun](https://bun.sh) | Latest | `npm install -g bun` |
 | [Git](https://git-scm.com) | Any | https://git-scm.com |
 
-> This project uses **Bun** as the package manager and runtime. Do not use `npm` or `yarn` — the lockfile is `bun.lock`.
+> This project uses **Bun** as the package manager and runtime. Do not use `npm` or `yarn` - the lockfile is `bun.lock`.
 
 ---
 
@@ -61,7 +61,7 @@ cp .env.example .env
 ```
 
 Open `.env` and fill in the required values. See [Environment Variables](#environment-variables) below.  
-The dev server works without real values — you only need them for the contact form (Phase 6) and analytics (Phase 7).
+The dev server works without real values - you only need them for the contact form (Phase 6) and analytics (Phase 7).
 
 ### 4. Start the development server
 
@@ -96,13 +96,13 @@ All commands are run from the root of the project:
 | UI Components | [Starwind UI v1.16](https://starwind.dev) |
 | Styling | [Tailwind CSS v4](https://tailwindcss.com) |
 | Icons | [Tabler Icons](https://tabler.io/icons) |
-| JavaScript | Vanilla JS only — no React/Vue in the UI layer |
+| JavaScript | Vanilla JS only - no React/Vue in the UI layer |
 | React | Installed for [React Email](https://react.email) templates only |
 | Animations | CSS `@keyframes` + Intersection Observer |
 | Forms | Astro Server Actions + [Resend](https://resend.com) (Phase 6) |
-| Images | Astro `<Image />` — automatic WebP conversion + lazy loading |
+| Images | Astro `<Image />` - automatic WebP conversion + lazy loading |
 | Analytics | [Vercel Analytics](https://vercel.com/analytics) + Google Analytics 4 (Phase 7) |
-| Deployment | [Vercel](https://vercel.com) — `@astrojs/vercel` adapter |
+| Deployment | [Vercel](https://vercel.com) - `@astrojs/vercel` adapter |
 | Package manager | [Bun](https://bun.sh) |
 
 ---
@@ -112,20 +112,20 @@ All commands are run from the root of the project:
 ```
 phehlwana-group/
 │
-├── public/                          Served as-is — no Astro processing
+├── public/                          Served as-is - no Astro processing
 │   ├── favicon.ico                  Browser tab icon
 │   ├── robots.txt                   Search engine crawl rules
 │   ├── site.webmanifest             PWA manifest
 │   ├── img/
-│   │   ├── logo.png                 ⚠️  Placeholder — replace with final brand asset
-│   │   └── logow.png                ⚠️  Placeholder — replace with final brand asset
+│   │   ├── logo.png                 ⚠️  Placeholder - replace with final brand asset
+│   │   └── logow.png                ⚠️  Placeholder - replace with final brand asset
 │   ├── docs/                        Client PDFs (CIDB cert, BBBEE cert, company profile)
 │   └── scripts/
 │       └── animations.js            Scroll-triggered entrance animations (Intersection Observer)
 │
 ├── src/
 │   ├── assets/
-│   │   └── images/                  ✅  Processed by Astro — auto WebP, optimised, lazy loaded
+│   │   └── images/                  ✅  Processed by Astro - auto WebP, optimised, lazy loaded
 │   │       ├── hero/                Hero/carousel images
 │   │       ├── about/               About section images
 │   │       ├── services/            Service card images (one per division)
@@ -134,16 +134,16 @@ phehlwana-group/
 │   │       └── blog/                Blog post featured images
 │   │
 │   ├── components/
-│   │   ├── starwind/                Starwind UI components — fully editable, you own the code
+│   │   ├── starwind/                Starwind UI components - fully editable, you own the code
 │   │   ├── shared/
-│   │   │   ├── Header.astro         Sticky header — topbar, Services dropdown, mobile drawer, dark mode
-│   │   │   └── Footer.astro         4-column footer — theme-aware, dynamic copyright year
+│   │   │   ├── Header.astro         Sticky header - topbar, Services dropdown, mobile drawer, dark mode
+│   │   │   └── Footer.astro         4-column footer - theme-aware, dynamic copyright year
 │   │   ├── helpful-links.astro      Used on 404 page
-│   │   └── sections/                ⏳  Page section components — built in Phase 2+
+│   │   └── sections/                ⏳  Page section components - built in Phase 2+
 │   │
 │   ├── content/
-│   │   ├── projects/                MDX files — one per project (Phase 5)
-│   │   └── blog/                    MDX files — one per post (Phase 2+)
+│   │   ├── projects/                MDX files - one per project (Phase 5)
+│   │   └── blog/                    MDX files - one per post (Phase 2+)
 │   │
 │   ├── content.config.ts            Content collection schemas (projects + blog)
 │   │
@@ -151,7 +151,7 @@ phehlwana-group/
 │   │   └── navigation.ts            ⭐  Single source of truth for all nav links and service divisions
 │   │
 │   ├── layouts/
-│   │   └── Layout.astro             Root layout — CSS, Header, Footer, dark mode, skip-to-content
+│   │   └── Layout.astro             Root layout - CSS, Header, Footer, dark mode, skip-to-content
 │   │
 │   ├── pages/
 │   │   ├── index.astro              Home (Phase 2)
@@ -159,7 +159,7 @@ phehlwana-group/
 │   │   ├── projects.astro           Projects portfolio (Phase 5)
 │   │   ├── contact.astro            Contact (Phase 6)
 │   │   ├── thank-you.astro          Post-form confirmation (Phase 6)
-│   │   ├── 404.astro                ✅  Custom 404 — branded, theme-aware
+│   │   ├── 404.astro                ✅  Custom 404 - branded, theme-aware
 │   │   └── services/
 │   │       ├── index.astro          Services overview (Phase 4)
 │   │       ├── construction.astro   Construction & Civil Engineering (Phase 4)
@@ -181,13 +181,13 @@ phehlwana-group/
 │       ├── home.md / about.md / services.md / blog.md
 │       ├── team.md / contact.md / faq.md / thank-you.md
 │
-├── astro.config.mjs                 Astro config — site URL, adapter, integrations
+├── astro.config.mjs                 Astro config - site URL, adapter, integrations
 ├── content.config.ts                Content collection definitions (Astro v6 glob loader)
 ├── starwind.config.json             Starwind CLI config
-├── tsconfig.json                    TypeScript config — @/ alias, strict mode
-├── .env.example                     ✅  Safe to commit — placeholder values only
-├── .env                             ⚠️  Never commit — real secrets go here
-├── bun.lock                         Bun lockfile — commit this
+├── tsconfig.json                    TypeScript config - @/ alias, strict mode
+├── .env.example                     ✅  Safe to commit - placeholder values only
+├── .env                             ⚠️  Never commit - real secrets go here
+├── bun.lock                         Bun lockfile - commit this
 └── package.json
 ```
 
@@ -195,29 +195,29 @@ phehlwana-group/
 
 ## Environment Variables
 
-Copy `.env.example` to `.env` and fill in real values. The dev server runs without them — they are only required for the contact form (Phase 6) and analytics (Phase 7).
+Copy `.env.example` to `.env` and fill in real values. The dev server runs without them - they are only required for the contact form (Phase 6) and analytics (Phase 7).
 
 ```bash
-# Email — Phase 6
+# Email - Phase 6
 RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxx        # Get from resend.com
 RESEND_REGISTERED_DOMAIN=info.phehlwanagroup.co.za  # Subdomain verified in Resend DNS
 FROM_EMAIL=noreply@info.phehlwanagroup.co.za  # Must match the verified domain above
 TO_EMAIL=info@phehlwanagroup.co.za            # Where form submissions are delivered
 
-# Analytics — Phase 7
+# Analytics - Phase 7
 PUBLIC_GA4_ID=G-XXXXXXXXXX                   # Get from Google Analytics
 
 # Site
 PUBLIC_SITE_URL=https://phehlwanagroup.co.za
 ```
 
-> **Never commit `.env`** — it is in `.gitignore`. Only `.env.example` is committed.
+> **Never commit `.env`** - it is in `.gitignore`. Only `.env.example` is committed.
 
 ---
 
 ## Images
 
-Images in `src/assets/images/` are processed by Astro at build time — automatically converted to WebP, optimised, and lazy loaded. Always use the `<Image />` component for these.
+Images in `src/assets/images/` are processed by Astro at build time - automatically converted to WebP, optimised, and lazy loaded. Always use the `<Image />` component for these.
 
 ```astro
 ---
@@ -233,7 +233,7 @@ import heroImg from '@/assets/images/hero/hero-construction.png';
 />
 ```
 
-Images in `public/img/` (logos) are served as-is and referenced by URL path — no `<Image />` needed.
+Images in `public/img/` (logos) are served as-is and referenced by URL path - no `<Image />` needed.
 
 > See `docs/developer-guide.md` → Image Guidelines for required sizes and full usage details.
 
@@ -257,13 +257,13 @@ bun preview        # preview the build at localhost:4321
 5. Add all environment variables from `.env`
 6. Point the custom domain `phehlwanagroup.co.za` to Vercel
 
-> The `@astrojs/vercel` adapter is already installed and configured. The contact page (Phase 6) uses `export const prerender = false` for SSR — Vercel handles this automatically.
+> The `@astrojs/vercel` adapter is already installed and configured. The contact page (Phase 6) uses `export const prerender = false` for SSR - Vercel handles this automatically.
 
 ---
 
 ## Key Conventions
 
-### Tailwind — use semantic tokens, not palette classes
+### Tailwind - use semantic tokens, not palette classes
 
 | ❌ Avoid | ✅ Use instead |
 | :------- | :------------- |
@@ -275,7 +275,7 @@ bun preview        # preview the build at localhost:4321
 
 Semantic tokens make light/dark mode work automatically everywhere. Hardcoded palette classes break in dark mode.
 
-### Navigation — one file to rule them all
+### Navigation - one file to rule them all
 
 All nav links live in `src/data/navigation.ts`. Edit that file and the Header, Footer, mobile drawer, and sitemap all update automatically. Never hardcode nav links in components.
 
@@ -309,7 +309,7 @@ Only the contact page (Phase 6) needs this.
 
 | Branch | Purpose |
 | :----- | :------ |
-| `master` | Production — auto-deploys to phehlwanagroup.co.za |
+| `master` | Production - auto-deploys to phehlwanagroup.co.za |
 | `feature/*` | New features and pages |
 | `fix/*` | Bug fixes |
 | `content/*` | Copy, images, and MDX files only |
@@ -327,8 +327,8 @@ docs:     documentation updates
 
 ### What not to commit
 
-- `.env` — real API keys and secrets
-- `dist/` — build output (in `.gitignore`)
+- `.env` - real API keys and secrets
+- `dist/` - build output (in `.gitignore`)
 - Client PDFs containing sensitive business information
 
 ---
@@ -355,13 +355,13 @@ Full project documentation is in the `docs/` folder:
 | [`docs/development-plan.md`](docs/development-plan.md) | Phase-by-phase build plan with per-phase checklists |
 | [`docs/client-questionnaire.md`](docs/client-questionnaire.md) | Outstanding questions for the client |
 | [`docs/website-audit-report.md`](docs/website-audit-report.md) | Findings from the audit of the old site |
-| [`docs/content/README.md`](docs/content/README.md) | Content status — what's written, what's still needed |
+| [`docs/content/README.md`](docs/content/README.md) | Content status - what's written, what's still needed |
 
 ---
 
 ## License
 
-Private — all rights reserved. This codebase is the property of Phehlwana Group Investments. Not open source.
+Private - all rights reserved. This codebase is the property of Phehlwana Group Investments. Not open source.
 
 ---
 

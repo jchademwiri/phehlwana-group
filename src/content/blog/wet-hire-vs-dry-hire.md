@@ -8,7 +8,7 @@ tags: ['plant hire', 'wet hire', 'dry hire', 'construction equipment', 'Gauteng'
 published: true
 ---
 
-When hiring construction equipment, you'll typically be offered two options: wet hire or dry hire. Understanding the difference — and knowing which is right for your project — can save you time, money, and headaches on site.
+When hiring construction equipment, you'll typically be offered two options: wet hire or dry hire. Understanding the difference - and knowing which is right for your project - can save you time, money, and headaches on site.
 
 ## What is Wet Hire?
 
@@ -28,7 +28,7 @@ Wet hire means you hire the equipment together with a qualified, experienced ope
 
 ## What is Dry Hire?
 
-Dry hire means you hire the equipment only — you provide your own qualified operator. You are responsible for the safe operation of the equipment during the hire period, including all OHS compliance related to its use.
+Dry hire means you hire the equipment only - you provide your own qualified operator. You are responsible for the safe operation of the equipment during the hire period, including all OHS compliance related to its use.
 
 **Best for:**
 - Contractors with their own qualified operators
@@ -52,15 +52,15 @@ Dry hire means you hire the equipment only — you provide your own qualified op
 
 ## Which Should You Choose?
 
-If you're a homeowner, small developer, or a contractor without a specific operator for the equipment type you need — wet hire is almost always the better choice. You get the equipment and the expertise in one package, and the hire company carries the operational risk.
+If you're a homeowner, small developer, or a contractor without a specific operator for the equipment type you need - wet hire is almost always the better choice. You get the equipment and the expertise in one package, and the hire company carries the operational risk.
 
 If you're an established contractor with qualified operators on your payroll and a longer-term need for the equipment, dry hire gives you more flexibility and a lower daily rate.
 
-When in doubt, ask the hire company. A good plant hire provider will ask about your project and recommend the right option — not just the more expensive one.
+When in doubt, ask the hire company. A good plant hire provider will ask about your project and recommend the right option - not just the more expensive one.
 
 ## Phehlwana Group Plant Hire
 
-We offer both wet and dry hire options for our full fleet — TLBs, excavators, tipper trucks, water carts, bulldozers, and generators. Our operators are experienced, safety-trained, and familiar with South African construction site requirements.
+We offer both wet and dry hire options for our full fleet - TLBs, excavators, tipper trucks, water carts, bulldozers, and generators. Our operators are experienced, safety-trained, and familiar with South African construction site requirements.
 
 Equipment is delivered to your site and collected on completion. We respond to hire enquiries within 1 business day.
 

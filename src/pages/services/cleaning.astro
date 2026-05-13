@@ -3,113 +3,113 @@ import ServiceLayout from '@/layouts/ServiceLayout.astro';
 export const prerender = true;
 
 const cleaningServices = [
-    {
-        title: 'Commercial & Contract Cleaning',
-        body: 'Daily, weekly, or scheduled cleaning maintenance for offices, retail spaces, shopping centres, schools, clinics, and public buildings. We provide dedicated cleaning teams on flexible contracts tailored to your operational needs.',
-    },
-    {
-        title: 'Industrial Cleaning',
-        body: 'Specialised cleaning for factories, warehouses, and processing plants — including high-pressure (HP) cleaning, tank cleaning, industrial vacuuming, and degreasing.',
-    },
-    {
-        title: 'Hygiene & Sanitation',
-        body: 'Full management of workplace hygiene including washroom dispensers, sanitary bin services, and the supply of hygiene consumables (toilet paper, hand soap, sanitiser).',
-    },
-    {
-        title: 'Specialised Cleaning',
-        body: 'Deep cleaning for hard-to-reach areas including silos, ventilation systems, and elevated surfaces. Also includes carpet and upholstery cleaning, window cleaning, and post-construction clean-ups.',
-    },
-    {
-        title: 'Hazardous Materials (Hazmat)',
-        body: 'Safe removal and disposal of contaminated materials, asbestos stripping, and incident scene management — carried out by trained personnel with the correct PPE and in compliance with NEM:WA regulations.',
-    },
+  {
+    title: 'Commercial & Contract Cleaning',
+    body: 'Daily, weekly, or scheduled cleaning maintenance for offices, retail spaces, shopping centres, schools, clinics, and public buildings. We provide dedicated cleaning teams on flexible contracts tailored to your operational needs.',
+  },
+  {
+    title: 'Industrial Cleaning',
+    body: 'Specialised cleaning for factories, warehouses, and processing plants - including high-pressure (HP) cleaning, tank cleaning, industrial vacuuming, and degreasing.',
+  },
+  {
+    title: 'Hygiene & Sanitation',
+    body: 'Full management of workplace hygiene including washroom dispensers, sanitary bin services, and the supply of hygiene consumables (toilet paper, hand soap, sanitiser).',
+  },
+  {
+    title: 'Specialised Cleaning',
+    body: 'Deep cleaning for hard-to-reach areas including silos, ventilation systems, and elevated surfaces. Also includes carpet and upholstery cleaning, window cleaning, and post-construction clean-ups.',
+  },
+  {
+    title: 'Hazardous Materials (Hazmat)',
+    body: 'Safe removal and disposal of contaminated materials, asbestos stripping, and incident scene management - carried out by trained personnel with the correct PPE and in compliance with NEM:WA regulations.',
+  },
 ];
 
 const wasteServices = [
-    {
-        title: 'Collection & Transportation',
-        body: 'Regular scheduled collection of domestic, commercial, and industrial waste — including door-to-door and onsite collection services. All waste is transported in compliant vehicles with proper waste manifests.',
-    },
-    {
-        title: 'Recycling & Sorting',
-        body: "Onsite or offsite separation of recyclable waste streams including paper, plastic, glass, and metal — reducing landfill dependency and supporting your organisation's sustainability goals.",
-    },
-    {
-        title: 'Hazardous Waste Management',
-        body: 'Secure handling, treatment, and disposal of toxic, medical, and chemical wastes in full compliance with the National Environmental Management: Waste Act (NEM:WA) and relevant SANS standards.',
-    },
-    {
-        title: 'Organic Waste & Composting',
-        body: 'Processing food and garden waste into compost or animal feed, diverting organic material from landfill and creating value from waste.',
-    },
-    {
-        title: 'Landfill Management',
-        body: 'Planning, construction, and operation of compliant landfill sites for non-recyclable waste, including liner systems, leachate management, and gas capture.',
-    },
+  {
+    title: 'Collection & Transportation',
+    body: 'Regular scheduled collection of domestic, commercial, and industrial waste - including door-to-door and onsite collection services. All waste is transported in compliant vehicles with proper waste manifests.',
+  },
+  {
+    title: 'Recycling & Sorting',
+    body: "Onsite or offsite separation of recyclable waste streams including paper, plastic, glass, and metal - reducing landfill dependency and supporting your organisation's sustainability goals.",
+  },
+  {
+    title: 'Hazardous Waste Management',
+    body: 'Secure handling, treatment, and disposal of toxic, medical, and chemical wastes in full compliance with the National Environmental Management: Waste Act (NEM:WA) and relevant SANS standards.',
+  },
+  {
+    title: 'Organic Waste & Composting',
+    body: 'Processing food and garden waste into compost or animal feed, diverting organic material from landfill and creating value from waste.',
+  },
+  {
+    title: 'Landfill Management',
+    body: 'Planning, construction, and operation of compliant landfill sites for non-recyclable waste, including liner systems, leachate management, and gas capture.',
+  },
 ];
 ---
 
 <ServiceLayout
-    title='Cleaning & Waste Management'
-    description='Commercial and industrial cleaning, hygiene services, waste collection and disposal in Pretoria and Gauteng — Phehlwana Group Investments.'
-    label='Cleaning & Waste Management'
-    subtitle='From daily commercial cleaning to hazardous waste disposal — hygienic, compliant, and environmentally responsible solutions.'
-    image='/images/services/service-cleaning.png'
-    imageAlt='Phehlwana Group cleaning team in a commercial office building'
-    serviceParam='Cleaning & Waste Management'
+  title='Cleaning & Waste Management'
+  description='Commercial and industrial cleaning, hygiene services, waste collection and disposal in Pretoria and Gauteng - Phehlwana Group Investments.'
+  label='Cleaning & Waste Management'
+  subtitle='From daily commercial cleaning to hazardous waste disposal - hygienic, compliant, and environmentally responsible solutions.'
+  image='/images/services/service-cleaning.png'
+  imageAlt='Phehlwana Group cleaning team in a commercial office building'
+  serviceParam='Cleaning & Waste Management'
 >
-    <div class='space-y-12'>
-        <div data-animate>
-            <h2
-                class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
-            >
-                Cleaning Services
-            </h2>
-            <div class='grid sm:grid-cols-2 gap-4'>
-                {
-                    cleaningServices.map((item) => (
-                        <div class='bg-card border border-border rounded-xl p-5'>
-                            <h3 class='text-sm font-semibold text-foreground mb-2 flex items-center gap-2'>
-                                <span class='size-1.5 rounded-full bg-primary shrink-0' />
-                                {item.title}
-                            </h3>
-                            <p class='text-sm text-muted-foreground leading-relaxed'>
-                                {item.body}
-                            </p>
-                        </div>
-                    ))
-                }
+  <div class='space-y-12'>
+    <div data-animate>
+      <h2
+        class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
+      >
+        Cleaning Services
+      </h2>
+      <div class='grid sm:grid-cols-2 gap-4'>
+        {
+          cleaningServices.map((item) => (
+            <div class='bg-card border border-border rounded-xl p-5'>
+              <h3 class='text-sm font-semibold text-foreground mb-2 flex items-center gap-2'>
+                <span class='size-1.5 rounded-full bg-primary shrink-0' />
+                {item.title}
+              </h3>
+              <p class='text-sm text-muted-foreground leading-relaxed'>
+                {item.body}
+              </p>
             </div>
-        </div>
-
-        <div data-animate>
-            <h2
-                class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
-            >
-                Waste Management Services
-            </h2>
-            <div class='grid sm:grid-cols-2 gap-4'>
-                {
-                    wasteServices.map((item) => (
-                        <div class='bg-card border border-border rounded-xl p-5'>
-                            <h3 class='text-sm font-semibold text-foreground mb-2 flex items-center gap-2'>
-                                <span class='size-1.5 rounded-full bg-primary shrink-0' />
-                                {item.title}
-                            </h3>
-                            <p class='text-sm text-muted-foreground leading-relaxed'>
-                                {item.body}
-                            </p>
-                        </div>
-                    ))
-                }
-            </div>
-            <p
-                class='mt-4 text-xs text-muted-foreground bg-accent/40 border border-border rounded-lg px-4 py-3'
-            >
-                All waste management services are carried out in compliance with
-                the National Environmental Management: Waste Act (NEM:WA, Act 59
-                of 2008) and applicable municipal by-laws.
-            </p>
-        </div>
+          ))
+        }
+      </div>
     </div>
+
+    <div data-animate>
+      <h2
+        class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
+      >
+        Waste Management Services
+      </h2>
+      <div class='grid sm:grid-cols-2 gap-4'>
+        {
+          wasteServices.map((item) => (
+            <div class='bg-card border border-border rounded-xl p-5'>
+              <h3 class='text-sm font-semibold text-foreground mb-2 flex items-center gap-2'>
+                <span class='size-1.5 rounded-full bg-primary shrink-0' />
+                {item.title}
+              </h3>
+              <p class='text-sm text-muted-foreground leading-relaxed'>
+                {item.body}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+      <p
+        class='mt-4 text-xs text-muted-foreground bg-accent/40 border border-border rounded-lg px-4 py-3'
+      >
+        All waste management services are carried out in compliance with the
+        National Environmental Management: Waste Act (NEM:WA, Act 59 of 2008)
+        and applicable municipal by-laws.
+      </p>
+    </div>
+  </div>
 </ServiceLayout>

@@ -1,4 +1,4 @@
-# Phehlwana Group Investments — Client Discovery Questionnaire (Completed)
+# Phehlwana Group Investments - Client Discovery Questionnaire (Completed)
 
 **Purpose:** To gather all the information needed to build an accurate, effective, and up-to-date website for Phehlwana Group Investments.
 
@@ -27,7 +27,7 @@ NHBRC
 **7. In what year was the company officially established?**
 It was founded in 2015 but it was changed to Phehlwana Group Investments in 2020 with a new registration number.
 
-**8. We noticed the company name is spelled two ways across the current website — "Phehlwana" and "Phehlawana". Which is the correct spelling?**
+**8. We noticed the company name is spelled two ways across the current website - "Phehlwana" and "Phehlawana". Which is the correct spelling?**
 Phehlwana Group Investments
 
 ---
@@ -99,10 +99,10 @@ None, but Billy is currently working on that. Listed name to be used: "Phehlwana
 [No response provided]
 
 **27. Can you verify or update the following statistics currently shown on the website:**
-- 129+ Projects Completed — *We prefer not to display a number.*
-- 20+ Awards Won — *0 (Remove this metric).*
-- 50+ Skilled Professionals — *Update to 10 full-time employees (Subcontractors used occasionally).*
-- 6+ Management Team — *[No response provided]*
+- 129+ Projects Completed - *We prefer not to display a number.*
+- 20+ Awards Won - *0 (Remove this metric).*
+- 50+ Skilled Professionals - *Update to 10 full-time employees (Subcontractors used occasionally).*
+- 6+ Management Team - *[No response provided]*
 
 ---
 
@@ -154,10 +154,10 @@ City of Tshwane, Sanparks, AgriSkills, JB Levelling, Magalies Water, Civicon.
 **41. Do you have any written testimonials or references from past clients that we can use?**
 Yes, but we need assistance gathering them.
 
-**42. The website currently states 129+ projects completed — please confirm this number is accurate and up to date.**
+**42. The website currently states 129+ projects completed - please confirm this number is accurate and up to date.**
 We prefer not to display a number.
 
-**43. The website states 20+ awards won — please provide the name, awarding body, and year for each award so they can be displayed correctly.**
+**43. The website states 20+ awards won - please provide the name, awarding body, and year for each award so they can be displayed correctly.**
 0 (Please remove awards).
 
 ---
@@ -229,7 +229,7 @@ Maybe, but we do not have a dedicated writer. Billy Maphothoma would handle this
 **62. Are there any pages or sections from the current website you definitely want removed or significantly changed?**
 No, but they should be re-arranged.
 
-**63. Is there anything important about the company — its history, values, achievements, or capabilities — that is currently missing from the website and should be included?**
+**63. Is there anything important about the company - its history, values, achievements, or capabilities - that is currently missing from the website and should be included?**
 Pictures.
 
 ---

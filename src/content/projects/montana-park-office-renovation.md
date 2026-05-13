@@ -1,7 +1,7 @@
 ---
 title: 'Montana Park Office Complex Renovation'
 projectNo: 'PGI-2023-001'
-description: 'Full interior renovation of a multi-tenant commercial office complex — structural modifications, complete fit-out, and facade upgrades across three occupied floors.'
+description: 'Full interior renovation of a multi-tenant commercial office complex - structural modifications, complete fit-out, and facade upgrades across three occupied floors.'
 scopeOfWorks: 'Structural wall removal, replastering, painting, ceiling replacement, electrical upgrades, plumbing, waterproofing, facade painting, and new entrance lobby fit-out.'
 client: 'Private Commercial Client'
 location: 'Montana Park, Pretoria'

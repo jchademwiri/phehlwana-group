@@ -1,19 +1,19 @@
-# Build Now Checklist — Updated After Questionnaire Responses (3 May 2026)
+# Build Now Checklist - Updated After Questionnaire Responses (3 May 2026)
 
 > **Status:** Client questionnaire received. Several TODOs are now resolved.
 > Several critical corrections are required before further development.
 
 ---
 
-## 🔴 CRITICAL CORRECTIONS — Do Before Anything Else
+## 🔴 CRITICAL CORRECTIONS - Do Before Anything Else
 
 These are factual errors that must be fixed across ALL pages before any new work:
 
-- [ ] **Remove "20+ Awards Won"** — from StatsBar, About page, homepage. Confirmed zero awards.
-- [ ] **Remove "129+ Projects Completed"** — client prefers not to display a number.
-- [ ] **Remove "50+ Skilled Professionals"** — actual count is 10. Remove or replace with accurate copy.
-- [ ] **Update geographic coverage** — change "Gauteng and beyond" to "nationally" / "across South Africa" everywhere.
-- [ ] **Fix StatsBar.astro** — replace the 4 counters with verified stats (see below).
+- [ ] **Remove "20+ Awards Won"** - from StatsBar, About page, homepage. Confirmed zero awards.
+- [ ] **Remove "129+ Projects Completed"** - client prefers not to display a number.
+- [ ] **Remove "50+ Skilled Professionals"** - actual count is 10. Remove or replace with accurate copy.
+- [ ] **Update geographic coverage** - change "Gauteng and beyond" to "nationally" / "across South Africa" everywhere.
+- [ ] **Fix StatsBar.astro** - replace the 4 counters with verified stats (see below).
 
 ### Revised Stats Bar Content
 Replace the current 4-stat bar with these confirmed facts:
@@ -27,9 +27,9 @@ Replace the current 4-stat bar with these confirmed facts:
 
 ---
 
-## ✅ Now Unblocked — Can Build With Confirmed Data
+## ✅ Now Unblocked - Can Build With Confirmed Data
 
-### Credentials / Compliance Section (About Page — was blocked)
+### Credentials / Compliance Section (About Page - was blocked)
 All of the following are now confirmed and can be written into the site:
 
 - **VAT Number:** 4520316631
@@ -41,12 +41,12 @@ All of the following are now confirmed and can be written into the site:
 > Build the credentials section on the About page now using these confirmed values.
 > Add placeholder rows for registration numbers / certificate upload links.
 
-### CEO / Leadership (Team Page — was blocked)
-- **Nicholas Mahlangu** — Group CEO. Add to About page and Team page.
-- **Sbusiso Mashilwane** — appears to be a team member. Role/title unclear — show as "Coming Soon" card.
-- No headshots available yet — use placeholder cards.
+### CEO / Leadership (Team Page - was blocked)
+- **Nicholas Mahlangu** - Group CEO. Add to About page and Team page.
+- **Sbusiso Mashilwane** - appears to be a team member. Role/title unclear - show as "Coming Soon" card.
+- No headshots available yet - use placeholder cards.
 
-### Named Clients (About / Projects — was blocked)
+### Named Clients (About / Projects - was blocked)
 Can now be listed on the website with client permission confirmed:
 - City of Tshwane
 - Sanparks
@@ -57,18 +57,18 @@ Can now be listed on the website with client permission confirmed:
 
 Add to: About page (Client Trust section), Projects page (filter/tag), homepage trust strip.
 
-### Plant Hire Equipment (Services — was partially blocked)
+### Plant Hire Equipment (Services - was partially blocked)
 Add **Grader** to the equipment table on `/services/plant-hire`.
 Updated fleet: TLB, Water Carts, Tipper Trucks, Excavators, Bulldozers, **Grader**, Tools, Generators.
 
-### Geographic Coverage (All pages — was pending)
+### Geographic Coverage (All pages - was pending)
 Replace all instances of "Pretoria", "Gauteng", or "Gauteng and beyond" with **"nationally"** or "across South Africa".
 
 ### Contact Page FAQ (was blocked on some answers)
 Now confirmed:
 - Geographic coverage: Nationally
-- CIDB registered: Yes — 4CE, 5GB
-- BBBEE compliant: Yes — Level 1
+- CIDB registered: Yes - 4CE, 5GB
+- BBBEE compliant: Yes - Level 1
 - Business hours: Monday–Friday 07:30–17:00
 
 ### Founding Story (About Page)
@@ -77,44 +77,44 @@ Update to: *"founded in 2015 and incorporated as Phehlwana Group Investments in 
 
 ---
 
-## Shared Components (build these first — everything else depends on them)
+## Shared Components (build these first - everything else depends on them)
 
-- [ ] **`StatsBar.astro`** — 🔴 MUST update first. Remove inflated stats. Use confirmed 4-stat layout above.
-- [ ] **`PageHeader.astro`** — ✅ Already built, no changes needed
-- [ ] **`ContactCTA.astro`** — ✅ Already built, no changes needed
+- [ ] **`StatsBar.astro`** - 🔴 MUST update first. Remove inflated stats. Use confirmed 4-stat layout above.
+- [ ] **`PageHeader.astro`** - ✅ Already built, no changes needed
+- [ ] **`ContactCTA.astro`** - ✅ Already built, no changes needed
 
 ---
 
 ## About Page (`/about`)
 
-- [ ] **Credentials section** — ✅ NOW UNBLOCKED. Add CIDB, BBBEE, ISO 45001, NHBRC, VAT.
-- [ ] **CEO card** — ✅ NOW UNBLOCKED. Nicholas Mahlangu, Group CEO. Add placeholder headshot.
-- [ ] **Team preview** — Add Nicholas Mahlangu card. Add "Coming Soon" card for Sbusiso Mashilwane. ⚠️ No headshots yet.
-- [ ] **Remove Awards section** — 🔴 Confirmed 0 awards. Remove entirely.
-- [ ] **Update Our Story** — Add 2020 re-registration milestone.
-- [ ] **Named clients strip** — ✅ NOW UNBLOCKED. Add 6 confirmed clients.
-- [ ] **Geographic coverage** — Update to "nationally".
+- [ ] **Credentials section** - ✅ NOW UNBLOCKED. Add CIDB, BBBEE, ISO 45001, NHBRC, VAT.
+- [ ] **CEO card** - ✅ NOW UNBLOCKED. Nicholas Mahlangu, Group CEO. Add placeholder headshot.
+- [ ] **Team preview** - Add Nicholas Mahlangu card. Add "Coming Soon" card for Sbusiso Mashilwane. ⚠️ No headshots yet.
+- [ ] **Remove Awards section** - 🔴 Confirmed 0 awards. Remove entirely.
+- [ ] **Update Our Story** - Add 2020 re-registration milestone.
+- [ ] **Named clients strip** - ✅ NOW UNBLOCKED. Add 6 confirmed clients.
+- [ ] **Geographic coverage** - Update to "nationally".
 
 ---
 
 ## Home Page (`/`)
 
-- [ ] **Hero section** — ⚠️ Still needs real photography. Use existing placeholder images for now.
-- [ ] **Stats bar** — 🔴 MUST fix. Remove 3 unsubstantiated stats. Use confirmed values.
-- [ ] **Services grid** — ⚠️ Confirm Mechanical Engineering and Security with client before featuring.
-- [ ] **Trust strip** — ✅ Update with: CIDB 4CE/5GB, BBBEE Level 1, ISO 45001, Nationally.
-- [ ] **Primary CTA** — Consider changing from "Request a Quote" to "View Our Projects" based on client's stated primary CTA goal.
-- [ ] **Named clients** — Add client logos / names strip between services and projects sections.
+- [ ] **Hero section** - ⚠️ Still needs real photography. Use existing placeholder images for now.
+- [ ] **Stats bar** - 🔴 MUST fix. Remove 3 unsubstantiated stats. Use confirmed values.
+- [ ] **Services grid** - ⚠️ Confirm Mechanical Engineering and Security with client before featuring.
+- [ ] **Trust strip** - ✅ Update with: CIDB 4CE/5GB, BBBEE Level 1, ISO 45001, Nationally.
+- [ ] **Primary CTA** - Consider changing from "Request a Quote" to "View Our Projects" based on client's stated primary CTA goal.
+- [ ] **Named clients** - Add client logos / names strip between services and projects sections.
 
 ---
 
 ## Services Pages
 
-- [ ] **Construction** (`/services/construction`) — ✅ Active & confirmed. Update geographic ref.
-- [ ] **Mechanical Engineering** (`/services/mechanical`) — ✅ Active & confirmed. All services to be promoted equally.
-- [ ] **Cleaning & Waste Management** (`/services/cleaning`) — ✅ Active & confirmed. Update geographic ref.
-- [ ] **Plant Hire** (`/services/plant-hire`) — ✅ Active & confirmed. Add Grader to equipment table.
-- [ ] **Security** (`/services/security`) — ✅ Active & confirmed. All services to be promoted equally.
+- [ ] **Construction** (`/services/construction`) - ✅ Active & confirmed. Update geographic ref.
+- [ ] **Mechanical Engineering** (`/services/mechanical`) - ✅ Active & confirmed. All services to be promoted equally.
+- [ ] **Cleaning & Waste Management** (`/services/cleaning`) - ✅ Active & confirmed. Update geographic ref.
+- [ ] **Plant Hire** (`/services/plant-hire`) - ✅ Active & confirmed. Add Grader to equipment table.
+- [ ] **Security** (`/services/security`) - ✅ Active & confirmed. All services to be promoted equally.
 
 ---
 
@@ -123,9 +123,9 @@ Update to: *"founded in 2015 and incorporated as Phehlwana Group Investments in 
 Now can answer these previously-blocked questions:
 
 - **Geographic coverage:** Nationally ✅
-- **CIDB registered:** Yes — 4CE, 5GB ✅
-- **BBBEE compliant:** Yes — Level 1 ✅
-- **OHS compliant:** Yes — ISO 45001 certified ✅
+- **CIDB registered:** Yes - 4CE, 5GB ✅
+- **BBBEE compliant:** Yes - Level 1 ✅
+- **OHS compliant:** Yes - ISO 45001 certified ✅
 - **Plant hire equipment:** Add Grader to the list ✅
 
 Still blocked:
@@ -138,8 +138,8 @@ Still blocked:
 
 ## Contact Page (`/contact`)
 
-- [ ] Business hours — ✅ Confirmed existing hours from previous website.
-- [ ] All confirmed contact details — ✅ no changes needed.
+- [ ] Business hours - ✅ Confirmed existing hours from previous website.
+- [ ] All confirmed contact details - ✅ no changes needed.
 
 ---
 
@@ -176,4 +176,4 @@ Still blocked:
 7. 📧 Send client: project detail submission template
 8. 📧 Send client: testimonial request email template for named clients
 9. 🎨 Apply Grey and Blue as primary brand colours (from questionnaire)
-10. 📸 Arrange photoshoot — this is the single highest-impact action
+10. 📸 Arrange photoshoot - this is the single highest-impact action
