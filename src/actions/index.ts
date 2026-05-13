@@ -1,7 +1,7 @@
 import { defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
 import { Resend } from 'resend';
-import { renderAsync } from '@react-email/render';
+import { render } from '@react-email/components';
 import React from 'react';
 import { randomUUID } from 'node:crypto';
 import ContactNotification from '../emails/ContactNotification';
@@ -22,12 +22,12 @@ export const server = {
             message: z.string().min(20, 'Please enter at least 20 characters.'),
         }),
         handler: async ({ name, email, phone, service, subject, message }) => {
-            const fromEmail  = import.meta.env.FROM_EMAIL  ?? 'info@info.phehlwanagroup.co.za';
+            const fromEmail  = import.meta.env.FROM_EMAIL  ?? 'noreply@info.phehlwanagroup.co.za';
             const toEmail    = import.meta.env.TO_EMAIL    ?? 'info@phehlwanagroup.co.za';
             const subjectLine = subject?.trim() || `New enquiry - ${service}`;
 
             // Render React components to HTML strings
-            const notificationHtml = await renderAsync(
+            const notificationHtml = await render(
                 React.createElement(ContactNotification, {
                     name,
                     email,
@@ -38,7 +38,7 @@ export const server = {
                 })
             );
 
-            const autoReplyHtml = await renderAsync(
+            const autoReplyHtml = await render(
                 React.createElement(ContactAutoReply, {
                     name,
                 })
