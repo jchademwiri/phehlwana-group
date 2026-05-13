@@ -22,12 +22,12 @@ interface ContactNotificationProps {
 }
 
 export const ContactNotification = ({
-  name,
-  email,
-  phone,
-  service,
-  subject,
-  message,
+  name = 'John Doe',
+  email = 'john.doe@example.com',
+  phone = '082 123 4567',
+  service = 'Plant Hire',
+  subject = 'Enquiry about Grader hire',
+  message = 'Good day,\n\nI would like to enquire about hiring a Grader for a road resurfacing project in Pretoria. Please send me your rates.\n\nThank you.',
 }: ContactNotificationProps) => {
   return (
     <Html>
