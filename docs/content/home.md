@@ -145,7 +145,7 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 > in 2015. Over the past decade, our highly professional and experienced team has built
 > a deep understanding of the construction, engineering, and facilities management
 > sectors — delivering quality results for government, corporate, and private clients
-> across Gauteng and beyond.
+> nationally.
 >
 > Our business approach is built on a clear strategy: leverage local expertise, maintain
 > the highest standards of quality and safety, and develop lasting partnerships with our
@@ -175,12 +175,10 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 
 | Stat                  | Value | Display text                  |
 |-----------------------|-------|-------------------------------|
-| Projects Completed    | 129+  | "Projects Completed"          |
-| Awards Won            | 20+   | "Awards Won"                  |
-| Skilled Professionals | 50+   | "Skilled Professionals"       |
-| Years in Business     | 10+   | "Years in Business" *(updated from "Management Team 6+" — more impactful on homepage)* |
-
-> **[TODO: Confirm all stats are current. If "20+ Awards" is accurate, list them on the About page.]**
+| BBBEE Level           | Level 1 | "BBBEE Level"                 |
+| CIDB Grade            | 4CE/5GB | "CIDB Grade"                  |
+| Years in Business     | 10+   | "Years in Business"           |
+| Coverage              | National | "Coverage"                 |
 
 **Image:** `public/images/hero/about-site-photo.jpg`
 **Alt text:** "Phehlwana Group project site — construction work in progress"
@@ -225,11 +223,11 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 > accreditation logos and trust signals.
 
 **Suggested content:**
-- CIDB Registered *(logo + grade)* — **[TODO: Add CIDB grade and registration number]**
-- BBBEE Compliant *(logo + level)* — **[TODO: Add BBBEE level]**
+- CIDB Registered — Grade 4CE, 5GB
+- BBBEE Compliant — Level 1
 - OHS Act Compliant
+- NEM:WA Compliant
 - 10+ Years in Business
-- 129+ Projects Completed
 
 ---
 
@@ -291,4 +289,3 @@ Keywords:    construction Pretoria, civil engineering South Africa, plant hire G
 | 5 | CIDB registration details     | Grade and registration number                                |
 | 6 | BBBEE level                   | Current certificate level                                    |
 | 7 | Newsletter platform           | Mailchimp / Brevo account setup                              |
-| 8 | Stats verification            | Confirm 129+ projects, 20+ awards are current                |

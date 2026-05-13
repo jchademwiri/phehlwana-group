@@ -424,7 +424,7 @@ Phehlwana Group is a proudly BBBEE-compliant business. Our transformation commit
 are not just about compliance — they reflect our genuine belief that a more equitable
 economy benefits everyone.
 
-> **[TODO: Add specific BBBEE level and any specific transformation initiatives]**
+> **[TODO: Add specific transformation initiatives (Level 1 BBBEE status confirmed)]**
 
 #### Looking Ahead
 
@@ -497,4 +497,4 @@ tags:        [3–5 relevant tags]
 | 2 | Publication dates             | Set dates for each post                                      |
 | 3 | Author names                  | Replace "Phehlwana Group Team" with real author names/titles |
 | 4 | Project showcase post         | Write based on a real completed project with photos          |
-| 5 | BBBEE details for Post 6      | Level and specific transformation initiatives                |
+| 5 | BBBEE details for Post 6      | Specific transformation initiatives (Level 1 confirmed)        |

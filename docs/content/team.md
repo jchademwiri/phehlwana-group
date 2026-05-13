@@ -184,10 +184,10 @@ of the team page. Please follow these guidelines:
 
 **Section label:** Our People
 
-**Heading:** 50+ Skilled Professionals
+**Heading:** Our Skilled Workforce
 
 **Body copy:**
-> Beyond our management team, Phehlwana Group employs over 50 skilled professionals
+> Beyond our management team, Phehlwana Group employs a dedicated team of 10 full-time professionals
 > including qualified artisans, plant operators, safety officers, cleaning supervisors,
 > and support staff. We invest in ongoing training and development to ensure our team
 > stays at the forefront of industry standards and best practices.

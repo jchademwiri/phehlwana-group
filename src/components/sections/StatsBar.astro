@@ -6,10 +6,10 @@
  */
 
 const stats = [
-    { value: 129, suffix: '+', label: 'Projects Completed' },
-    { value: 20, suffix: '+', label: 'Awards Won' },
-    { value: 50, suffix: '+', label: 'Skilled Professionals' },
-    { value: 10, suffix: '+', label: 'Years in Business' },
+    { text: 'Level 1', label: 'BBBEE Level', isNumber: false },
+    { text: '4CE/5GB', label: 'CIDB Grade', isNumber: false },
+    { value: 10, suffix: '+', label: 'Years in Business', isNumber: true },
+    { text: 'National', label: 'Coverage', isNumber: false },
 ];
 ---
 
@@ -20,13 +20,17 @@ const stats = [
                 stats.map((stat) => (
                     <div data-animate>
                         <dt class='text-4xl font-bold mb-1 tabular-nums text-foreground'>
-                            <span
-                                class='stat-counter'
-                                data-target={stat.value}
-                                data-suffix={stat.suffix}
-                            >
-                                0{stat.suffix}
-                            </span>
+                            {stat.isNumber ? (
+                                <span
+                                    class='stat-counter'
+                                    data-target={stat.value}
+                                    data-suffix={stat.suffix}
+                                >
+                                    0{stat.suffix}
+                                </span>
+                            ) : (
+                                <span>{stat.text}</span>
+                            )}
                         </dt>
                         <dd class='text-sm text-muted-foreground font-medium uppercase tracking-wide'>
                             {stat.label}

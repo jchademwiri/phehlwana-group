@@ -1,105 +1,178 @@
-# Build Now Checklist — No Client Content Required
+# Build Now Checklist — Updated After Questionnaire Responses (3 May 2026)
 
-Everything below can be built today using copy already in `docs/content/` and images already in `public/`.
-Items marked ⚠️ will use placeholder images — swap them when the client delivers real photos.
+> **Status:** Client questionnaire received. Several TODOs are now resolved.
+> Several critical corrections are required before further development.
+
+---
+
+## 🔴 CRITICAL CORRECTIONS — Do Before Anything Else
+
+These are factual errors that must be fixed across ALL pages before any new work:
+
+- [ ] **Remove "20+ Awards Won"** — from StatsBar, About page, homepage. Confirmed zero awards.
+- [ ] **Remove "129+ Projects Completed"** — client prefers not to display a number.
+- [ ] **Remove "50+ Skilled Professionals"** — actual count is 10. Remove or replace with accurate copy.
+- [ ] **Update geographic coverage** — change "Gauteng and beyond" to "nationally" / "across South Africa" everywhere.
+- [ ] **Fix StatsBar.astro** — replace the 4 counters with verified stats (see below).
+
+### Revised Stats Bar Content
+Replace the current 4-stat bar with these confirmed facts:
+
+| Display | Value | Status |
+|---|---|---|
+| BBBEE Level | Level 1 | ✅ Confirmed |
+| CIDB Grade | 4CE / 5GB | ✅ Confirmed |
+| Years in Business | 10+ | ✅ Confirmed (est. 2015) |
+| National Coverage | ✅ | ✅ Confirmed |
+
+---
+
+## ✅ Now Unblocked — Can Build With Confirmed Data
+
+### Credentials / Compliance Section (About Page — was blocked)
+All of the following are now confirmed and can be written into the site:
+
+- **VAT Number:** 4520316631
+- **CIDB Grade:** 4CE, 5GB *(registration number still pending)*
+- **BBBEE Level:** Level 1 *(certificate document still pending)*
+- **ISO 45001:** Occupational Health & Safety *(certificate document still pending)*
+- **NHBRC:** Member *(registration number still pending)*
+
+> Build the credentials section on the About page now using these confirmed values.
+> Add placeholder rows for registration numbers / certificate upload links.
+
+### CEO / Leadership (Team Page — was blocked)
+- **Nicholas Mahlangu** — Group CEO. Add to About page and Team page.
+- **Sbusiso Mashilwane** — appears to be a team member. Role/title unclear — show as "Coming Soon" card.
+- No headshots available yet — use placeholder cards.
+
+### Named Clients (About / Projects — was blocked)
+Can now be listed on the website with client permission confirmed:
+- City of Tshwane
+- Sanparks
+- AgriSkills
+- JB Levelling
+- Magalies Water
+- Civicon
+
+Add to: About page (Client Trust section), Projects page (filter/tag), homepage trust strip.
+
+### Plant Hire Equipment (Services — was partially blocked)
+Add **Grader** to the equipment table on `/services/plant-hire`.
+Updated fleet: TLB, Water Carts, Tipper Trucks, Excavators, Bulldozers, **Grader**, Tools, Generators.
+
+### Geographic Coverage (All pages — was pending)
+Replace all instances of "Pretoria", "Gauteng", or "Gauteng and beyond" with **"nationally"** or "across South Africa".
+
+### Contact Page FAQ (was blocked on some answers)
+Now confirmed:
+- Geographic coverage: Nationally
+- CIDB registered: Yes — 4CE, 5GB
+- BBBEE compliant: Yes — Level 1
+- Business hours: Monday–Friday 07:30–17:00
+
+### Founding Story (About Page)
+Update from: *"established in 2015"*
+Update to: *"founded in 2015 and incorporated as Phehlwana Group Investments in 2020"*
 
 ---
 
 ## Shared Components (build these first — everything else depends on them)
 
-- [ ] **`PageHeader.astro`** — reusable interior page header (title, subtitle, breadcrumb)
-- [ ] **`ContactCTA.astro`** — reusable bottom CTA strip (used on every page)
-- [ ] **`StatsBar.astro`** — 4 animated counters (129+ projects, 20+ awards, 50+ staff, 10+ years)
-
----
-
-## Home Page (`/`)
-
-- [ ] **Hero section** — 3-slide carousel, all copy ready in `docs/content/home.md` ⚠️ placeholder images
-- [ ] **About snapshot** — company description, vision, mission, 3 values, "Learn More" CTA ✅ copy ready
-- [ ] **Stats counters** — 129+, 20+, 50+, 10+ ✅ copy ready
-- [ ] **Services grid** — 5 service cards with summaries and links ⚠️ 4 of 5 images exist (no Security image)
-- [ ] **Trust strip** — OHS Act, 10+ years, 129+ projects (skip CIDB/BBBEE until client confirms)
-- [ ] **Featured projects strip** — pull 2 featured projects from content collection ✅ data exists
-- [ ] **Contact CTA** — reuse `ContactCTA.astro` ✅ no content needed
+- [ ] **`StatsBar.astro`** — 🔴 MUST update first. Remove inflated stats. Use confirmed 4-stat layout above.
+- [ ] **`PageHeader.astro`** — ✅ Already built, no changes needed
+- [ ] **`ContactCTA.astro`** — ✅ Already built, no changes needed
 
 ---
 
 ## About Page (`/about`)
 
-- [ ] **Page header** — "About Us / Building South Africa since 2015" ✅ copy ready
-- [ ] **Company overview** — 2 paragraphs ✅ copy ready
-- [ ] **Vision, Mission & Values** — all 6 values ✅ copy ready
-- [ ] **Our Story** — 3 paragraphs ✅ copy ready (placeholder note for client to personalise)
-- [ ] **Stats section** — reuse `StatsBar.astro` ✅ ready
-- [ ] **Why Choose Us** — 8 differentiators ✅ copy ready
-- [ ] **Accreditations** — OHS Act + NEM:WA confirmed; CIDB/BBBEE show as "pending" ✅ partial
-- [ ] **Team preview** — skip or show "Coming Soon" card (no headshots yet) ⚠️ blocked on photos
-- [ ] **Contact CTA** — reuse `ContactCTA.astro`
+- [ ] **Credentials section** — ✅ NOW UNBLOCKED. Add CIDB, BBBEE, ISO 45001, NHBRC, VAT.
+- [ ] **CEO card** — ✅ NOW UNBLOCKED. Nicholas Mahlangu, Group CEO. Add placeholder headshot.
+- [ ] **Team preview** — Add Nicholas Mahlangu card. Add "Coming Soon" card for Sbusiso Mashilwane. ⚠️ No headshots yet.
+- [ ] **Remove Awards section** — 🔴 Confirmed 0 awards. Remove entirely.
+- [ ] **Update Our Story** — Add 2020 re-registration milestone.
+- [ ] **Named clients strip** — ✅ NOW UNBLOCKED. Add 6 confirmed clients.
+- [ ] **Geographic coverage** — Update to "nationally".
 
 ---
 
-## Services Overview (`/services`)
+## Home Page (`/`)
 
-- [ ] **Page header** — "Our Services" ✅ copy ready
-- [ ] **Intro copy** ✅ ready in `docs/content/services.md`
-- [ ] **5 service cards** — title, summary, image, "Read More" link ⚠️ 4 images exist, Security missing
-- [ ] **How We Work** — 5-step process ✅ copy ready
-- [ ] **Safety commitment** — OHS Act section ✅ copy ready
-- [ ] **Contact CTA** — reuse `ContactCTA.astro`
-
----
-
-## Individual Service Pages (all 5)
-
-All copy is in `docs/content/services.md`. Images are placeholders for now.
-
-- [ ] **`/services/construction`** — General Building + Road Construction sections ✅ copy ready ⚠️ image
-- [ ] **`/services/mechanical`** — 6 service sections ✅ copy ready ⚠️ image
-- [ ] **`/services/cleaning`** — Cleaning + Waste Management sections ✅ copy ready ⚠️ image
-- [ ] **`/services/plant-hire`** — Equipment table + How to Hire ✅ copy ready ⚠️ image
-- [ ] **`/services/security`** — 6 service sections ✅ copy ready ⚠️ no image yet
+- [ ] **Hero section** — ⚠️ Still needs real photography. Use existing placeholder images for now.
+- [ ] **Stats bar** — 🔴 MUST fix. Remove 3 unsubstantiated stats. Use confirmed values.
+- [ ] **Services grid** — ⚠️ Confirm Mechanical Engineering and Security with client before featuring.
+- [ ] **Trust strip** — ✅ Update with: CIDB 4CE/5GB, BBBEE Level 1, ISO 45001, Nationally.
+- [ ] **Primary CTA** — Consider changing from "Request a Quote" to "View Our Projects" based on client's stated primary CTA goal.
+- [ ] **Named clients** — Add client logos / names strip between services and projects sections.
 
 ---
 
-## FAQ Page (`/faq`) — new page
+## Services Pages
 
-- [ ] **Create `src/pages/faq.astro`** — full FAQ with accordion ✅ all copy ready in `docs/content/faq.md`
-  - 6 categories: General, Quotes, Construction, Plant Hire, Cleaning, Safety, Security
-  - TODOs shown inline for client to fill in (CIDB, BBBEE, hire periods, etc.)
-- [ ] **Add FAQ to footer quick links** in `navigation.ts`
-
----
-
-## SEO Groundwork (Phase 7 prep — no content needed)
-
-- [ ] **Open Graph tags** — add to `Layout.astro` (title, description, url, locale)
-- [ ] **Twitter Card tags** — add to `Layout.astro`
-- [ ] **JSON-LD LocalBusiness schema** — add to `Layout.astro` (address, phone, services)
-- [ ] **OG image fallback** — use `public/images/placeholder.svg` until real OG image is made
+- [ ] **Construction** (`/services/construction`) — ✅ Active & confirmed. Update geographic ref.
+- [ ] **Mechanical Engineering** (`/services/mechanical`) — ✅ Active & confirmed. All services to be promoted equally.
+- [ ] **Cleaning & Waste Management** (`/services/cleaning`) — ✅ Active & confirmed. Update geographic ref.
+- [ ] **Plant Hire** (`/services/plant-hire`) — ✅ Active & confirmed. Add Grader to equipment table.
+- [ ] **Security** (`/services/security`) — ✅ Active & confirmed. All services to be promoted equally.
 
 ---
 
-## Suggested Build Order
+## FAQ Page (`/faq`)
 
-1. `PageHeader.astro` + `ContactCTA.astro` + `StatsBar.astro`
-2. Home page (highest impact — first thing visitors see)
-3. About page
-4. Services overview + all 5 individual service pages
-5. FAQ page
-6. SEO groundwork
+Now can answer these previously-blocked questions:
+
+- **Geographic coverage:** Nationally ✅
+- **CIDB registered:** Yes — 4CE, 5GB ✅
+- **BBBEE compliant:** Yes — Level 1 ✅
+- **OHS compliant:** Yes — ISO 45001 certified ✅
+- **Plant hire equipment:** Add Grader to the list ✅
+
+Still blocked:
+- PSIRA registration (Security)
+- Minimum hire periods
+- Plant hire delivery/fuel policy
+- Emergency maintenance availability
 
 ---
 
-## What's Actually Blocked (needs client before touching)
+## Contact Page (`/contact`)
 
-| Item | Blocked on |
-|---|---|
-| Real hero photography | Client photos |
-| Team section on About | Headshots + bios |
-| CIDB / BBBEE credentials | Client documents |
-| Awards section | Client list |
-| Social media links | Client URLs |
-| Security service image | Client photo |
-| Stats verification | Client confirmation |
-| Testimonials | Client quotes |
+- [ ] Business hours — ✅ Confirmed existing hours from previous website.
+- [ ] All confirmed contact details — ✅ no changes needed.
+
+---
+
+## What's Still Blocked (needs client before touching)
+
+| Item | Blocked on | Priority |
+|---|---|---|
+| Real hero photography | Client photoshoot | High |
+| Team headshots | Client photos | High |
+| Nicholas Mahlangu bio | Client input | High |
+| Sbusiso Mashilwane role + bio | Client clarification | Medium |
+| CIDB full registration number | Client | High (tender support) |
+| BBBEE certificate document | Client | High (tender support) |
+| ISO 45001 certificate document | Client | Medium |
+| NHBRC registration number | Client | Medium |
+| 2020 registration number | Client | Medium |
+| Social media URLs | Billy Maphothoma | Medium |
+| Project photos (organised) | Client Drive link | High |
+| Project detail submissions | Client form responses | High |
+| Client testimonials | Email campaign needed | Medium |
+| Logo (SVG + white versions) | Client | Medium |
+
+---
+
+## Suggested Next Steps (Priority Order)
+
+1. ✅ Apply critical stat corrections across all pages
+2. ✅ Build credentials section on About page
+3. ✅ Add Nicholas Mahlangu to team/about
+4. ✅ Add named clients to about/projects
+5. ✅ Add Grader to plant hire page
+6. ✅ Update all geographic references to "nationally"
+7. 📧 Send client: project detail submission template
+8. 📧 Send client: testimonial request email template for named clients
+9. 🎨 Apply Grey and Blue as primary brand colours (from questionnaire)
+10. 📸 Arrange photoshoot — this is the single highest-impact action

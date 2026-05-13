@@ -40,8 +40,8 @@ Keywords:    construction services Pretoria, civil engineering South Africa, pla
 
 **Intro copy:**
 > At Phehlwana Group, we are committed to delivering excellence across every service
-> we provide. With over a decade of experience and a team of 50+ skilled professionals,
-> we serve government, corporate, and private clients across Gauteng and South Africa.
+> we provide. With over a decade of experience and a dedicated team of 10 full-time professionals,
+> we serve government, corporate, and private clients nationally.
 >
 > Whether you need a new building constructed, a road maintained, machinery serviced,
 > a facility cleaned, equipment hired, or a site secured — we have the expertise,
@@ -304,12 +304,13 @@ capital cost of ownership.
 | Water Carts            | Dust suppression and water supply on construction and road sites                    | Yes                |
 | Generators             | Portable power supply for sites without mains electricity                           | No (dry hire)      |
 | Tools & Equipment      | Hand tools, power tools, and small plant for hire                                   | N/A                |
+| Grader                 | Road grading and surface levelling                                                  | Yes                |
 
 > **[TODO: Add equipment specifications — e.g. TLB capacity, truck tonnage, generator kVA]**
 > **[TODO: Confirm minimum hire periods and delivery/collection areas]**
 
 ### Service Area
-> **[TODO: Confirm geographic service area — Pretoria only? Greater Gauteng? Nationally?]**
+We provide plant hire services nationally across South Africa.
 
 ### How to Hire
 1. Contact us with your equipment requirements and project dates
@@ -447,7 +448,6 @@ Private Security Industry Regulation Act (PSIRA, Act 56 of 2001).
 | 3 | Plant hire equipment specs        | Capacity, tonnage, kVA for each item                               |
 | 4 | Hire options per equipment        | Confirm wet/dry hire availability for each item                    |
 | 5 | Minimum hire periods              | Daily, weekly, monthly rates or minimums                           |
-| 6 | Service area for plant hire       | Pretoria only? Gauteng? National?                                  |
 | 7 | Mining sector confirmation        | Does Phehlwana serve mining clients for mechanical engineering?    |
 | 8 | Security services full list       | Confirm all security services offered                              |
 | 9 | PSIRA registration number         | Required for security services page                                |

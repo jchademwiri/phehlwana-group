@@ -56,8 +56,7 @@ A: We offer five core service areas:
 **Q: Where are you based and what areas do you serve?**
 
 A: Our offices are located at PKN Office Park, 62 Taaifontein Street, Montana Park,
-Pretoria, 0182. **[TODO: Confirm service area — e.g. "We serve clients across Gauteng
-and can accommodate projects in other provinces on request."]**
+Pretoria, 0182. We provide our services nationally across South Africa.
 
 ---
 
@@ -71,17 +70,13 @@ across South Africa.
 
 **Q: Are you BBBEE compliant?**
 
-A: **[TODO: Confirm — e.g. "Yes, Phehlwana Group Investments is a Level [X] BBBEE
-contributor. Our current B-BBEE certificate is available on request."]**
+A: Yes, Phehlwana Group Investments is a Level 1 BBBEE contributor. Our current B-BBEE certificate is available on request.
 
 ---
 
 **Q: Are you CIDB registered?**
 
-A: **[TODO: Confirm — e.g. "Yes, we are registered with the Construction Industry
-Development Board (CIDB) at Grade [X], Category [Y]. Our registration number is [Z].
-This registration is required for all government and public sector construction
-contracts above a certain value."]**
+A: Yes, we are registered with the Construction Industry Development Board (CIDB) at Grade 4CE, 5GB. This registration is required for all government and public sector construction contracts above a certain value.
 
 ---
 
@@ -192,7 +187,7 @@ A: Our plant hire fleet includes:
 - Generators
 - Hand tools and power tools
 
-**[TODO: Add equipment specifications — capacity, tonnage, kVA]**
+**[TODO: Add equipment specifications — capacity, tonnage, kVA. Also note that Grader should be added as a hire option once specs are confirmed.]**
 
 ---
 
@@ -349,9 +344,8 @@ require round-the-clock coverage."]**
 
 | # | Item                              | Notes                                                              |
 |---|-----------------------------------|--------------------------------------------------------------------|
-| 1 | Geographic service area           | Pretoria only? Gauteng? National?                                  |
-| 2 | BBBEE level                       | Current level and certificate availability                         |
-| 3 | CIDB registration                 | Grade, category, registration number                               |
+| 1 | BBBEE certificate                 | Current certificate PDF                                            |
+| 2 | CIDB registration                 | Registration number                                                |
 | 4 | Plant hire minimum hire periods   | Daily, weekly, monthly                                             |
 | 5 | Plant hire delivery policy        | Delivery charges, collection process                               |
 | 6 | Plant hire fuel policy            | Who provides fuel, return policy                                   |

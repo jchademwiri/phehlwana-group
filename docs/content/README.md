@@ -167,22 +167,16 @@ These items cannot be written without information from the client:
 
 | # | Item                          | Page(s)                    | Notes                                                  |
 |---|-------------------------------|----------------------------|--------------------------------------------------------|
-| 10 | CIDB registration details    | About, FAQ                 | Grade, category, registration number                   |
-| 11 | BBBEE level                  | About, FAQ, Blog           | Current level and certificate                          |
+| 10 | CIDB registration number     | About, FAQ                 | Grade 4CE, 5GB confirmed; need registration number     |
+| 11 | BBBEE certificate document   | About, FAQ                 | Level 1 confirmed; need PDF certificate for upload     |
 | 12 | PSIRA registration number    | Services (Security), FAQ   | Required for security services                         |
-| 13 | Awards list                  | About                      | All 20+ awards with names, bodies, and years           |
-| 14 | Client testimonials          | About                      | 2–3 quotes with permission to publish                  |
-| 15 | Our Story narrative          | About                      | Founding story, milestones, growth journey             |
-| 16 | Operating hours              | Contact, FAQ               | Saturday, Sunday, public holiday hours                 |
-| 17 | Geographic service area      | FAQ, Contact               | Pretoria only? Gauteng? National?                      |
-| 18 | Plant hire specs             | Services, FAQ              | Equipment capacity, tonnage, kVA                       |
+| 13 | Client testimonials          | About                      | 2–3 quotes with permission to publish                  |
+| 14 | Plant hire specs             | Services, FAQ              | Equipment capacity, tonnage, kVA                       |
 | 19 | Plant hire hire periods      | Services, FAQ              | Minimum hire, daily/weekly/monthly rates               |
 | 20 | Plant hire delivery policy   | FAQ                        | Delivery charges, collection process                   |
 | 21 | Public liability insurance   | FAQ                        | Confirm coverage                                       |
-| 22 | CV submission email          | Team                       | Confirm careers@ email address                         |
-| 23 | Security services full list  | Services, FAQ              | Confirm all security services offered                  |
-| 24 | Project photos + descriptions | Projects page             | Minimum 6 projects for portfolio (Phase 5)             |
-| 25 | Brand colour hex codes       | Dev team                   | Update `src/styles/starwind.css` once confirmed        |
+| 18 | CV submission email          | Team                       | Confirm careers@ email address                         |
+| 19 | Project photos + descriptions | Projects page             | Minimum 6 projects for portfolio (Phase 5)             |
 
 ---
 

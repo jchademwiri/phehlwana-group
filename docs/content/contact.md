@@ -192,14 +192,12 @@ please call us directly on 012 655 0284.
 ---
 
 **Q: Do you work outside of Pretoria?**
-A: **[TODO: Confirm geographic service area — e.g. "We serve clients across Gauteng
-and can accommodate projects in other provinces on request."]**
+A: Yes, we provide our services nationally across South Africa.
 
 ---
 
 **Q: Are you CIDB registered?**
-A: **[TODO: Confirm and add: "Yes, Phehlwana Group Investments is registered with the
-CIDB at Grade [X], Category [Y]. Our registration number is [Z]."]**
+A: Yes, Phehlwana Group Investments is registered with the CIDB at Grade 4CE, 5GB.
 
 ---
 
@@ -226,8 +224,7 @@ of our plant and equipment. Contact us to discuss the best option for your proje
 ---
 
 **Q: Are you BBBEE compliant?**
-A: **[TODO: Confirm — e.g. "Yes, Phehlwana Group Investments is a Level [X] BBBEE
-contributor. Our current certificate is available on request."]**
+A: Yes, Phehlwana Group Investments is a Level 1 BBBEE contributor. Our current certificate is available on request.
 
 ---
 
@@ -263,9 +260,8 @@ contributor. Our current certificate is available on request."]**
 | # | Item                          | Notes                                                              |
 |---|-------------------------------|--------------------------------------------------------------------|
 | 1 | Operating hours               | Confirm Saturday, Sunday, and public holiday hours                 |
-| 2 | Geographic service area       | Pretoria only? Gauteng? National?                                  |
-| 3 | CIDB registration details     | Grade, category, registration number for FAQ                       |
-| 4 | BBBEE level                   | Current level for FAQ                                              |
+| 2 | CIDB registration details     | Registration number for FAQ                                        |
+| 3 | BBBEE certificate             | Certificate PDF                                                    |
 | 5 | Emergency maintenance policy  | Do you offer after-hours emergency response?                       |
 | 6 | CV submission email           | Confirm `careers@phehlwanagroup.co.za` or correct address          |
 | 7 | Resend domain verification    | Domain `phehlwanagroup.co.za` must be verified in Resend before Phase 6 |

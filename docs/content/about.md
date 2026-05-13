@@ -36,7 +36,7 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 > in 2015. Over the past decade, our highly professional and experienced team has built
 > a deep understanding of the construction, engineering, and facilities management
 > sectors — delivering quality results for government, corporate, and private clients
-> across Gauteng and beyond.
+> nationally.
 >
 > Our business approach is built on a clear strategy: leverage local expertise, maintain
 > the highest standards of quality and safety, and develop lasting partnerships with our
@@ -90,9 +90,9 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 > sectors. Each new service area was built on the same foundation: experienced people,
 > quality execution, and a genuine commitment to client success.
 >
-> Today, with over 129 completed projects, 50+ skilled professionals, and a growing
-> footprint across Gauteng, Phehlwana Group Investments continues to grow — driven by
-> the same values that shaped the company from day one.
+> Today, with 10 full-time professionals, and a growing national footprint, Phehlwana
+> Group Investments continues to grow — driven by the same values that shaped the
+> company from day one.
 
 > **[TODO: Review and personalise this narrative with the founding director's actual story,
 > key milestones, and specific projects or clients that shaped the company's growth.]**
@@ -103,9 +103,9 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 
 | Stat                  | Value | Notes                                                                    |
 |-----------------------|-------|--------------------------------------------------------------------------|
-| Projects Completed    | 129+  | **[TODO: Verify this is current]**                                       |
-| Awards Won            | 20+   | **[TODO: List actual awards — see Awards section below]**                |
-| Skilled Professionals | 50+   | Permanent and contract staff combined                                    |
+| BBBEE Level           | Level 1 | Confirmed                                                                |
+| CIDB Grade            | 4CE/5GB | Confirmed                                                                |
+| Employees             | 10    | Full-time permanent staff                                                |
 | Years in Business     | 10+   | Established 2015                                                         |
 
 **Image:** `public/images/about/about-team-or-project.jpg`
@@ -129,7 +129,7 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 | 4 | Local Expertise, National Standards   | Deep knowledge of the South African market, combined with internationally recognised quality standards.   |
 | 5 | End-to-End Project Management         | From initial consultation and site assessment through to handover and ongoing maintenance support.        |
 | 6 | Transparent Pricing                   | Detailed, honest quotations with no hidden costs — so you always know what you're paying for.             |
-| 7 | BBBEE Compliant                       | Proudly contributing to transformation in the South African construction sector. **[TODO: Add level]**    |
+| 7 | BBBEE Compliant                       | Proudly contributing to transformation in the South African construction sector as a Level 1 Contributor. |
 | 8 | Responsive and Reliable               | We respond to quote requests within 1 business day and keep clients informed throughout every project.    |
 
 ---
@@ -146,8 +146,8 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 
 | Accreditation / Registration         | Details                                                    |
 |--------------------------------------|------------------------------------------------------------|
-| CIDB Registration                    | **[TODO: Add grade, category, and registration number]**   |
-| BBBEE Certificate                    | **[TODO: Add level and certificate expiry date]**          |
+| CIDB Registration                    | Grade 4CE, 5GB (Registration Number Pending)               |
+| BBBEE Certificate                    | Level 1 Contributor                                        |
 | OHS Act Compliance                   | Occupational Health and Safety Act 85 of 1993              |
 | NHBRC Registration                   | **[TODO: Confirm if applicable]**                          |
 | NEM:WA Compliance (Waste Management) | National Environmental Management: Waste Act               |
@@ -159,27 +159,9 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 
 ---
 
-## Section 7 — Awards & Recognition *(New)*
+## Section 7 — Awards & Recognition (Removed)
 
-**Section label:** Awards & Recognition
-
-**Heading:** Recognised for Excellence
-
-> **[TODO: List all 20+ awards here. For each award include:]**
-> - Award name
-> - Awarding body / organisation
-> - Year received
-> - Brief description (1 sentence)
-
-**Example format:**
-
-| Year | Award                              | Awarded By                    |
-|------|------------------------------------|-------------------------------|
-| 20XX | **[TODO: Award name]**             | **[TODO: Awarding body]**     |
-| 20XX | **[TODO: Award name]**             | **[TODO: Awarding body]**     |
-
-> If the "20+ Awards" figure cannot be substantiated with a list, adjust the stat to
-> reflect only verifiable, named awards. Accuracy builds more trust than inflated numbers.
+> Removed as client confirmed there are no verifiable awards to list.
 
 ---
 
@@ -240,8 +222,6 @@ Keywords:    about Phehlwana Group, construction company Pretoria, CIDB register
 | 3 | BBBEE certificate                 | Level and expiry date                                        |
 | 4 | NHBRC registration                | Confirm if applicable                                        |
 | 5 | Industry body memberships         | MBA, SAFCEC, CESA, etc.                                      |
-| 6 | Awards list                       | All 20+ awards with names, bodies, and years                 |
-| 7 | Client testimonials               | 2–3 quotes with permission to publish                        |
-| 8 | Team preview photos               | 3–4 headshots for the team preview section                   |
-| 9 | About page hero/section image     | Real team or project photo to replace `sed.png`              |
-| 10 | Stats verification                | Confirm 129+ projects, 20+ awards, 50+ professionals         |
+| 6 | Client testimonials               | 2–3 quotes with permission to publish                        |
+| 7 | Team preview photos               | 3–4 headshots for the team preview section                   |
+| 8 | About page hero/section image     | Real team or project photo to replace `sed.png`              |

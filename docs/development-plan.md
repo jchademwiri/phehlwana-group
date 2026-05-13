@@ -97,7 +97,7 @@
 
 - [ ] Replace placeholder project content with real client projects (min 6)
 - [ ] Replace SVG blog covers with real photography
-- [ ] Add Mechanical and Security category projects once client provides content
+- [ ] Add Mechanical and Security category projects (services confirmed active, awaiting project photos)
 
 ---
 
@@ -149,7 +149,7 @@
 > - About Us copy
 > - Confirmed stat numbers
 > - Service photography (1 per service, 800×500px, WebP)
-> - Brand colour hex codes
+> - Brand colours (Grey and Blue confirmed, need hex codes or choose suitable ones)
 
 ### Tasks
 
@@ -357,23 +357,23 @@ Once service pages have real sectioned content with `id` anchors, add `items` ar
 | Item | Needed For | Status |
 |---|---|---|
 | Logo — colour PNG, white PNG, SVG | All phases | ⚠️ Placeholder in use |
-| Brand colour hex codes | Phase 2 | ❌ Not received |
-| Hero photography ×2 (1920×800px, WebP) | Phase 2 | ❌ Not received |
-| About Us copy | Phase 2, 3 | ❌ Not received |
+| Brand colour hex codes | Phase 2 | ✅ Grey and Blue confirmed, can proceed with approximations |
+| Hero photography ×2 (1920×800px, WebP) | Phase 2 | ❌ Not received (Unorganized) |
+| About Us copy | Phase 2, 3 | ✅ Will curate from existing content |
 | Service photography ×5 incl. Security (800×500px, WebP) | Phase 2, 4 | ❌ Not received |
-| Confirmed stat numbers | Phase 2, 3 | ❌ Not received |
-| Client testimonials ×2–3 | Phase 2 | ❌ Not received |
-| CIDB registration number + grading | Phase 2, 3 | ❌ Not received |
-| BBBEE level + certificate PDF | Phase 2, 3 | ❌ Not received |
+| Confirmed stat numbers | Phase 2, 3 | ✅ Confirmed (0 awards, 10 employees, prefer no project #) |
+| Client testimonials ×2–3 | Phase 2 | ❌ Need assistance gathering |
+| CIDB registration number + grading | Phase 2, 3 | ⚠️ Grading 4CE, 5GB confirmed, need registration # |
+| BBBEE level + certificate PDF | Phase 2, 3 | ⚠️ Level 1 confirmed, need PDF |
 | Company Profile PDF | Phase 3 | ❌ Not received |
-| Team headshots + bios | Phase 3 | ❌ Not received |
-| Vision + Mission statements | Phase 3 | ❌ Not received |
+| Team headshots + bios | Phase 3 | ❌ Not received (Photos not available) |
+| Vision + Mission statements | Phase 3 | ✅ Keeping existing |
 | Core values | Phase 3 | ❌ Not received |
-| Awards list | Phase 3 | ❌ Not received |
+| Awards list | Phase 3 | ✅ Confirmed 0 awards (remove) |
 | Additional project photos + descriptions (min 6 total) | Phase 5 | ⚠️ 4 placeholder projects exist |
-| Social media URLs (Facebook, Instagram, LinkedIn) | Phase 1 update | ❌ Not received |
-| Business hours (Saturday, Sunday, public holidays) | Phase 6 | ❌ Not confirmed |
-| Security division service details | Phase 4 | ❌ Not received |
+| Social media URLs (Facebook, Instagram, LinkedIn) | Phase 1 update | ⚠️ Billy working on it, use 'Phehlwana Group' |
+| Business hours (Saturday, Sunday, public holidays) | Phase 6 | ✅ Confirmed existing |
+| Security division service details | Phase 4 | ✅ Active & Keep |
 | Resend API key + domain verification | Phase 6 | ❌ Not set up |
 | GA4 Measurement ID | Phase 7 | ❌ Not set up |
 | Google Search Console access | Phase 7 | ❌ Not set up |
