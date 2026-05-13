@@ -7,512 +7,528 @@ import ContactCTA from '@/components/sections/ContactCTA.astro';
 export const prerender = true;
 
 const values = [
-    {
-        title: 'Adaptable Solutions',
-        body: "We tailor our approach to each client's unique needs, project scope, and budget requirements.",
-        icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
-    },
-    {
-        title: 'Uncompromising Quality',
-        body: 'Every project is executed to the highest standards — on time, within budget, and built to last.',
-        icon: '<polyline points="20 6 9 17 4 12"/>',
-    },
-    {
-        title: 'Client-First Partnerships',
-        body: 'We build long-term relationships based on trust, open communication, and consistent delivery.',
-        icon: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
-    },
-    {
-        title: 'Safety Above All',
-        body: 'The health and safety of our people, clients, and communities is non-negotiable on every site.',
-        icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
-    },
-    {
-        title: 'Community Impact',
-        body: 'We prioritise local employment, skills development, and meaningful contribution to the communities we work in.',
-        icon: '<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>',
-    },
-    {
-        title: 'Integrity in Everything',
-        body: 'We operate with honesty and transparency — in our pricing, our timelines, and our workmanship.',
-        icon: '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>',
-    },
+  {
+    title: 'Adaptable Solutions',
+    body: "We tailor our approach to each client's unique needs, project scope, and budget requirements.",
+    icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+  },
+  {
+    title: 'Uncompromising Quality',
+    body: 'Every project is executed to the highest standards - on time, within budget, and built to last.',
+    icon: '<polyline points="20 6 9 17 4 12"/>',
+  },
+  {
+    title: 'Client-First Partnerships',
+    body: 'We build long-term relationships based on trust, open communication, and consistent delivery.',
+    icon: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  },
+  {
+    title: 'Safety Above All',
+    body: 'The health and safety of our people, clients, and communities is non-negotiable on every site.',
+    icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+  },
+  {
+    title: 'Community Impact',
+    body: 'We prioritise local employment, skills development, and meaningful contribution to the communities we work in.',
+    icon: '<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>',
+  },
+  {
+    title: 'Integrity in Everything',
+    body: 'We operate with honesty and transparency - in our pricing, our timelines, and our workmanship.',
+    icon: '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>',
+  },
 ];
 
 const whyUs = [
-    {
-        title: '10+ Years of Proven Experience',
-        body: 'A decade of delivering quality construction, engineering, and facilities services across South Africa.',
-    },
-    {
-        title: 'Multi-Disciplinary Capability',
-        body: 'One company, five service areas — construction, mechanical engineering, cleaning, plant hire, and security.',
-    },
-    {
-        title: 'Safety-First Culture',
-        body: 'Dedicated safety officers on every site, full OHS Act compliance, and a zero-harm commitment.',
-    },
-    {
-        title: 'Local Expertise, National Standards',
-        body: 'Deep knowledge of the South African market, combined with internationally recognised quality standards.',
-    },
-    {
-        title: 'End-to-End Project Management',
-        body: 'From initial consultation and site assessment through to handover and ongoing maintenance support.',
-    },
-    {
-        title: 'Transparent Pricing',
-        body: "Detailed, honest quotations with no hidden costs — so you always know what you're paying for.",
-    },
-    {
-        title: 'BBBEE Compliant',
-        body: 'Proudly contributing to transformation in the South African construction sector.',
-    },
-    {
-        title: 'Responsive and Reliable',
-        body: 'We respond to quote requests within 1 business day and keep clients informed throughout every project.',
-    },
+  {
+    title: '10+ Years of Proven Experience',
+    body: 'A decade of delivering quality construction, engineering, and facilities services across South Africa.',
+  },
+  {
+    title: 'Multi-Disciplinary Capability',
+    body: 'One company, five service areas - construction, mechanical engineering, cleaning, plant hire, and security.',
+  },
+  {
+    title: 'Safety-First Culture',
+    body: 'Dedicated safety officers on every site, full OHS Act compliance, and a zero-harm commitment.',
+  },
+  {
+    title: 'Local Expertise, National Standards',
+    body: 'Deep knowledge of the South African market, combined with internationally recognised quality standards.',
+  },
+  {
+    title: 'End-to-End Project Management',
+    body: 'From initial consultation and site assessment through to handover and ongoing maintenance support.',
+  },
+  {
+    title: 'Transparent Pricing',
+    body: "Detailed, honest quotations with no hidden costs - so you always know what you're paying for.",
+  },
+  {
+    title: 'BBBEE Compliant',
+    body: 'Proudly contributing to transformation in the South African construction sector.',
+  },
+  {
+    title: 'Responsive and Reliable',
+    body: 'We respond to quote requests within 1 business day and keep clients informed throughout every project.',
+  },
 ];
 
 const accreditations = [
-    {
-        label: 'CIDB Registration',
-        detail: 'Grade 4CE, 5GB (Registration Number Pending)',
-        confirmed: true,
-    },
-    {
-        label: 'BBBEE Certificate',
-        detail: 'Level 1 Contributor',
-        confirmed: true,
-    },
-    {
-        label: 'OHS Act Compliance',
-        detail: 'Occupational Health and Safety Act 85 of 1993',
-        confirmed: true,
-    },
-    {
-        label: 'NEM:WA Compliance',
-        detail: 'National Environmental Management: Waste Act (Act 59 of 2008)',
-        confirmed: true,
-    },
-    {
-        label: 'NHBRC Registration',
-        detail: 'Pending — client to confirm if applicable.',
-        confirmed: false,
-    },
-    {
-        label: 'Industry Body Memberships',
-        detail: 'Pending — client to confirm (e.g. MBA, SAFCEC, CESA).',
-        confirmed: false,
-    },
+  {
+    label: 'CIDB Registration',
+    detail: 'Grade 4CE, 5GB (Registration Number Pending)',
+    confirmed: true,
+  },
+  {
+    label: 'BBBEE Certificate',
+    detail: 'Level 1 Contributor',
+    confirmed: true,
+  },
+  {
+    label: 'OHS Act Compliance',
+    detail: 'ISO 45001 Certified',
+    confirmed: true,
+  },
+  {
+    label: 'VAT Registration',
+    detail: 'VAT Number: 4520316631',
+    confirmed: true,
+  },
+  {
+    label: 'NHBRC Registration',
+    detail: 'Registered Member',
+    confirmed: true,
+  },
 ];
 ---
 
 <Layout
-    title='About Us | Phehlwana Group Investments — Construction & Engineering Pretoria'
-    description='Phehlwana Group Investments has been delivering quality construction, engineering, cleaning and plant hire services since 2015. Learn about our story, values, and the team behind every project.'
+  title='About Us | Phehlwana Group Investments - Construction & Engineering Pretoria'
+  description='Phehlwana Group Investments has been delivering quality construction, engineering, cleaning and plant hire services since 2015. Learn about our story, values, and the team behind every project.'
 >
-    <PageHeader
-        label='About Phehlwana Group Investments'
-        title='About Us'
-        subtitle='Building South Africa since 2015'
-        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About Us' }]}
-    />
+  <PageHeader
+    label='About Phehlwana Group Investments'
+    title='About Us'
+    subtitle='Building South Africa since 2015'
+    breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About Us' }]}
+  />
 
-    <!-- ── Company overview ──────────────────────────────────────────────────── -->
-    <section class='container mx-auto px-4 py-16 lg:py-20'>
-        <div class='grid lg:grid-cols-2 gap-12 items-center'>
-            <div data-animate>
-                <p
-                    class='text-sm font-semibold text-primary uppercase tracking-widest mb-3'
-                >
-                    Who We Are
-                </p>
-                <h2 class='text-3xl font-bold text-foreground mb-5'>
-                    A South African Company Built on Quality
-                </h2>
-                <p class='text-muted-foreground leading-relaxed mb-4'>
-                    Phehlwana Group Investments is a South African
-                    small-to-medium enterprise established in 2015. Over the
-                    past decade, our highly professional and experienced team
-                    has built a deep understanding of the construction,
-                    engineering, and facilities management sectors — delivering
-                    quality results for government, corporate, and private
-                    clients nationally.
-                </p>
-                <p class='text-muted-foreground leading-relaxed mb-8'>
-                    Our business approach is built on a clear strategy: leverage
-                    local expertise, maintain the highest standards of quality
-                    and safety, and develop lasting partnerships with our
-                    clients. We don't just complete projects — we build
-                    relationships.
-                </p>
-                <a
-                    href='/services'
-                    class='inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-5 py-2.5 rounded-lg text-sm hover:bg-primary/90 transition-colors'
-                >
-                    View Our Services
-                    <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        class='size-4'
-                        viewBox='0 0 24 24'
-                        fill='none'
-                        stroke='currentColor'
-                        stroke-width='2'
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
-                        aria-hidden='true'
-                        ><path d='M5 12h14'></path><path d='m12 5 7 7-7 7'
-                        ></path></svg
-                    >
-                </a>
-            </div>
-            <div data-animate>
-                <div
-                    class='aspect-4/3 rounded-2xl overflow-hidden bg-accent shadow-sm'
-                >
-                    <img
-                        src='/images/about-site.jpg'
-                        alt='Phehlwana Group project site'
-                        width='800'
-                        height='600'
-                        loading='lazy'
-                        decoding='async'
-                        class='w-full h-full object-cover'
-                    />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Vision, Mission & Values ─────────────────────────────────────────── -->
-    <section class='bg-accent/40 border-y border-border py-16 lg:py-20'>
-        <div class='container mx-auto px-4'>
-            <!-- Vision + Mission -->
-            <div class='grid md:grid-cols-2 gap-6 mb-14' data-animate>
-                <div class='bg-card border border-border rounded-xl p-7'>
-                    <div
-                        class='size-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4'
-                    >
-                        <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            class='size-5 text-primary'
-                            viewBox='0 0 24 24'
-                            fill='none'
-                            stroke='currentColor'
-                            stroke-width='2'
-                            stroke-linecap='round'
-                            stroke-linejoin='round'
-                            aria-hidden='true'
-                            ><circle cx='12' cy='12' r='10'></circle><line
-                                x1='2'
-                                y1='12'
-                                x2='22'
-                                y2='12'></line><path
-                                d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'
-                            ></path></svg
-                        >
-                    </div>
-                    <h3 class='text-lg font-bold text-foreground mb-3'>
-                        Our Vision
-                    </h3>
-                    <p class='text-muted-foreground leading-relaxed'>
-                        To be the most trusted and preferred multi-disciplinary
-                        service provider in South Africa, recognised for quality
-                        workmanship, safety excellence, and positive community
-                        impact.
-                    </p>
-                </div>
-                <div class='bg-card border border-border rounded-xl p-7'>
-                    <div
-                        class='size-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4'
-                    >
-                        <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            class='size-5 text-primary'
-                            viewBox='0 0 24 24'
-                            fill='none'
-                            stroke='currentColor'
-                            stroke-width='2'
-                            stroke-linecap='round'
-                            stroke-linejoin='round'
-                            aria-hidden='true'
-                            ><polyline points='22 12 18 12 15 21 9 3 6 12 2 12'
-                            ></polyline></svg
-                        >
-                    </div>
-                    <h3 class='text-lg font-bold text-foreground mb-3'>
-                        Our Mission
-                    </h3>
-                    <p class='text-muted-foreground leading-relaxed'>
-                        To deliver exceptional construction, engineering,
-                        cleaning, and plant hire services through skilled
-                        professionals, innovative methods, and an unwavering
-                        commitment to safety and client satisfaction.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Values grid -->
-            <div class='text-center mb-10' data-animate>
-                <p
-                    class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
-                >
-                    Our Values
-                </p>
-                <h2 class='text-3xl font-bold text-foreground'>
-                    What We Stand For
-                </h2>
-            </div>
-            <div class='grid sm:grid-cols-2 lg:grid-cols-3 gap-5'>
-                {
-                    values.map((v) => (
-                        <div
-                            class='bg-card border border-border rounded-xl p-5 flex gap-4'
-                            data-animate
-                        >
-                            <div class='size-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5'>
-                                <svg
-                                    xmlns='http://www.w3.org/2000/svg'
-                                    class='size-4 text-primary'
-                                    viewBox='0 0 24 24'
-                                    fill='none'
-                                    stroke='currentColor'
-                                    stroke-width='2'
-                                    stroke-linecap='round'
-                                    stroke-linejoin='round'
-                                    aria-hidden='true'
-                                    set:html={v.icon}
-                                />
-                            </div>
-                            <div>
-                                <h3 class='text-sm font-semibold text-foreground mb-1'>
-                                    {v.title}
-                                </h3>
-                                <p class='text-sm text-muted-foreground leading-relaxed'>
-                                    {v.body}
-                                </p>
-                            </div>
-                        </div>
-                    ))
-                }
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Our Story ─────────────────────────────────────────────────────────── -->
-    <section class='container mx-auto px-4 py-16 lg:py-20'>
-        <div class='max-w-3xl mx-auto' data-animate>
-            <p
-                class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
-            >
-                Our Story
-            </p>
-            <h2 class='text-3xl font-bold text-foreground mb-6'>
-                A Decade of Building Excellence
-            </h2>
-            <div class='space-y-4 text-muted-foreground leading-relaxed'>
-                <p>
-                    Phehlwana Group Investments was founded in 2015 with a clear
-                    purpose: to provide high-quality, reliable construction and
-                    engineering services to clients who deserved better than the
-                    status quo. Starting with a small but dedicated team, the
-                    company quickly earned a reputation for professionalism,
-                    attention to detail, and getting the job done right.
-                </p>
-                <p>
-                    In the years that followed, Phehlwana Group expanded its
-                    service offering to include mechanical engineering, cleaning
-                    and waste management, and plant hire — becoming a true
-                    one-stop solution for clients across the construction and
-                    facilities management sectors. Each new service area was
-                    built on the same foundation: experienced people, quality
-                    execution, and a genuine commitment to client success.
-                </p>
-                <p>
-                    Today, with 10 full-time professionals, and a growing
-                    national footprint, Phehlwana Group Investments continues
-                    to grow — driven by
-                    the same values that shaped the company from day one.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Stats ─────────────────────────────────────────────────────────────── -->
-    <StatsBar />
-
-    <!-- ── Why Choose Us ─────────────────────────────────────────────────────── -->
-    <section class='container mx-auto px-4 py-16 lg:py-20'>
-        <div class='text-center mb-12' data-animate>
-            <p
-                class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
-            >
-                Why Choose Phehlwana Group
-            </p>
-            <h2 class='text-3xl font-bold text-foreground'>
-                What Sets Us Apart
-            </h2>
-        </div>
-        <div class='grid sm:grid-cols-2 lg:grid-cols-4 gap-5'>
-            {
-                whyUs.map((item, i) => (
-                    <div
-                        class='bg-card border border-border rounded-xl p-5'
-                        data-animate
-                    >
-                        <div class='size-8 rounded-md bg-accent flex items-center justify-center mb-3'>
-                            <span class='text-xs font-bold text-muted-foreground'>
-                                0{i + 1}
-                            </span>
-                        </div>
-                        <h3 class='text-sm font-semibold text-foreground mb-2'>
-                            {item.title}
-                        </h3>
-                        <p class='text-sm text-muted-foreground leading-relaxed'>
-                            {item.body}
-                        </p>
-                    </div>
-                ))
-            }
-        </div>
-    </section>
-
-    <!-- ── Accreditations ────────────────────────────────────────────────────── -->
-    <section class='bg-accent/40 border-y border-border py-16 lg:py-20'>
-        <div class='container mx-auto px-4'>
-            <div class='text-center mb-10' data-animate>
-                <p
-                    class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
-                >
-                    Accreditations & Compliance
-                </p>
-                <h2 class='text-3xl font-bold text-foreground mb-3'>
-                    Registered, Certified, and Compliant
-                </h2>
-                <p class='text-muted-foreground max-w-xl mx-auto text-sm'>
-                    Phehlwana Group Investments operates in full compliance with
-                    South African regulatory requirements, giving clients
-                    confidence that every project is managed to the correct
-                    legal and professional standards.
-                </p>
-            </div>
-            <div
-                class='grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto'
-            >
-                {
-                    accreditations.map((item) => (
-                        <div
-                            class='bg-card border border-border rounded-xl p-5 flex items-start gap-3'
-                            data-animate
-                        >
-                            <div
-                                class:list={[
-                                    'size-8 rounded-md flex items-center justify-center shrink-0 mt-0.5',
-                                    item.confirmed
-                                        ? 'bg-success/20'
-                                        : 'bg-accent',
-                                ]}
-                            >
-                                {item.confirmed ? (
-                                    <svg
-                                        xmlns='http://www.w3.org/2000/svg'
-                                        class='size-4 text-success-foreground'
-                                        viewBox='0 0 24 24'
-                                        fill='none'
-                                        stroke='currentColor'
-                                        stroke-width='2.5'
-                                        stroke-linecap='round'
-                                        stroke-linejoin='round'
-                                        aria-hidden='true'
-                                    >
-                                        <polyline points='20 6 9 17 4 12' />
-                                    </svg>
-                                ) : (
-                                    <svg
-                                        xmlns='http://www.w3.org/2000/svg'
-                                        class='size-4 text-muted-foreground'
-                                        viewBox='0 0 24 24'
-                                        fill='none'
-                                        stroke='currentColor'
-                                        stroke-width='2'
-                                        stroke-linecap='round'
-                                        stroke-linejoin='round'
-                                        aria-hidden='true'
-                                    >
-                                        <circle cx='12' cy='12' r='10' />
-                                        <line x1='12' y1='8' x2='12' y2='12' />
-                                        <line
-                                            x1='12'
-                                            y1='16'
-                                            x2='12.01'
-                                            y2='16'
-                                        />
-                                    </svg>
-                                )}
-                            </div>
-                            <div>
-                                <p class='text-sm font-semibold text-foreground'>
-                                    {item.label}
-                                </p>
-                                <p class='text-xs text-muted-foreground mt-0.5 leading-relaxed'>
-                                    {item.detail}
-                                </p>
-                            </div>
-                        </div>
-                    ))
-                }
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Team placeholder ──────────────────────────────────────────────────── -->
-    <section class='container mx-auto px-4 py-16 lg:py-20'>
-        <div class='text-center mb-10' data-animate>
-            <p
-                class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
-            >
-                Our Team
-            </p>
-            <h2 class='text-3xl font-bold text-foreground mb-3'>
-                The People Behind Every Project
-            </h2>
-            <p class='text-muted-foreground max-w-xl mx-auto'>
-                Our management team brings together decades of combined
-                experience across construction, engineering, operations, and
-                business management.
-            </p>
-        </div>
-        <div
-            class='bg-card border border-dashed border-border rounded-2xl p-12 text-center max-w-lg mx-auto'
-            data-animate
+  <!-- ── Company overview ──────────────────────────────────────────────────── -->
+  <section class='container mx-auto px-4 py-16 lg:py-20'>
+    <div class='grid lg:grid-cols-2 gap-12 items-center'>
+      <div data-animate>
+        <p
+          class='text-sm font-semibold text-primary uppercase tracking-widest mb-3'
         >
-            <svg
-                xmlns='http://www.w3.org/2000/svg'
-                class='size-10 text-muted-foreground/40 mx-auto mb-4'
-                viewBox='0 0 24 24'
-                fill='none'
-                stroke='currentColor'
-                stroke-width='1.5'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                aria-hidden='true'
-                ><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'
-                ></path><circle cx='9' cy='7' r='4'></circle><path
-                    d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path
-                    d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg
-            >
-            <p class='text-sm font-medium text-foreground mb-1'>
-                Team profiles coming soon
-            </p>
-            <p class='text-xs text-muted-foreground'>
-                Headshots and bios will be added once received from the client.
-            </p>
+          Who We Are
+        </p>
+        <h2 class='text-3xl font-bold text-foreground mb-5'>
+          A South African Company Built on Quality
+        </h2>
+        <p class='text-muted-foreground leading-relaxed mb-4'>
+          Phehlwana Group Investments is a South African small-to-medium
+          enterprise founded in 2015 and incorporated as Phehlwana Group
+          Investments in 2020. Over the past decade, our highly professional and
+          experienced team has built a deep understanding of the construction,
+          engineering, and facilities management sectors - delivering quality
+          results for government, corporate, and private clients nationally.
+        </p>
+        <p class='text-muted-foreground leading-relaxed mb-8'>
+          Our business approach is built on a clear strategy: leverage local
+          expertise, maintain the highest standards of quality and safety, and
+          develop lasting partnerships with our clients. We don't just complete
+          projects - we build relationships.
+        </p>
+        <a
+          href='/services'
+          class='inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-5 py-2.5 rounded-lg text-sm hover:bg-primary/90 transition-colors'
+        >
+          View Our Services
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            class='size-4'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            aria-hidden='true'
+            ><path d='M5 12h14'></path><path d='m12 5 7 7-7 7'></path></svg
+          >
+        </a>
+      </div>
+      <div data-animate>
+        <div class='aspect-4/3 rounded-2xl overflow-hidden bg-accent shadow-sm'>
+          <img
+            src='/images/about-site.jpg'
+            alt='Phehlwana Group project site'
+            width='800'
+            height='600'
+            loading='lazy'
+            decoding='async'
+            class='w-full h-full object-cover'
+          />
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <ContactCTA
-        heading='Ready to Work With Us?'
-        body='Contact us for a free, no-obligation quote. We respond within 1 business day.'
-    />
+  <!-- ── Vision, Mission & Values ─────────────────────────────────────────── -->
+  <section class='bg-accent/40 border-y border-border py-16 lg:py-20'>
+    <div class='container mx-auto px-4'>
+      <!-- Vision + Mission -->
+      <div class='grid md:grid-cols-2 gap-6 mb-14' data-animate>
+        <div class='bg-card border border-border rounded-xl p-7'>
+          <div
+            class='size-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='size-5 text-primary'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              aria-hidden='true'
+              ><circle cx='12' cy='12' r='10'></circle><line
+                x1='2'
+                y1='12'
+                x2='22'
+                y2='12'></line><path
+                d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'
+              ></path></svg
+            >
+          </div>
+          <h3 class='text-lg font-bold text-foreground mb-3'>Our Vision</h3>
+          <p class='text-muted-foreground leading-relaxed'>
+            To be the most trusted and preferred multi-disciplinary service
+            provider in South Africa, recognised for quality workmanship, safety
+            excellence, and positive community impact.
+          </p>
+        </div>
+        <div class='bg-card border border-border rounded-xl p-7'>
+          <div
+            class='size-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='size-5 text-primary'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              aria-hidden='true'
+              ><polyline points='22 12 18 12 15 21 9 3 6 12 2 12'
+              ></polyline></svg
+            >
+          </div>
+          <h3 class='text-lg font-bold text-foreground mb-3'>Our Mission</h3>
+          <p class='text-muted-foreground leading-relaxed'>
+            To deliver exceptional construction, engineering, cleaning, and
+            plant hire services through skilled professionals, innovative
+            methods, and an unwavering commitment to safety and client
+            satisfaction.
+          </p>
+        </div>
+      </div>
+
+      <!-- Values grid -->
+      <div class='text-center mb-10' data-animate>
+        <p
+          class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
+        >
+          Our Values
+        </p>
+        <h2 class='text-3xl font-bold text-foreground'>What We Stand For</h2>
+      </div>
+      <div class='grid sm:grid-cols-2 lg:grid-cols-3 gap-5'>
+        {
+          values.map((v) => (
+            <div
+              class='bg-card border border-border rounded-xl p-5 flex gap-4'
+              data-animate
+            >
+              <div class='size-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  class='size-4 text-primary'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke='currentColor'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  aria-hidden='true'
+                  set:html={v.icon}
+                />
+              </div>
+              <div>
+                <h3 class='text-sm font-semibold text-foreground mb-1'>
+                  {v.title}
+                </h3>
+                <p class='text-sm text-muted-foreground leading-relaxed'>
+                  {v.body}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Our Story ─────────────────────────────────────────────────────────── -->
+  <section class='container mx-auto px-4 py-16 lg:py-20'>
+    <div class='max-w-3xl mx-auto' data-animate>
+      <p
+        class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
+      >
+        Our Story
+      </p>
+      <h2 class='text-3xl font-bold text-foreground mb-6'>
+        A Decade of Building Excellence
+      </h2>
+      <div class='space-y-4 text-muted-foreground leading-relaxed'>
+        <p>
+          Phehlwana Group Investments was founded in 2015 with a clear purpose:
+          to provide high-quality, reliable construction and engineering
+          services to clients who deserved better than the status quo. Starting
+          with a small but dedicated team, the company quickly earned a
+          reputation for professionalism, attention to detail, and getting the
+          job done right.
+        </p>
+        <p>
+          In the years that followed, Phehlwana Group expanded its service
+          offering to include mechanical engineering, cleaning and waste
+          management, and plant hire - becoming a true one-stop solution for
+          clients across the construction and facilities management sectors.
+          Each new service area was built on the same foundation: experienced
+          people, quality execution, and a genuine commitment to client success.
+        </p>
+        <p>
+          Today, with 10 full-time professionals, and a growing national
+          footprint, Phehlwana Group Investments continues to grow - driven by
+          the same values that shaped the company from day one.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Stats ─────────────────────────────────────────────────────────────── -->
+  <StatsBar />
+
+  <!-- ── Why Choose Us ─────────────────────────────────────────────────────── -->
+  <section class='container mx-auto px-4 py-16 lg:py-20'>
+    <div class='text-center mb-12' data-animate>
+      <p
+        class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
+      >
+        Why Choose Phehlwana Group
+      </p>
+      <h2 class='text-3xl font-bold text-foreground'>What Sets Us Apart</h2>
+    </div>
+    <div class='grid sm:grid-cols-2 lg:grid-cols-4 gap-5'>
+      {
+        whyUs.map((item, i) => (
+          <div class='bg-card border border-border rounded-xl p-5' data-animate>
+            <div class='size-8 rounded-md bg-accent flex items-center justify-center mb-3'>
+              <span class='text-xs font-bold text-muted-foreground'>
+                0{i + 1}
+              </span>
+            </div>
+            <h3 class='text-sm font-semibold text-foreground mb-2'>
+              {item.title}
+            </h3>
+            <p class='text-sm text-muted-foreground leading-relaxed'>
+              {item.body}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- ── Accreditations ────────────────────────────────────────────────────── -->
+  <section class='bg-accent/40 border-y border-border py-16 lg:py-20'>
+    <div class='container mx-auto px-4'>
+      <div class='text-center mb-10' data-animate>
+        <p
+          class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
+        >
+          Accreditations & Compliance
+        </p>
+        <h2 class='text-3xl font-bold text-foreground mb-3'>
+          Registered, Certified, and Compliant
+        </h2>
+        <p class='text-muted-foreground max-w-xl mx-auto text-sm'>
+          Phehlwana Group Investments operates in full compliance with South
+          African regulatory requirements, giving clients confidence that every
+          project is managed to the correct legal and professional standards.
+        </p>
+      </div>
+      <div class='grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto'>
+        {
+          accreditations.map((item) => (
+            <div
+              class='bg-card border border-border rounded-xl p-5 flex items-start gap-3'
+              data-animate
+            >
+              <div
+                class:list={[
+                  'size-8 rounded-md flex items-center justify-center shrink-0 mt-0.5',
+                  item.confirmed ? 'bg-success/20' : 'bg-accent',
+                ]}
+              >
+                {item.confirmed ? (
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    class='size-4 text-success-foreground'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    stroke='currentColor'
+                    stroke-width='2.5'
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    aria-hidden='true'
+                  >
+                    <polyline points='20 6 9 17 4 12' />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    class='size-4 text-muted-foreground'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    stroke='currentColor'
+                    stroke-width='2'
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    aria-hidden='true'
+                  >
+                    <circle cx='12' cy='12' r='10' />
+                    <line x1='12' y1='8' x2='12' y2='12' />
+                    <line x1='12' y1='16' x2='12.01' y2='16' />
+                  </svg>
+                )}
+              </div>
+              <div>
+                <p class='text-sm font-semibold text-foreground'>
+                  {item.label}
+                </p>
+                <p class='text-xs text-muted-foreground mt-0.5 leading-relaxed'>
+                  {item.detail}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Team Section ──────────────────────────────────────────────────── -->
+  <section class='container mx-auto px-4 py-16 lg:py-20'>
+    <div class='text-center mb-10' data-animate>
+      <p
+        class='text-sm font-semibold text-primary uppercase tracking-widest mb-2'
+      >
+        Our Team
+      </p>
+      <h2 class='text-3xl font-bold text-foreground mb-3'>
+        The People Behind Every Project
+      </h2>
+      <p class='text-muted-foreground max-w-xl mx-auto'>
+        Our management team brings together decades of combined experience
+        across construction, engineering, operations, and business management.
+      </p>
+    </div>
+    <div class='grid sm:grid-cols-2 max-w-3xl mx-auto gap-8' data-animate>
+      <!-- Nicholas Mahlangu -->
+      <div class='bg-card border border-border rounded-xl overflow-hidden'>
+        <div class='aspect-[4/5] bg-accent relative'>
+          <img
+            src='/images/placeholder.svg'
+            alt='Nicholas Mahlangu'
+            class='w-full h-full object-cover opacity-50'
+          />
+        </div>
+        <div class='p-6 text-center'>
+          <h3 class='text-xl font-bold text-foreground mb-1'>
+            Nicholas Mahlangu
+          </h3>
+          <p class='text-sm text-primary font-medium mb-3'>Group CEO</p>
+          <p class='text-sm text-muted-foreground'>
+            Driving the strategic vision and growth of Phehlwana Group
+            Investments.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sbusiso Mashilwane -->
+      <div class='bg-card border border-border rounded-xl overflow-hidden'>
+        <div class='aspect-[4/5] bg-accent relative'>
+          <img
+            src='/images/placeholder.svg'
+            alt='Sbusiso Mashilwane'
+            class='w-full h-full object-cover opacity-50'
+          />
+        </div>
+        <div class='p-6 text-center'>
+          <h3 class='text-xl font-bold text-foreground mb-1'>
+            Sbusiso Mashilwane
+          </h3>
+          <p class='text-sm text-primary font-medium mb-3'>Coming Soon</p>
+          <p class='text-sm text-muted-foreground'>
+            Details and technical qualifications to be announced shortly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Trusted Clients ──────────────────────────────────────────────────── -->
+  <section class='container mx-auto px-4 py-16 lg:py-20 border-t border-border'>
+    <div class='text-center mb-10' data-animate>
+      <h2 class='text-xl font-bold text-foreground mb-2'>
+        Trusted By Leading Organisations
+      </h2>
+      <p class='text-sm text-muted-foreground'>
+        We are proud to have delivered successful projects for:
+      </p>
+    </div>
+    <div
+      class='flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70 grayscale hover:grayscale-0 transition-all duration-300'
+      data-animate
+    >
+      <span class='text-xl font-bold text-foreground/60 whitespace-nowrap'
+        >City of Tshwane</span
+      >
+      <span class='text-xl font-bold text-foreground/60 whitespace-nowrap'
+        >Sanparks</span
+      >
+      <span class='text-xl font-bold text-foreground/60 whitespace-nowrap'
+        >AgriSkills</span
+      >
+      <span class='text-xl font-bold text-foreground/60 whitespace-nowrap'
+        >JB Levelling</span
+      >
+      <span class='text-xl font-bold text-foreground/60 whitespace-nowrap'
+        >Magalies Water</span
+      >
+      <span class='text-xl font-bold text-foreground/60 whitespace-nowrap'
+        >Civicon</span
+      >
+    </div>
+  </section>
+
+  <ContactCTA
+    heading='Ready to Work With Us?'
+    body='Contact us for a free, no-obligation quote. We respond within 1 business day.'
+  />
 </Layout>

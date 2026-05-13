@@ -3,185 +3,173 @@ import ServiceLayout from '@/layouts/ServiceLayout.astro';
 export const prerender = true;
 
 const equipment = [
-    {
-        name: 'TLB (Tractor Loader Backhoe)',
-        desc: 'Versatile earthmoving machine for digging, loading, and grading',
-        operator: true,
-    },
-    {
-        name: 'Excavators',
-        desc: 'Tracked excavators for bulk earthworks, trenching, and demolition',
-        operator: true,
-    },
-    {
-        name: 'Bulldozers',
-        desc: 'Heavy-duty dozing and land clearing for large civil projects',
-        operator: true,
-    },
-    {
-        name: 'Tipper Trucks',
-        desc: 'Bulk material transport — soil, sand, gravel, rubble, and aggregate',
-        operator: true,
-    },
-    {
-        name: 'Water Carts',
-        desc: 'Dust suppression and water supply on construction and road sites',
-        operator: true,
-    },
-    {
-        name: 'Generators',
-        desc: 'Portable power supply for sites without mains electricity',
-        operator: false,
-    },
-    {
-        name: 'Tools & Equipment',
-        desc: 'Hand tools, power tools, and small plant for hire',
-        operator: null,
-    },
+  {
+    name: 'TLB (Tractor Loader Backhoe)',
+    desc: 'Versatile earthmoving machine for digging, loading, and grading',
+    operator: true,
+  },
+  {
+    name: 'Excavators',
+    desc: 'Tracked excavators for bulk earthworks, trenching, and demolition',
+    operator: true,
+  },
+  {
+    name: 'Bulldozers',
+    desc: 'Heavy-duty dozing and land clearing for large civil projects',
+    operator: true,
+  },
+  {
+    name: 'Tipper Trucks',
+    desc: 'Bulk material transport - soil, sand, gravel, rubble, and aggregate',
+    operator: true,
+  },
+  {
+    name: 'Water Carts',
+    desc: 'Dust suppression and water supply on construction and road sites',
+    operator: true,
+  },
+  {
+    name: 'Generators',
+    desc: 'Portable power supply for sites without mains electricity',
+    operator: false,
+  },
+  {
+    name: 'Grader',
+    desc: 'Road grading and surface levelling',
+    operator: true,
+  },
+  {
+    name: 'Tools & Equipment',
+    desc: 'Hand tools, power tools, and small plant for hire',
+    operator: null,
+  },
 ];
 
 const hireSteps = [
-    'Contact us with your equipment requirements and project dates',
-    'We confirm availability and provide a quote within 1 business day',
-    'Equipment is delivered to your site on the agreed date',
-    'On completion, we collect the equipment from your site',
+  'Contact us with your equipment requirements and project dates',
+  'We confirm availability and provide a quote within 1 business day',
+  'Equipment is delivered to your site on the agreed date',
+  'On completion, we collect the equipment from your site',
 ];
 ---
 
 <ServiceLayout
-    title='Plant Hire'
-    description='TLB, tipper trucks, water carts, excavators, bulldozers and generators for hire in Pretoria and Gauteng — Phehlwana Group Investments.'
-    label='Plant Hire'
-    subtitle='Flexible equipment hire for construction, landscaping, and civil projects — available with or without an operator, delivered to your site.'
-    image='/images/services/service-plant-hire.png'
-    imageAlt='Phehlwana Group TLB and construction equipment available for hire'
-    serviceParam='Plant Hire'
+  title='Plant Hire'
+  description='TLB, tipper trucks, water carts, excavators, bulldozers and generators for hire in Pretoria and Gauteng - Phehlwana Group Investments.'
+  label='Plant Hire'
+  subtitle='Flexible equipment hire for construction, landscaping, and civil projects - available with or without an operator, delivered to your site.'
+  image='/images/services/service-plant-hire.png'
+  imageAlt='Phehlwana Group TLB and construction equipment available for hire'
+  serviceParam='Plant Hire'
 >
-    <div class='space-y-12'>
-        <!-- Hire options -->
-        <div data-animate>
-            <h2
-                class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
-            >
-                Hire Options
-            </h2>
-            <div class='grid sm:grid-cols-2 gap-4'>
-                <div class='bg-card border border-border rounded-xl p-6'>
-                    <h3 class='text-base font-bold text-foreground mb-2'>
-                        Wet Hire
-                    </h3>
-                    <p
-                        class='text-sm text-muted-foreground leading-relaxed mb-3'
-                    >
-                        Equipment supplied with a qualified, experienced
-                        operator provided by us. The operator is employed by and
-                        responsible to Phehlwana Group.
-                    </p>
-                    <p class='text-xs text-muted-foreground'>
-                        <strong class='text-foreground'>Best for:</strong> Clients
-                        without qualified operators, specialist equipment, shorter-term
-                        projects.
-                    </p>
-                </div>
-                <div class='bg-card border border-border rounded-xl p-6'>
-                    <h3 class='text-base font-bold text-foreground mb-2'>
-                        Dry Hire
-                    </h3>
-                    <p
-                        class='text-sm text-muted-foreground leading-relaxed mb-3'
-                    >
-                        Equipment supplied without an operator — you provide
-                        your own qualified operator and take responsibility for
-                        safe operation during the hire period.
-                    </p>
-                    <p class='text-xs text-muted-foreground'>
-                        <strong class='text-foreground'>Best for:</strong> Contractors
-                        with their own operators, longer-term projects, full operational
-                        control.
-                    </p>
-                </div>
-            </div>
+  <div class='space-y-12'>
+    <!-- Hire options -->
+    <div data-animate>
+      <h2
+        class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
+      >
+        Hire Options
+      </h2>
+      <div class='grid sm:grid-cols-2 gap-4'>
+        <div class='bg-card border border-border rounded-xl p-6'>
+          <h3 class='text-base font-bold text-foreground mb-2'>Wet Hire</h3>
+          <p class='text-sm text-muted-foreground leading-relaxed mb-3'>
+            Equipment supplied with a qualified, experienced operator provided
+            by us. The operator is employed by and responsible to Phehlwana
+            Group.
+          </p>
+          <p class='text-xs text-muted-foreground'>
+            <strong class='text-foreground'>Best for:</strong> Clients without qualified
+            operators, specialist equipment, shorter-term projects.
+          </p>
         </div>
-
-        <!-- Equipment table -->
-        <div data-animate>
-            <h2
-                class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
-            >
-                Equipment Available for Hire
-            </h2>
-            <div class='overflow-x-auto rounded-xl border border-border'>
-                <table class='w-full text-sm'>
-                    <thead>
-                        <tr class='bg-accent/60 border-b border-border'>
-                            <th
-                                class='text-left px-4 py-3 font-semibold text-foreground'
-                                >Equipment</th
-                            >
-                            <th
-                                class='text-left px-4 py-3 font-semibold text-foreground'
-                                >Description</th
-                            >
-                            <th
-                                class='text-left px-4 py-3 font-semibold text-foreground'
-                                >Operator</th
-                            >
-                        </tr>
-                    </thead>
-                    <tbody class='divide-y divide-border'>
-                        {
-                            equipment.map((item) => (
-                                <tr class='bg-card hover:bg-accent/30 transition-colors'>
-                                    <td class='px-4 py-3 font-medium text-foreground whitespace-nowrap'>
-                                        {item.name}
-                                    </td>
-                                    <td class='px-4 py-3 text-muted-foreground'>
-                                        {item.desc}
-                                    </td>
-                                    <td class='px-4 py-3'>
-                                        {item.operator === true && (
-                                            <span class='inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-success/20 text-success-foreground'>
-                                                Available
-                                            </span>
-                                        )}
-                                        {item.operator === false && (
-                                            <span class='inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-accent text-muted-foreground'>
-                                                Dry hire only
-                                            </span>
-                                        )}
-                                        {item.operator === null && (
-                                            <span class='text-muted-foreground text-xs'>
-                                                N/A
-                                            </span>
-                                        )}
-                                    </td>
-                                </tr>
-                            ))
-                        }
-                    </tbody>
-                </table>
-            </div>
+        <div class='bg-card border border-border rounded-xl p-6'>
+          <h3 class='text-base font-bold text-foreground mb-2'>Dry Hire</h3>
+          <p class='text-sm text-muted-foreground leading-relaxed mb-3'>
+            Equipment supplied without an operator - you provide your own
+            qualified operator and take responsibility for safe operation during
+            the hire period.
+          </p>
+          <p class='text-xs text-muted-foreground'>
+            <strong class='text-foreground'>Best for:</strong> Contractors with their
+            own operators, longer-term projects, full operational control.
+          </p>
         </div>
-
-        <!-- How to hire -->
-        <div data-animate>
-            <h2
-                class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
-            >
-                How to Hire
-            </h2>
-            <ol class='space-y-3'>
-                {
-                    hireSteps.map((step, i) => (
-                        <li class='flex items-start gap-3 text-sm text-muted-foreground'>
-                            <span class='size-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5'>
-                                {i + 1}
-                            </span>
-                            {step}
-                        </li>
-                    ))
-                }
-            </ol>
-        </div>
+      </div>
     </div>
+
+    <!-- Equipment table -->
+    <div data-animate>
+      <h2
+        class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
+      >
+        Equipment Available for Hire
+      </h2>
+      <div class='overflow-x-auto rounded-xl border border-border'>
+        <table class='w-full text-sm'>
+          <thead>
+            <tr class='bg-accent/60 border-b border-border'>
+              <th class='text-left px-4 py-3 font-semibold text-foreground'
+                >Equipment</th
+              >
+              <th class='text-left px-4 py-3 font-semibold text-foreground'
+                >Description</th
+              >
+              <th class='text-left px-4 py-3 font-semibold text-foreground'
+                >Operator</th
+              >
+            </tr>
+          </thead>
+          <tbody class='divide-y divide-border'>
+            {
+              equipment.map((item) => (
+                <tr class='bg-card hover:bg-accent/30 transition-colors'>
+                  <td class='px-4 py-3 font-medium text-foreground whitespace-nowrap'>
+                    {item.name}
+                  </td>
+                  <td class='px-4 py-3 text-muted-foreground'>{item.desc}</td>
+                  <td class='px-4 py-3'>
+                    {item.operator === true && (
+                      <span class='inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-success/20 text-success-foreground'>
+                        Available
+                      </span>
+                    )}
+                    {item.operator === false && (
+                      <span class='inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-accent text-muted-foreground'>
+                        Dry hire only
+                      </span>
+                    )}
+                    {item.operator === null && (
+                      <span class='text-muted-foreground text-xs'>N/A</span>
+                    )}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- How to hire -->
+    <div data-animate>
+      <h2
+        class='text-xl font-bold text-foreground mb-6 pb-3 border-b border-border'
+      >
+        How to Hire
+      </h2>
+      <ol class='space-y-3'>
+        {
+          hireSteps.map((step, i) => (
+            <li class='flex items-start gap-3 text-sm text-muted-foreground'>
+              <span class='size-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5'>
+                {i + 1}
+              </span>
+              {step}
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </div>
 </ServiceLayout>

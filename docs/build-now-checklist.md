@@ -161,6 +161,7 @@ Still blocked:
 | Project detail submissions | Client form responses | High |
 | Client testimonials | Email campaign needed | Medium |
 | Logo (SVG + white versions) | Client | Medium |
+| Resend API key + domain verification | Phase 6 | ❌ Not set up (Domain: info.phehlwanagroup.co.za) |
 
 ---
 

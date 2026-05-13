@@ -129,7 +129,7 @@
 ### Before emails will work
 
 1. Create Resend account at https://resend.com
-2. Verify domain `phehlwanagroup.co.za` (add DKIM, SPF, DMARC DNS records)
+2. Verify domain `info.phehlwanagroup.co.za` (add DKIM, SPF, DMARC DNS records)
 3. Set real values in Vercel environment variables:
    ```
    RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxx
