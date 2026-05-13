@@ -42,7 +42,7 @@ function formatDate(date: Date): string {
     <section class='container mx-auto px-4 py-14'>
         {posts.length === 0 ? (
             <p class='text-center text-muted-foreground py-16 text-sm'>
-                No posts published yet — check back soon.
+                No posts published yet - check back soon.
             </p>
         ) : (
             <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -56,7 +56,7 @@ function formatDate(date: Date): string {
                             aria-label={`Read: ${post.data.title}`}
                         />
 
-                        <!-- Cover image — always shown, falls back to branded placeholder -->
+                        <!-- Cover image - always shown, falls back to branded placeholder -->
                         <div class='aspect-video overflow-hidden bg-accent'>
                             <img
                                 src={post.data.coverImage ?? '/images/placeholder.svg'}
